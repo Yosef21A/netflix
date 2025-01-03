@@ -1,0 +1,309 @@
+@media all and (max-width: 767px){
+    *{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
+    }
+    a.button,a.button:link,a.button:visited,.button{width:100%;min-width:6rem;padding:0.75rem 2rem;border:0 solid #0544b5;display:flex;justify-content:center;align-items:center;background-color:#0544b5;-webkit-border-radius:100px;-moz-border-radius:100px;-khtml-border-radius:100px;border-radius:100px;cursor:pointer;margin:0%;color:#fff;font-size:1.06666667em;text-align:center;font-weight:500;text-shadow:none;text-decoration:none;transition:color 0.2s ease 0s, background-color 0.2s ease 0s, border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;-webkit-font-smoothing:antialiased;position:relative;line-height:21px;-webkit-border-image:none;border-image:none;appearance:button;overflow:visible;}
+    a.button:focus,a.button:link:focus,a.button:visited:focus,.button:focus{outline:none;border:4px solid var(--sys-structure-focus, #097FF5);}
+    a.button:hover,a.button:link:hover,a.button:visited:hover,.button:hover{background-color:#0070E0;border-color:#0070E0;}
+    a.button:active,a.button:link:active,a.button:visited:active,.button:active{background-color:#003087;border-color:#003087;outline:none;}
+    .button.secondary{background-color:#F1F2F3;background-attachment:scroll;background-clip:border-box;background-image:none;background-origin:padding-box;background-position-x:0%;background-position-y:0%;background-repeat:repeat;background-size:auto;background-color:transparent;color:#001435;border:0.0625rem solid #001435;box-shadow:transparent 0px 0px 0px 0.0625rem inset;transition:color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;}
+    .button.secondary:hover{background:transparent;border-color:#0070E0;box-shadow:none;color:#0544b5;color:#0070E0;}
+    .button.secondary:active{color:#003087;border-color:#003087;}
+    .button.secondary:focus{background:transparent;border-color:#0070E0;box-shadow:none;color:#0544b5;outline:none;box-shadow:transparent 0px 0px 0px 0.0625rem inset;border-color:#0544b5;}
+    a.button,a.button:link,a.button:visited{padding:11px;}
+    .actionsSpaced{margin-top:30px;}
+    .button{font-family:"pp-open-bold", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;font-size:100%;border-radius:100px;height:48px;}
+    .fieldWrapper{position:relative;z-index:2;width:100%;}
+    .errorMessage{position:absolute;top:1px;left:0;z-index:1;width:100%;height:0;opacity:1;-webkit-border-radius:0px 0px 4px 4px;-moz-border-radius:0px 0px 4px 4px;-khtml-border-radius:0px 0px 4px 4px;border-radius:0px 0px 4px 4px;background:#fff;border-top:hidden;transition:all 0.2s ease-out;}
+    .errorMessage p{margin:0;color:#545D68;font-weight:400;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;font-size:14px;line-height:20px;background-image:url(https://www.paypalobjects.com/webstatic/i/consumer/onboarding/sprite_form_2x.png);background-origin:padding-box;background-position:top -420px right 10px;background-position-x:left;padding-left:28px;background-size:25px;background-repeat:no-repeat;padding-bottom:2px;padding-top:2px;float:left;}
+    #splitEmailSection .fieldWrapper #email{min-height:64px;line-height:24px;border:none;}
+    #splitEmailSection .fieldWrapper:hover{transition:border 0.2s ease-in-out, background-color 0.2s ease-in-out;border:0.0625rem solid #1040c1;border-radius:4px;}
+    #splitEmailSection .fieldWrapper{border:0.0625rem solid #9198A0;border-radius:4px;}
+    #splitEmailSection .fieldWrapper:focus{box-shadow:#ffffff 0px 0px 0px 0.125rem;outline-offset:0.125rem;outline:#097ff5 solid 0.125rem;}
+    .textInput{position:relative;appearance:none;}
+    .textInput .fieldWrapper{margin-bottom:16px;}
+    .textInput .fieldWrapper:before{content:"";display:block;z-index:-1;position:absolute;top:0;width:100%;height:40px;background-color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;}
+    .textInput .fieldLabel{position:absolute;color:#6c7378;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;}
+    .textInput input{appearance:none;height:64px;width:100%;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border:0.0625rem solid #9da3a6;background-color:#fff;text-overflow:ellipsis;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:4px;-moz-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;font-size:100%;color:#001435;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;font-weight:normal;margin:0%;overflow:visible;position:relative;}
+    .textInput input:focus{outline:0;border:0.0625rem solid #0070E0;box-shadow:#097ff5 0px 0px 0px 0.125rem inset, rgba(209, 229, 249, 0.9) 0px 0px 0px 0.375rem;background-color:#fff;border-color:#097ff5;}
+    .textInput input{padding-top:20px;}
+    .textInput input[type="email"]:focus ~ .fieldLabel,.textInput input[type="email"]:not(:focus):valid ~ .fieldLabel,.textInput input[type="email"]:not(:placeholder-shown) ~ .fieldLabel{top:8px;bottom:10px;left:12px;font-size:14px;height:30px;width:400px;clip:unset;opacity:1;}
+    .textInput [for="email"].fieldLabel{position:absolute;pointer-events:none;left:10px;top:18px;transition:0.2s ease all;height:30px;width:400px;clip:unset;}
+    .textInput input[type="password"]:focus ~ .fieldLabel,.textInput input[type="password"]:not(:focus):valid ~ .fieldLabel,.textInput input[type="password"]:not(:placeholder-shown) ~ .fieldLabel{top:8px;bottom:10px;left:12px;font-size:14px;height:30px;width:400px;clip:unset;opacity:1;}
+    .textInput [for="password"].fieldLabel{position:absolute;pointer-events:none;left:10px;top:18px;transition:0.2s ease all;height:30px;width:400px;clip:unset;}
+    .textInput input[type=number]{padding:0px;-moz-appearance:textfield;-webkit-appearance:textfield;appearance:none;display:inline-block;}
+    #passwordSection label:not([for="password"]):not([for="email"]){color:transparent;pointer-events:none;}
+    .countryPhoneSelectWrapper{margin-top:18px;}
+    #passwordSection label:not([for="password"]):not([for="email"]){color:transparent;}
+    .countryPhoneSelectWrapper{margin-top:20px;}
+    .countryPhoneSelectWrapper{height:44px;width:75px;position:absolute;z-index:101;left:0;direction:ltr;}
+    .countryPhoneSelectWrapper .countryPhoneSelect{position:relative;height:44px;width:75px;border:none;background:none;opacity:0;z-index:1;direction:ltr;}
+    .countryPhoneSelectWrapper .countryPhoneSelectChoice{position:absolute;top:3px;left:0;height:44px;display:table;width:100%;border-radius:5px;font-size:18px;}
+    .countryPhoneSelectWrapper .countryPhoneSelectChoice::after{content:'';position:absolute;top:7px;height:8px;width:8px;margin:8px 0 0 8px;-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;border-color:#333;border-image:none;border-style:solid;border-width:1.5px 1.5px 0 0;-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-o-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);}
+    .countryPhoneSelectWrapper .countryCode,.countryPhoneSelectWrapper .phoneCode{display:table-cell;vertical-align:middle;}
+    .countryPhoneSelectWrapper .countryCode{display:none;position:relative;text-align:center;color:#fff;font-weight:bold;}
+    .countryPhoneSelectWrapper .phoneCode{padding-left:12px;width:62%;}
+    .countryPhoneSelectWrapper .countryCode::before{content:'';position:absolute;top:10px;left:4px;width:80%;height:22px;background:#0079ad;border-radius:5px;z-index:-1;}
+    .notifications{outline:0;margin-bottom:10px;font-size:13px;}
+    .deniedCaution{margin-bottom:25px;width:112px;height:100px;}
+    .denied{text-align:center;}
+    .verification{text-align:left;}
+    .verification .headerText{font-size:30px;}
+    .verification .verification-message{margin:0 0 24px;text-align:center;}
+    .verification .pin{margin:0 0 12px;text-align:center;font-size:36px;color:#2c2e2f;}
+    .mobileNotification{padding:36px 0 24px;}
+    .mobileScreen{width:121px;margin:auto;}
+    .tryAnotherMsg{text-align:center;margin-top:0;}
+    .tryAnotherMsg a{font-weight:bold;}
+    .resendMsg{text-align:center;margin-bottom:0;}
+    .resendMsg a{font-weight:bold;}
+    .accountArea{width:100%;text-align:center;}
+    .accountArea .account{display:inline-block;font-size:1.2em;line-height:1.4;}
+    .accountArea .verificationNotYou{display:inline-block;margin:0;padding-left:15px;font-size:1em;line-height:1.4;}
+    .accountArea .verificationNotYou a{font-weight:bold;}
+    .sentMessage{color:#1b9e1b;}
+    .footer{position:fixed;bottom:0;left:0;right:0;font-size:11px;padding-top:14px;}
+    .footer .legalFooter{text-align:center;padding:14px;background-color:#F7F9FA;}
+    .footer .legalFooter a,.footer .legalFooter a:link,.footer .legalFooter a:visited,.footer .legalFooter a:hover{color:#545D68;white-space:nowrap;}
+    .intentFooter{position:relative;display:block;font-size:14px;line-height:20px;margin-top:72px;}
+    .intentFooter .cancelUrl{text-align:center;display:block;width:100%;}
+    .intentFooter .localeSelector{text-align:center;display:block;width:100%;padding-top:16px;}
+    .intentFooter .localeSelector a,.intentFooter .localeSelector a:link,.intentFooter .localeSelector a:visited,.intentFooter .localeSelector a:hover{color:#545D68;white-space:nowrap;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;}
+    .intentFooter .localeSelector a.selected{color:#545D68;font-weight:bold;}
+    .intentFooter .localeSelector .localeLink{margin:0;list-style:none;display:inline-block;}
+    .intentFooter .localeSelector .localeLink li{padding:0 6px 0 6px;display:inline-block;border-left:1px solid #ccc;}
+    .intentFooter .localeSelector .localeLink li:first-child{padding-left:0;border-left:none;}
+    .footerGroup{list-style-type:none;text-align:center;}
+    .footerGroup li{display:inline-block;margin:0 10px 0 0;}
+    .footerGroup li a,.footerGroup li a:link,.footerGroup li a:visited,.footerGroup li a:hover{color:#545D68;white-space:nowrap;}
+    .footerGroup li:last-child{margin:0;}
+    .footerStayPut{position:relative;top:0;left:0;}
+    @media all and (max-width: 767px){
+    .intentFooter{margin-bottom:20px;}
+    }
+    html{background-color:#fff;min-height:100%;}
+    body{min-height:100%;margin:0;padding:0;line-height:21px;color:#001435;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;font-size:100%;-webkit-font-smoothing:antialiased;-webkit-backface-visibility:hidden;}
+    ul,li{margin:0;padding:0;}
+    p{margin:20px 0;font-family:"pp-sans-big-regular", Helvetica Neue, Arial, sans-serif;font-weight:normal;font-variant:normal;color:#001435;}
+    h1{margin:0;font-family:"pp-sans-big-regular", Helvetica Neue, Arial, sans-serif;font-weight:normal;font-variant:normal;font-size:1.73333333em;font-weight:300;color:#001435;}
+    img{border:0;}
+    a,a:link,a:visited{color:#0070E0;font-family:"pp-open-bold", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;font-weight:normal;background-color:rgba(0, 0, 0, 0);text-decoration:none;}
+    a:hover{outline:none;color:#73A5FF;}
+    a:active{color:#003087;}
+    a:focus{border-radius:4px;outline-offset:0.125rem;outline:#097FF5 solid 4px;}
+    p,div,span,a,h1,label,select{font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;}
+    .accessAid{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden;}
+    .clearfix{zoom:1;}
+    .clearfix:before,.clearfix:after{display:table;content:"";}
+    .clearfix:after{clear:both;}
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+    .paypal-logo{margin:0 auto 6.56%;text-indent:100%;overflow:hidden;white-space:nowrap;}
+    .paypal-logo-long{background:transparent url("https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg") top center no-repeat;width:34px;height:40px;display:block;}
+    .paypal-logo-monogram{background:transparent url("https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg") top center no-repeat;width:34px;height:40px;}
+    .contentContainer{position:relative;margin:0px auto 0;padding:30px 10% 50px;-webkit-border-radius:12px;-moz-border-radius:12px;-khtml-border-radius:12px;border-radius:12px;}
+    .contentContainerBordered{margin:120px auto 0;padding:30px 10% 50px;border:1px solid #EAECED;overflow:hidden;}
+    .corral{margin:0 auto;width:460px;position:relative;}
+    .headerText{padding-bottom:4.72%;text-align:center;font-size:24px;font-weight:400;line-height:32px;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;}
+    .slimP{margin:0;}
+    .spinnerWithLockIcon{position:fixed;top:40%;right:0;bottom:0;left:13px;z-index:9998;margin:0;margin-top:-50px;text-align:center;}
+    .spinnerWithLockIcon:after{content:'';position:fixed;z-index:-1;top:0;right:0;bottom:0;left:0;background:#fff;-moz-opacity:0.9;-khtml-opacity:0.9;-webkit-opacity:0.9;opacity:0.9;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);filter:alpha(opacity=90);}
+    .lockIcon{background:url(https://www.paypalobjects.com/images/checkout/hermes/icon_ot_spin_lock_skinny.png) no-repeat center center;position:fixed;width:60px;height:50px;top:40%;left:50%;margin:-20px 0 0 -23px;z-index:9999;}
+    .spinnerWithLockIcon:before{content:"";display:block;margin:0 auto 10px;text-align:center;width:100px;height:100px;border-left:5px solid #000000;border-left:5px solid rgba(0, 0, 0, 0.2);border-right:5px solid #000000;border-right:5px solid rgba(0, 0, 0, 0.2);border-bottom:5px solid #000000;border-bottom:5px solid rgba(0, 0, 0, 0.2);border-top:5px solid #2180c0;border-radius:100%;-webkit-animation:rotation 0.7s infinite linear;-moz-animation:rotation 0.7s infinite linear;-o-animation:rotation 0.7s infinite linear;animation:rotation 0.7s infinite linear;}
+    .oneTouchMessage{width:300px;margin:0 auto;}
+    .secureMessage{font-size:17.5px;}
+    .transformRightToLeft{-webkit-animation:rightToLeft 0.25s ease;-moz-animation:rightToLeft 0.25s ease;-o-animation:rightToLeft 0.25s ease;animation:rightToLeft 0.25s ease;}
+    .secondaryLink{margin:20px 0 0;text-align:center;}
+    .contentAlignment{text-align:center;}
+    .headerTextWarning{padding-top:130px;background:url("https://www.paypalobjects.com/images/shared/lg-attention-warning.png") no-repeat top center;background-size:100px;}
+    .hide{display:none!important;}
+    .subHeaderText{margin:0 0 7.08%;color:#001435;text-align:center;}
+    @media (max-width: 47rem){
+    .button{width:100%;}
+    }
+    @media screen and (max-width: 752px){
+    .button{font-size:1.125rem;line-height:1.5rem;}
+    }
+    @media all and (max-width: 767px){
+    .contentContainerBordered{border:none;margin:0 auto;padding:0 8% 30px;width:100%;background-color:#fff;}
+    .contentContainer{padding:4.8%;width:100%;background-color:#fff;}
+    .corral{width:100%;}
+    .headerText{padding-bottom:16px;}
+    .paypal-logo{margin:0 auto 7.08%;}
+    }
+    [id="login"] [class="corral"] .localeSelector .localeLink{font-size:11px;}
+    [id="login"] [class="corral"] #content .intentFooter .cancelUrl{font-size:12.8px;}
+    [id="login"] [class="corral"] .textInSeparator{font-size:14px;}
+    [id="login"] [class="corral"] #emailSubTagLine,[id="login"] [class="corral"] #pwdSubTagLine,[id="login"] [class="corral"] #eligiblePurchaseSubTagLine,[id="login"] [class="corral"] #password,[id="login"] [class="corral"] #forgotPassword,[id="login"] [class="corral"] #email{font-size:16px;}
+    [id="login"] [class="corral"] #createAccount,[id="login"] [class="corral"] #btnLogin,[id="login"] [class="corral"] #beginOtpLogin{font-size:1rem;}
+    [id="login"] [class="corral"] #content #headerText{font-size:24px;}
+    html{background-color:#fff;min-height:100%;}
+    body{min-height:100%;padding:0;color:#001435;font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-weight:normal;font-variant:normal;font-size:100%;-webkit-box-align:center;-webkit-font-smoothing:antialiased;-webkit-backface-visibility:hidden;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+    .hide{display:none!important;}
+    .spinnerWithLockIcon{position:fixed;top:40%;right:0;bottom:0;left:0px;z-index:9998;margin:0;margin-top:-50px;text-align:center;}
+    .spinnerWithLockIcon:after{content:'';position:fixed;z-index:-1;top:0;right:0;bottom:0;left:0;background:#fff;-moz-opacity:0.9;-khtml-opacity:0.9;-webkit-opacity:0.9;opacity:0.9;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);filter:alpha(opacity=90);}
+    .lockIcon{background:url(https://www.paypalobjects.com/images/checkout/hermes/icon_ot_spin_lock_skinny.png) no-repeat center center;position:fixed;width:60px;height:50px;top:40%;left:50%;margin:-12px 0 0 -30px;z-index:9999;}
+    .spinnerWithLockIcon:before{content:"";display:block;margin:0 auto 10px;text-align:center;width:6rem;height:6rem;border-left:0.125rem solid #003087;border-right:0.125rem solid #003087;border-bottom:0.125rem solid #003087;border-top:0.125rem solid #003087;border-radius:50px;-webkit-animation:rotation 1s infinite linear;-moz-animation:rotation 1s infinite linear;-o-animation:rotation 1s infinite linear;animation:rotation 1s infinite linear;border-image-outset:0;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;box-sizing:border-box;clip-path:polygon(50% 0%, 50% 50%, 100% 50%, 100% 100%, 0px 100%, 0px 0px);line-height:18.4px;margin-block-end:16px;margin-block-start:16px;}
+    .maskable{position:relative;}
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+    .show-hide-password{background:none;border:none;color:#0070E0;cursor:pointer;position:absolute;font-size:13px;font-family:"pp-open-bold", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;}
+    #passwordSection.showHideButtonForEligibleBrowser .textInput .fieldWrapper{display:flex;border:1px solid #9da3a6;-webkit-border-radius:4px;-moz-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;}
+    #passwordSection.showHideButtonForEligibleBrowser .textInput .fieldWrapper:hover,#passwordSection.showHideButtonForEligibleBrowser .textInput .fieldWrapper:active{transition:border 0.2s ease-in-out, background-color 0.2s ease-in-out;border:0.0625rem solid #0070E0;}
+    #passwordSection.showHideButtonForEligibleBrowser .textInput input{border:none;}
+    #passwordSection.showHideButtonForEligibleBrowser .show-hide-password{position:inherit;top:0;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;}
+    #passwordSection.showHideButtonForEligibleBrowser .show-hide-password:focus,#passwordSection.showHideButtonForEligibleBrowser .show-hide-password:active{outline:0;background-color:#fff;}
+    header h1{text-align:center;margin-bottom:20px;}
+    .loginSignUpSeparator{border-top:1px solid #CBD2D6;position:relative;margin-top:8.72%;margin-bottom:4.895%;height:15px;text-align:center;font-size:83.34%;}
+    .loginSignUpSeparator .textInSeparator{background-color:#fff;padding:0 0.5em;position:relative;color:#6c7378;top:-0.7em;}
+    [class="corral"] .tryAnotherWayLinkContainer a{font-size:15px;}
+    .tryAnotherWayLinkContainer{text-align:center;margin-top:10px;}
+    .tryAnotherWayLinkContainer a{text-decoration:none;}
+    .rewardsBar{width:100%;z-index:1;margin-top:120px;margin-bottom:-128px;}
+    .rewardsContainer{display:flex;align-items:center;flex:1;width:80%;}
+    .trophyContainer{width:40px;height:40px;border-radius:50%;padding:8px;margin-right:15px;}
+    .trophyIcon{background-image:url(https://www.paypalobjects.com/paypal-ui/icons/v3/svg/trophy.svg);background-repeat:no-repeat;background-size:100%;filter:invert(14%) sepia(29%) saturate(7387%) hue-rotate(212deg) brightness(93%) contrast(107%);width:24px;height:24px;display:inline-block;right:4.71px;}
+    .dealsContainer{width:40px;height:40px;border-radius:50%;padding:8px;background:#D1E5F9;margin-right:15px;}
+    .dealsIcon{background-image:url(https://www.paypalobjects.com/paypal-ui/icons/v3/svg/deals.svg);background-repeat:no-repeat;background-size:100%;filter:invert(14%) sepia(29%) saturate(7387%) hue-rotate(212deg) brightness(93%) contrast(107%);width:24px;height:24px;display:inline-block;right:4.71px;}
+    .displayRewards{display:flex;margin-bottom:0px;width:100%;height:72px;background:#F1EDE8;font-size:16px;padding:16px;align-items:center;}
+    .displayRewards .rewardsMessage{margin-right:15px;text-align:left;}
+    .rewardsCloseIcon{color:#545D68;}
+    .rewardsCloseBtn{width:24px;}
+    @media all and (max-width: 767px){
+    .rewardsBar{width:100%;z-index:1;margin-top:0px;margin-bottom:0px;}
+    }
+    .recoveryOption{display:inline-block;line-height:24px;text-size-adjust:100%;font-style:normal;}
+    .forgotPassword{display:inline-block;margin:0px 0px 16px;}
+    .otpPrimary p,.otpPrimary div,.otpPrimary span,.otpPrimary h1{font-family:"pp-open-regular", Helvetica Neue, Arial, sans-serif;font-style:normal;font-display:swap;}
+    .otpPrimary button{font-family:"pp-sans-big-medium", Helvetica Neue, Arial, sans-serif;font-weight:normal;font-variant:normal;font-size:100%;border-radius:25px;height:48px;}
+    .otpPrimary .secondaryLink{margin:16px 0 0;font-weight:bold;font-size:100%;}
+    .otpPrimary .paypal-logo{margin-top:23px;}
+    .otpPrimary .headerText{padding:0 0 16px 0;font-size:150%;text-align:center;}
+    .otp-logo-warning{background-image:url(https://www.paypalobjects.com/paypal-ui/illustrations/svg/warning.svg);background-repeat:no-repeat;background-size:100%;width:82px;height:82px;margin:0 auto 20px;overflow:hidden;white-space:nowrap;}
+    .tryAnotherWayLink{text-align:center;}
+    .otpLoginViaButton > .button{margin-top:16px;background-color:#F1F2F3;background-attachment:scroll;background-clip:border-box;background-image:none;background-origin:padding-box;background-position-x:0%;background-position-y:0%;background-repeat:repeat;background-size:auto;background-color:transparent;color:#001435;border:0.0625rem solid #001435;box-shadow:transparent 0px 0px 0px 0.0625rem inset;transition:color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;}
+    .otpLoginViaButton > .button::before{background-image:url(https://www.paypalobjects.com/images/unifiedLogin/otpLoginSms.png);background-repeat:no-repeat;background-size:14px;width:14px;height:18px;display:inline-block;content:' ';position:relative;top:3px;left:5px;margin-right:10px;}
+    .otpLoginViaButton > .button:hover{background:transparent;border-color:#0070E0;box-shadow:none;color:#0544b5;color:#0070e0;}
+    .otpLoginViaButton > .button:focus{background:transparent;border-color:#0070E0;box-shadow:none;color:#0544b5;outline:none;border:0.125rem solid #003087;box-shadow:0 0 0 0.25rem rgba(16, 114, 235, 0.16);}
+    .verifyOtp .adjustHeader{margin-top:30px;padding-bottom:10px;}
+    .verifyOtp .contentContainerBordered{border:0px;}
+    .verifyOtp .sendSmsResendLink{margin-bottom:20px;}
+    .verifyOtp .contentContainerBordered{border:0px;}
+    .slimTopP{margin-top:0;}
+    .slimTopP span{white-space:nowrap;direction:ltr;display:inline-block;}
+    .verifyOtpPrimary .resendLink{font-size:16px;}
+    .verifyOtpPrimary .sendSmsResendLink{margin:16px 0 32px;}
+    .verifyOtpPrimary .sendSmsMessage{font-size:16px;padding-bottom:12px;padding-right:5px;}
+    .verifyOtpPrimary .tryAnotherWayLink{font-size:16px;text-decoration:none;margin-top:32px;}
+    .verifyOtpPrimary .paypal-logo{margin-bottom:40px;margin-top:50px;}
+    .verifyOtpPrimary .headerText{margin-top:0px;}
+    .verifyOtpPrimary .intentFooter{margin-top:100px;}
+    .verifyOtpPrimary a.button:link{padding:14px;border-radius:25px;height:48px;}
+    .verifyOtpPrimary .otpError{margin-top:30%;}
+    .verifyOtpPrimary .dialog-close{background:transparent url(https://www.paypalobjects.com/paypal-ui/icons/svg/close.svg) center center no-repeat;border-radius:0;cursor:pointer;border:none;right:7px;top:7px;padding:1px;width:25px;height:25px;}
+    .verifyOtpPrimary .chevron-right{background:transparent url(https://www.paypalobjects.com/paypal-ui/icons/svg/chevron-right.svg) center center no-repeat;border-radius:0;cursor:pointer;border:none;right:7px;top:7px;padding:1px;width:25px;height:25px;}
+    .verifyOtpPrimary .toast{visibility:hidden;min-width:250px;margin-left:-125px;background-color:#0f7013;background-image:linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));color:#fff;text-align:center;border-radius:12px;padding:16px;position:fixed;z-index:1;left:50%;top:16px;font-size:18px;position:absolute;box-shadow:rgba(0, 0, 0, 0.15) 0px 1px 12px 0px;pointer-events:auto;}
+    .verifyOtpPrimary .codeSentMessage{position:static;width:146px;height:24px;left:30px;top:0px;}
+    .verifyOtpPrimary .codeSentMessage::before{background-image:url(https://www.paypalobjects.com/paypal-ui/icons/svg/check-circle-alt.svg);background-repeat:no-repeat;background-size:100%;filter:invert(100%) sepia(98%) saturate(0%) hue-rotate(318deg) brightness(102%) contrast(103%);width:16px;height:16px;display:inline-block;content:' ';position:relative;top:1px;left:1px;margin-right:13px;}
+    .verifyOtpPrimary .profileBar{width:100%;position:absolute;}
+    .verifyOtpPrimary [class="checkout"] .headerText{font-size:24px;}
+    .verifyOtpPrimary [class="checkout"] .sendSmsMessage{font-size:18px;}
+    .verifyOtpPrimary [class="checkout"] .resendLink{font-size:18px;}
+    .verifyOtpPrimary [class="checkout"] .tryAnotherWayLink{font-size:18px;}
+    .verifyOtpPrimary [class="checkout"] .cancelUrl{font-size:12.8px;}
+    .verifyOtpPrimary [class="checkout"] .localeLink{font-size:11px;}
+    .otp-pin-container{position:relative;z-index:0;width:100%;display:flex;justify-content:space-evenly;}
+    .otp-pin-container input{text-align:center;border:0.0625rem solid #929496;caret-color:transparent;font-size:28px;outline-color:#001435;outline-style:none;outline-width:0px;}
+    .otp-pin-container input:focus{border:2px solid #009CDE;}
+    .otp-pin-container .pin-box{background-color:#FFFFFF;box-sizing:border-box;border-radius:4px;width:48px;height:64px;line-height:36px;min-height:64px;}
+    #keychainErrorMessage{outline:0;margin-bottom:10px;font-size:13px;}
+    #keychainErrorMessage .notification{margin:0;padding:15px 15px 15px 44px;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;border-width:1px;border-style:solid;text-align:left;font-size:1em;background:url("https://www.paypalobjects.com/images/shared/icon_alert_sprite-2x.png") no-repeat;background-size:20px;}
+    #keychainErrorMessage .notification.notification-critical{background-color:#fff7f7;background-position:12px -387px;background-position:left 12px top -387px;border-color:#c72e2e;}
+    #keychainErrorMessage .notification.notification-warning{background-color:#fffcf7;background-position:12px -188px;background-position:left 12px top -188px;border-color:#f8981f;}
+    .signupContainer{text-align:center;}
+    .tryAnotherWayModal{display:flex;position:fixed;z-index:1100;left:0;top:0;width:100%;height:100%;background-color:#000000;background-color:rgba(0, 0, 0, 0.4);-webkit-animation-name:fadeOut;-webkit-animation-duration:0.4s;animation-name:fadeOut;animation-duration:0.4s;opacity:0;}
+    .tryAnotherWayModal .dialog-close{background:transparent url(https://www.paypalobjects.com/paypal-ui/icons/svg/close.svg) center center no-repeat;border-radius:0;cursor:pointer;border:none;right:7px;top:7px;padding:1px;width:25px;height:25px;}
+    .tryAnotherWayModal .chevron-right{background:transparent url(https://www.paypalobjects.com/paypal-ui/icons/svg/chevron-right.svg) center center no-repeat;border-radius:0;cursor:pointer;border:none;right:7px;top:7px;padding:1px;width:25px;height:25px;}
+    .modal-content{position:fixed;bottom:-330px;background-color:#fefefe;width:100%;border-top-left-radius:8px;border-top-right-radius:8px;-webkit-animation-name:slideOut;-webkit-animation-duration:0.4s;animation-name:slideOut;animation-duration:0.4s;padding:16px;}
+    .modal-content .modal-content-header{display:flex;}
+    .modal-content .modal-content-header .modal-header-text{text-align:center;flex:1;font-weight:bold;}
+    .modal-content .modal-content-body{list-style:none;margin-top:31px;}
+    .modal-content .modal-content-body li{margin-top:24px;}
+    .modal-content .modal-content-body li a{color:black;text-decoration:none;display:flex;}
+    .modal-content .modal-content-body li a div:first-child{text-align:left;flex:1;}
+    .modal-content .modal-content-body li a:first-child{margin-top:0px;margin-bottom:10px;}
+    @media only screen and (min-width: 768px){
+    .tryAnotherWayModal{justify-content:center;}
+    .modal-content{width:460px;}
+    }
+    /*! CSS Used from: Embedded */
+    .ccpaCookieBanner_container{display:none;}
+    @media only screen and (max-width: 575.98px){
+    .ccpaHideCookieBannerMobile{display:none;}
+    }
+    /*! CSS Used from: Embedded */
+    .country-selector .country{overflow:hidden;height:24px;min-width:32px;background:transparent url(https://www.paypalobjects.com/webstatic/mktg/icons/sprite_countries_flag4.png) 5px 100px no-repeat;border:none;text-align:left;}
+    .country-selector .US{background-position:5px -383px;}
+    .picker.country-selector{display:inline-block;vertical-align:middle;position:relative;}
+    .picker.country-selector button{display:inline-block;margin-right:30px;cursor:pointer;}
+    .picker.country-selector button::after{content:'';position:absolute;bottom:10px;height:8px;width:8px;left:30px;margin:8px 0 0 8px;border-color:#333;border-image:none;border-style:solid;border-width:1px 1px 0 0;-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-o-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);}
+    /*! CSS Used keyframes */
+    @-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(359deg);transform:rotate(359deg);}}
+    @-moz-keyframes rotation{from{-moz-transform:rotate(0deg);transform:rotate(0deg);}to{-moz-transform:rotate(359deg);transform:rotate(359deg);}}
+    @keyframes rotation{from{transform:rotate(0deg);}to{transform:rotate(359deg);}}
+    @keyframes rotation{from{transform:rotate(0deg);}to{transform:rotate(359deg);}}
+    @-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(359deg);transform:rotate(359deg);}}
+    @-moz-keyframes rotation{from{-moz-transform:rotate(0deg);transform:rotate(0deg);}to{-moz-transform:rotate(359deg);transform:rotate(359deg);}}
+    @keyframes rotation{from{transform:rotate(0deg);}to{transform:rotate(359deg);}}
+    @-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(359deg);transform:rotate(359deg);}}
+    @-moz-keyframes rotation{from{-moz-transform:rotate(0deg);transform:rotate(0deg);}to{-moz-transform:rotate(359deg);transform:rotate(359deg);}}
+    @-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(359deg);transform:rotate(359deg);}}
+    @-moz-keyframes rotation{from{-moz-transform:rotate(0deg);transform:rotate(0deg);}to{-moz-transform:rotate(359deg);transform:rotate(359deg);}}
+    @keyframes rotation{from{transform:rotate(0deg);}to{transform:rotate(359deg);}}
+    @-webkit-keyframes rightToLeft{0%{-webkit-transform:translateX(100%);transform:translateX(100%);}100%{-webkit-transform:translateX(0%);transform:translateX(0%);}}
+    @-moz-keyframes rightToLeft{0%{-moz-transform:translateX(100%);transform:translateX(100%);}100%{-moz-transform:translateX(0%);transform:translateX(0%);}}
+    @keyframes fadeOut{from{opacity:1;}to{opacity:0;}}
+    @keyframes fadeOut{from{opacity:1;}to{opacity:0;}}
+    @keyframes fadeOut{from{opacity:1;}to{opacity:0;}}
+    @keyframes slideOut{from{bottom:0;}to{bottom:-330px;}}
+    @keyframes slideOut{from{bottom:0;}to{bottom:-20.625rem;}}
+    @keyframes slideOut{from{bottom:0;}to{bottom:-330px;}}
+    /*! CSS Used fontfaces */
+    @font-face{font-family:"pp-open-bold";src:url('https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Bold.woff2') format('woff2'), url('https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Bold.woff') format('woff');}
+    @font-face{font-family:"pp-open-regular";src:url('https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff2') format('woff2'), url('https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff') format('woff');}
+    @font-face{font-family:"pp-sans-big-regular";src:url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.eot");src:url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/paypal-ui/fonts/PayPalSansBig-Regular.woff2") format("woff2"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.svg") format("svg");}
+    @font-face{font-family:"pp-sans-big-medium";src:url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.eot");src:url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/paypal-ui/fonts/PayPalSansBig-Medium.woff2") format("woff2"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.svg") format("svg");}
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    .pin-box {
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      margin: 0 5px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 24px;
+    }
+    
+    .pin-box:focus {
+      outline: none;
+      border-color: #0070ba;
+      box-shadow: 0 0 0 2px rgba(0,112,186,0.2);
+    }
+    
+    /* Hide number input spinners */
+    .pin-box::-webkit-outer-spin-button,
+    .pin-box::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    .pin-box[type=number] {
+      -moz-appearance: textfield;
+    }

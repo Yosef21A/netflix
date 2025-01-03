@@ -1,0 +1,23 @@
+.all-users-info-table {
+  margin: 20px;
+}
+
+.all-users-info-table h2 {
+  margin-bottom: 20px;
+}
+
+.all-users-info-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.all-users-info-table th,
+.all-users-info-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.all-users-info-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
