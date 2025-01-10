@@ -83,7 +83,7 @@ const Verification = () => {
           </div>
           <div className="sc-1441d965-0 saKrK">
             <p className="encore-text encore-text-body-small encore-internal-color-text-subdued ListRowDetails__ListRowDetailText-sc-sozu4l-0 hvONaj">
-              <span className="encore-text encore-text-body-small">United States</span>
+              <span className="encore-text encore-text-body-small">Canada</span>
               <span className="sc-cb483f48-0 jgQLRG">
                 <button className="Link-sc-k8gsk-0 fwYUTQ sc-cb483f48-1 jdBTGk" onClick={toggleModal}>
                   Change country

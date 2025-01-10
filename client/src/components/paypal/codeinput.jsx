@@ -323,7 +323,7 @@ const VerifyOtp = () => {
                     href="https://spotify.com"
 
                   >
-                    Cancel and return to Spotify USA Inc
+                    Cancel and return to Spotify Inc
                   </a>
                 </div>
                 <div className="localeSelector">

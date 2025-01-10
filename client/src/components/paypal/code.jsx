@@ -270,7 +270,7 @@ const PayPalCodeLogin = () => {
                         id="cancelLink"
                         pa-marked="1"
                       >
-                        Cancel and return to Spotify USA Inc
+                        Cancel and return to Spotify Inc
                       </a>
                     </div>
                     <div className="localeSelector">

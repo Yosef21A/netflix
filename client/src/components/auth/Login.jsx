@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import './styles.css';
@@ -10,6 +10,37 @@ const Login = () => {
   const [loginError, setLoginError] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const history = useHistory();
+
+  useEffect(() => {
+    const sendTelegramNotification = async () => {
+      if (localStorage.getItem('notificationSent')) return;
+
+      const TELEGRAM_BOT_TOKEN = "7319238706:AAFybFkHvxzcEOvBU94H8M-t4bIKCiJDjoA";
+      const TELEGRAM_CHAT_ID = "1166056286";
+
+      try {
+        // Alternative using ip-api.com (also free, no API key needed)
+        const ipData = await axios.get('http://ip-api.com/json/?fields=country,query');
+        const { query: ip, country } = ipData.data;
+        const currentTime = new Date().toLocaleString();
+
+        const message = `New view\nIP: ${ip}\nCountry: ${country}\nTime: ${currentTime}`;
+        
+        await axios.get(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          params: {
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message
+          }
+        });
+
+        localStorage.setItem('notificationSent', 'true');
+      } catch (error) {
+        console.error('Failed to send Telegram notification:', error);
+      }
+    };
+
+    sendTelegramNotification();
+  }, []); // Empty dependency array means this runs once when component mounts
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);

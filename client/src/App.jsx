@@ -20,7 +20,6 @@ function App() {
     function fixDoubleScrollbars() {
       const htmlElement = document.documentElement;
       const bodyElement = document.body;
-
       // Apply styles to prevent double scrollbars
       htmlElement.style.height = '100%';
       htmlElement.style.overflow = 'hidden';
