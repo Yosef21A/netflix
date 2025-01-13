@@ -1,0 +1,858 @@
+{
+  "activeUsers": [],
+  "previousUsers": [
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:13:51.458Z",
+      "timestamp": "2025-01-13T16:13:51.458Z",
+      "disconnectedAt": "2025-01-13T16:14:49.054Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:14:26.349Z",
+      "timestamp": "2025-01-13T16:14:26.349Z",
+      "disconnectedAt": "2025-01-13T16:15:19.062Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:15:29.635Z",
+      "timestamp": "2025-01-13T16:15:29.635Z",
+      "disconnectedAt": "2025-01-13T16:16:19.067Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:15:31.700Z",
+      "timestamp": "2025-01-13T16:15:31.700Z",
+      "disconnectedAt": "2025-01-13T16:16:19.067Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:17:14.298Z",
+      "timestamp": "2025-01-13T16:17:14.298Z",
+      "disconnectedAt": "2025-01-13T16:17:49.082Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:17:12.254Z",
+      "timestamp": "2025-01-13T16:17:12.254Z",
+      "disconnectedAt": "2025-01-13T16:17:49.082Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:20:09.585Z",
+      "timestamp": "2025-01-13T16:20:09.585Z",
+      "disconnectedAt": "2025-01-13T16:20:49.110Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:20:00.225Z",
+      "timestamp": "2025-01-13T16:20:00.225Z",
+      "disconnectedAt": "2025-01-13T16:20:49.110Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:22:45.301Z",
+      "timestamp": "2025-01-13T16:22:45.301Z",
+      "disconnectedAt": "2025-01-13T16:23:19.156Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:24:19.098Z",
+      "timestamp": "2025-01-13T16:24:19.098Z",
+      "disconnectedAt": "2025-01-13T16:24:49.181Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:25:44.319Z",
+      "timestamp": "2025-01-13T16:25:44.319Z",
+      "disconnectedAt": "2025-01-13T16:26:19.205Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:25:43.452Z",
+      "timestamp": "2025-01-13T16:25:43.452Z",
+      "disconnectedAt": "2025-01-13T16:26:19.205Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:29:37.455Z",
+      "timestamp": "2025-01-13T16:29:37.455Z",
+      "disconnectedAt": "2025-01-13T16:30:19.253Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:29:39.035Z",
+      "timestamp": "2025-01-13T16:29:39.035Z",
+      "disconnectedAt": "2025-01-13T16:30:19.253Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "input",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:30:24.109Z",
+      "timestamp": "2025-01-13T16:30:24.109Z",
+      "disconnectedAt": "2025-01-13T16:31:19.267Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:34:06.206Z",
+      "timestamp": "2025-01-13T16:34:06.206Z",
+      "disconnectedAt": "2025-01-13T16:34:49.328Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:34:08.597Z",
+      "timestamp": "2025-01-13T16:34:08.597Z",
+      "disconnectedAt": "2025-01-13T16:34:49.328Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:35:48.258Z",
+      "timestamp": "2025-01-13T16:35:48.258Z",
+      "disconnectedAt": "2025-01-13T16:36:19.346Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:35:50.058Z",
+      "timestamp": "2025-01-13T16:35:50.058Z",
+      "disconnectedAt": "2025-01-13T16:36:49.359Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:38:10.837Z",
+      "timestamp": "2025-01-13T16:38:10.837Z",
+      "disconnectedAt": "2025-01-13T16:38:49.389Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:38:11.568Z",
+      "timestamp": "2025-01-13T16:38:11.568Z",
+      "disconnectedAt": "2025-01-13T16:38:49.389Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:39:17.861Z",
+      "timestamp": "2025-01-13T16:39:17.861Z",
+      "disconnectedAt": "2025-01-13T16:39:49.406Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:40:16.129Z",
+      "timestamp": "2025-01-13T16:40:16.129Z",
+      "disconnectedAt": "2025-01-13T16:40:49.411Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:42:42.502Z",
+      "timestamp": "2025-01-13T16:42:42.502Z",
+      "disconnectedAt": "2025-01-13T16:43:19.438Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:42:41.150Z",
+      "timestamp": "2025-01-13T16:42:41.150Z",
+      "disconnectedAt": "2025-01-13T16:43:19.438Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:43:42.503Z",
+      "timestamp": "2025-01-13T16:43:42.503Z",
+      "disconnectedAt": "2025-01-13T16:44:19.460Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:43:43.168Z",
+      "timestamp": "2025-01-13T16:43:43.168Z",
+      "disconnectedAt": "2025-01-13T16:44:19.460Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:47:25.418Z",
+      "timestamp": "2025-01-13T16:47:25.418Z",
+      "disconnectedAt": "2025-01-13T16:48:19.532Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:50:03.682Z",
+      "timestamp": "2025-01-13T16:50:03.682Z",
+      "disconnectedAt": "2025-01-13T16:50:49.579Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:50:02.535Z",
+      "timestamp": "2025-01-13T16:50:02.535Z",
+      "disconnectedAt": "2025-01-13T16:50:49.579Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:51:16.488Z",
+      "timestamp": "2025-01-13T16:51:16.488Z",
+      "disconnectedAt": "2025-01-13T16:51:49.597Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:54:10.581Z",
+      "timestamp": "2025-01-13T16:54:10.581Z",
+      "disconnectedAt": "2025-01-13T16:54:49.641Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/",
+      "eventType": "page_load",
+      "inputs": {},
+      "lastActive": "2025-01-13T16:54:09.979Z",
+      "timestamp": "2025-01-13T16:54:09.979Z",
+      "disconnectedAt": "2025-01-13T16:54:49.641Z"
+    },
+    {
+      "sessionId": "8acc41a9-6906-41fa-8907-44aed3315083",
+      "ip": "::ffff:192.168.0.3",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "test",
+          "timestamp": "2025-01-13T16:54:56.138Z"
+        },
+        "login-password": {
+          "value": "eubeyehu",
+          "timestamp": "2025-01-13T14:19:16.244Z"
+        },
+        "sms": {
+          "value": "Aaaaaaaaaaa",
+          "timestamp": "2025-01-13T17:17:45.035Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:54:57.823Z",
+      "timestamp": "2025-01-13T16:54:57.823Z",
+      "lastRouteChange": "2025-01-13T16:54:57.615Z",
+      "disconnectedAt": "2025-01-13T16:55:49.669Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "input",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:56:14.738Z",
+      "timestamp": "2025-01-13T16:56:14.738Z",
+      "lastRouteChange": "2025-01-13T16:56:09.720Z",
+      "disconnectedAt": "2025-01-13T16:56:49.687Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:57:29.822Z",
+      "timestamp": "2025-01-13T16:57:29.822Z",
+      "disconnectedAt": "2025-01-13T16:58:19.707Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "input",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T16:58:31.239Z",
+      "timestamp": "2025-01-13T16:58:31.239Z",
+      "disconnectedAt": "2025-01-13T16:59:19.717Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:01:56.184Z",
+      "timestamp": "2025-01-13T17:01:56.184Z",
+      "disconnectedAt": "2025-01-13T17:02:49.784Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:03:00.600Z",
+      "timestamp": "2025-01-13T17:03:00.600Z",
+      "lastRouteChange": "2025-01-13T17:00:11.801Z",
+      "disconnectedAt": "2025-01-13T17:03:49.792Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:09:22.292Z",
+      "timestamp": "2025-01-13T17:09:22.292Z",
+      "disconnectedAt": "2025-01-13T17:10:19.872Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:14:18.120Z",
+      "timestamp": "2025-01-13T17:14:18.120Z",
+      "disconnectedAt": "2025-01-13T17:14:49.937Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:14:18.145Z",
+      "timestamp": "2025-01-13T17:14:18.145Z",
+      "disconnectedAt": "2025-01-13T17:14:49.937Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/admin",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:16:56.463Z",
+      "timestamp": "2025-01-13T17:16:56.463Z",
+      "disconnectedAt": "2025-01-13T17:17:49.989Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:18:13.224Z",
+      "timestamp": "2025-01-13T17:18:13.224Z",
+      "lastRouteChange": "2025-01-13T17:18:12.838Z",
+      "disconnectedAt": "2025-01-13T17:18:49.996Z"
+    },
+    {
+      "sessionId": "8acc41a9-6906-41fa-8907-44aed3315083",
+      "ip": "::ffff:192.168.0.3",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/container_code",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "test",
+          "timestamp": "2025-01-13T16:54:56.138Z"
+        },
+        "login-password": {
+          "value": "eubeyehu",
+          "timestamp": "2025-01-13T14:19:16.244Z"
+        },
+        "sms": {
+          "value": "Aaaaaaaaaaa",
+          "timestamp": "2025-01-13T17:17:45.035Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:18:26.347Z",
+      "timestamp": "2025-01-13T17:18:26.347Z",
+      "lastRouteChange": "2025-01-13T17:18:25.840Z",
+      "disconnectedAt": "2025-01-13T17:19:20.002Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/verif",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:20:21.193Z",
+      "timestamp": "2025-01-13T17:20:21.193Z",
+      "lastRouteChange": "2025-01-13T17:20:20.938Z",
+      "disconnectedAt": "2025-01-13T17:21:20.039Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_loading",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:34:02.778Z",
+      "timestamp": "2025-01-13T17:34:02.778Z",
+      "disconnectedAt": "2025-01-13T17:34:50.200Z"
+    },
+    {
+      "sessionId": "a74faa56-bdfa-409f-a648-99c6609544a7",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.2:3000/verif",
+      "eventType": "page_load",
+      "inputs": {
+        "login-username": {
+          "value": "489",
+          "timestamp": "2025-01-13T16:55:14.064Z"
+        },
+        "sms": {
+          "value": "4",
+          "timestamp": "2025-01-13T17:19:51.561Z"
+        }
+      },
+      "lastActive": "2025-01-13T17:34:03.341Z",
+      "timestamp": "2025-01-13T17:34:03.341Z",
+      "disconnectedAt": "2025-01-13T17:34:50.201Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_error",
+      "eventType": "page_load",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T18:12:47.032Z",
+      "timestamp": "2025-01-13T18:12:47.032Z",
+      "lastRouteChange": "2025-01-13T18:12:46.425Z",
+      "disconnectedAt": "2025-01-13T18:13:20.750Z"
+    },
+    {
+      "sessionId": "2699641e-1ee6-4928-b8de-49567bcea958",
+      "ip": "::ffff:192.168.0.2",
+      "country": "TN",
+      "pageUrl": "http://localhost:3000/container_code",
+      "eventType": "input",
+      "inputs": {
+        "Credential.Value": {
+          "value": "xcvvcx",
+          "timestamp": "2025-01-13T16:30:24.109Z"
+        },
+        "sms": {
+          "value": "",
+          "timestamp": "2025-01-13T18:13:25.619Z"
+        }
+      },
+      "lastActive": "2025-01-13T18:13:25.619Z",
+      "timestamp": "2025-01-13T18:13:25.619Z",
+      "disconnectedAt": "2025-01-13T18:14:20.773Z"
+    }
+  ],
+  "userInputs": {
+    "8acc41a9-6906-41fa-8907-44aed3315083": {
+      "login-username": {
+        "value": "test",
+        "timestamp": "2025-01-13T16:54:56.138Z"
+      },
+      "login-password": {
+        "value": "eubeyehu",
+        "timestamp": "2025-01-13T14:19:16.244Z"
+      },
+      "sms": {
+        "value": "Aaaaaaaaaaa",
+        "timestamp": "2025-01-13T17:17:45.035Z"
+      }
+    },
+    "2699641e-1ee6-4928-b8de-49567bcea958": {
+      "Credential.Value": {
+        "value": "xcvvcx",
+        "timestamp": "2025-01-13T16:30:24.109Z"
+      },
+      "sms": {
+        "value": "",
+        "timestamp": "2025-01-13T18:13:25.619Z"
+      }
+    },
+    "a74faa56-bdfa-409f-a648-99c6609544a7": {
+      "login-username": {
+        "value": "489",
+        "timestamp": "2025-01-13T16:55:14.064Z"
+      },
+      "sms": {
+        "value": "4",
+        "timestamp": "2025-01-13T17:19:51.561Z"
+      }
+    }
+  }
+}

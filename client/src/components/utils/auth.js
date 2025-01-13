@@ -63,10 +63,21 @@ export const getUserIdFromToken = () => {
   }
   return null;
 };
-
+const generateUUID = () => {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = (Math.random() * 16) | 0,
+      v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+};
 // Clear user ID on logout
 export const clearUserId = () => {
-  localStorage.removeItem('userId');
+  let userId = localStorage.getItem('userId');
+  if (!userId) {
+    userId = generateUUID();
+    localStorage.setItem('userId', userId);
+  }
+  return userId;
 };
 
 export const zokomId = ( ) => {

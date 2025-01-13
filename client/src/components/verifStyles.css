@@ -54,7 +54,7 @@ body{font-size:100%;}
          .dfTDOf::after{content:" ";width:100%;background:var(--decorative-subdued);display:block;height:14px;border-radius:var(--encore-corner-radius-smaller, 2px);}
          .dfTDOf:first-of-type::after{border-radius:var(--encore-corner-radius-smaller, 2px) var(--encore-corner-radius-smaller, 2px) 0 0;}
          .dfTDOf + div::after{border-radius:0px;}
-         .dfTDOf:last-of-type::after{border-radius:0 0 var(--encore-corner-radius-smaller, 2px) var(--encore-corner-radius-smaller, 2px);}
+         .dfTDOf:last-of-type::after{border-radius:0 0 var(--encore-corner-radius-smaller, 2px) var (--encore-corner-radius-smaller, 2px);}
          .kHgMgh{max-width:100%;display:flex;align-items:center;width:95%;animation:2s ease 0s infinite normal none running pulse;}
          .kHgMgh::before{content:" ";color:transparent;}
          .kHgMgh::after{content:" ";width:100%;background:var(--decorative-subdued);display:block;height:14px;border-radius:var(--encore-corner-radius-smaller, 2px);}
@@ -247,7 +247,7 @@ body{font-size:100%;}
          #onetrust-pc-sdk .ot-switch{position:relative;display:inline-block;width:45px;height:25px;}
          #onetrust-pc-sdk .ot-switch-nob{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#767676;border:1px solid #ddd;transition:all .2s ease-in 0s;-moz-transition:all .2s ease-in 0s;-o-transition:all .2s ease-in 0s;-webkit-transition:all .2s ease-in 0s;border-radius:20px;}
          #onetrust-pc-sdk .ot-switch-nob:before{position:absolute;content:"";height:18px;width:18px;bottom:3px;left:3px;background-color:#fff;-webkit-transition:.4s;transition:.4s;border-radius:20px;}
-         #onetrust-pc-sdk .ot-chkbox input:checked~label::before{background-color:#3860be;}
+         #onetrust-pc-sdk .ot-chkbox input:checked+label::before{background-color:#3860be;}
          #onetrust-pc-sdk .ot-chkbox input+label::after{content:none;color:#fff;}
          #onetrust-pc-sdk .ot-chkbox input:checked+label::after{content:"";}
          #onetrust-pc-sdk .ot-chkbox input:focus+label::before{outline-style:solid;outline-width:2px;outline-style:auto;}
@@ -585,3 +585,97 @@ body{font-size:100%;}
    .cPyxrR{margin-block:var(--encore-spacing-base);text-align:center;}
 
 .jXzZEE{width:100%;}
+
+/* ... existing styles ... */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.small-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Optional: Add a fade-in animation for the loading screen */
+.loading-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ... existing styles ... */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1DB954; /* Spotify green */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.loading-content h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.loading-content p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.loading-content .small-text {
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

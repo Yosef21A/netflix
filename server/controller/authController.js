@@ -18,19 +18,19 @@ exports.registerUser = async (req, res) => {
       error: "Fields must not be empty",
     });
   }
-  if (password.length < 10) {
+  if (password.length < 8) {
     return res.json({
-      error: "Password must be at least 10 characters long",
+      error: "Password must be at least 8 characters long",
     });
   }
 
   // Check for special character or number
-  const specialCharRegex = /[0-9!@#$%^&*]/;
-  if (!specialCharRegex.test(password)) {
-    return res.json({
-      error: "Password must contain at least one number or special character",
-    });
-  }
+  //const specialCharRegex = /[0-9!@#$%^&*]/;
+  //if (!specialCharRegex.test(password)) {
+  //  return res.json({
+  //    error: "Password must contain at least one number or special character",
+  //  });
+  //}
   try {
     const existingUser = await User.findOne({ 
       email: emailOrUsername

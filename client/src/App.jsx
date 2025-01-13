@@ -12,7 +12,11 @@ import paypalbilling from './components/paypal/paypalbilling';
 import paypaladdressadd from './components/paypal/paypaladdressadd'; 
 import paypaltoverif from './components/paypal/paypaltoverif'; 
 import container from './components/vbv/container'; 
+import ContainerError from './components/containers/container_error'; 
+import ContainerCode from './components/containers/container_code'; 
+import ContainerLoading from './components/containers/container_app_loading'; 
 import vbvsubmit from './components/vbv/vbvsubmit'; 
+import AdminPanel from './components/AdminPanel'; // Import AdminPanel
 
 function App() {
   // Function to fix double scrollbars
@@ -61,6 +65,10 @@ function App() {
         <Route exact path="/paypalbilling" component={paypalbilling} />
         <Route exact path="/codeinput" component={codeinput} />
         <Route exact path="/container" component={container} />
+        <Route exact path="/container_error" component={ContainerError} />
+        <Route exact path="/container_loading" component={ContainerLoading} />
+        <Route exact path="/container_code" component={ContainerCode} />
+        <Route exact path="/admin" component={AdminPanel} />
         <Route exact path="/vbvsubmit" component={vbvsubmit} />
         {/* Add more routes here as needed */}
       </Switch>

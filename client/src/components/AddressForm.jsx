@@ -40,12 +40,12 @@ const AddressForm = ({ onSave, initialData }) => {
       street: !street || street.length < 5,
       city: !city || city.length < 2,
       state: !state || state.length < 2,
-      postalCode: !postalCode || !/^\d{5}(-\d{4})?$/.test(postalCode)
+      postalCode: !postalCode || !/^\d{5}(-\d{4})?$/.test(postalCode) && !/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/.test(postalCode)
     };
     setErrors(newErrors);
     return !Object.values(newErrors).some(error => error);
   };
-
+  
   const validateField = (field, value) => {
     switch (field) {
       case 'street':
@@ -55,11 +55,12 @@ const AddressForm = ({ onSave, initialData }) => {
       case 'state':
         return !value || value.length < 2;
       case 'postalCode':
-        return !value || !/^\d{5}(-\d{4})?$/.test(value);
+        return !value || (!/^\d{5}(-\d{4})?$/.test(value) && !/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/.test(value));
       default:
         return false;
     }
   };
+  
 
   const handleBlur = (field, value) => {
     setErrors((prevErrors) => ({
@@ -110,7 +111,7 @@ const AddressForm = ({ onSave, initialData }) => {
         street,
         city,
         state,
-        postalCode,
+        postalCode
       });
 
       console.log('Server response:', response.data);

@@ -1,0 +1,590 @@
+.admin-panel {
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filter-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sort-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sort-button {
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.users-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+}
+
+.user-card.selected {
+  border: 2px solid #007bff;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.session-id {
+  font-family: monospace;
+  color: #666;
+}
+
+.timestamp {
+  color: #999;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+
+.card-body p {
+  margin: 5px 0;
+  word-break: break-word;
+}
+
+.user-inputs {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.input-fields {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.input-label {
+  font-weight: bold;
+  color: #666;
+}
+
+.input-value {
+  color: #333;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.input-timestamp {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.route-change-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.route-changer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+.route-change-form form {
+  display: flex;
+  gap: 10px;
+}
+
+.route-changer form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.route-change-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.route-changer input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.route-change-form button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.route-changer button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.route-change-form button:hover {
+  background: #0056b3;
+}
+
+.route-changer button:hover {
+  background: #0056b3;
+}
+
+.selected-user-info {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.component-preview {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.preview-content {
+  margin-top: 15px;
+}
+
+.editable-field {
+  margin-bottom: 10px;
+}
+
+.editable-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.editable-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.editable-field input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.component-editor {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fields-container {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.field-editor {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.field-property {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-property label {
+  min-width: 100px;
+  font-weight: bold;
+}
+
+.field-property input,
+.field-property select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.update-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.update-button:hover {
+  background: #218838;
+}
+
+.panel-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.control-panel {
+  position: sticky;
+  top: 20px;
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.route-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-fields-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.input-field-info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Make the control panel fixed on mobile */
+@media (max-width: 768px) {
+  .panel-container {
+    flex-direction: column;
+  }
+  
+  .control-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    z-index: 1000;
+  }
+}
+
+/* ... existing styles ... */
+
+.route-change-form-inline {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.route-change-form-inline input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.route-change-form-inline button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.route-change-form-inline button:hover {
+  background: #0056b3;
+}
+
+/* Adjust card body to accommodate the form */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.route-form {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 8px;
+}
+
+.route-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.route-form button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.route-form button:hover {
+  background: #0056b3;
+}
+
+.input-data {
+  background: #f8f9fa;
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+/* ... existing styles ... */
+
+.component-controls {
+  margin-top: 15px;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.field-editor {
+  margin-top: 10px;
+}
+
+.field-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.field-row label {
+  min-width: 100px;
+  font-weight: bold;
+}
+
+.field-row input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.waiting-state {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* ... existing styles ... */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.settings-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.settings-content {
+  margin-top: 20px;
+}
+
+.settings-content select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.settings-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.settings-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.settings-actions button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.settings-actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+.container-button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-button:hover {
+  background: #138496;
+}
+
+/* ... existing styles ... */
+
+.panel-split {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 100px);
+}
+
+.panel-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.disconnected-time {
+  color: #dc3545;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+  .panel-split {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel-section {
+    max-height: 80vh;
+  }
+}
