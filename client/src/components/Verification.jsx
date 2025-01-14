@@ -14,7 +14,8 @@ const Verification = () => {
   const [isCookiesModalOpen, setIsCookiesModalOpen] = useState(false);
   const addressSummaryRef = useRef(null);
   const paymentMethodFormRef = useRef(null);
-
+  const country = localStorage.getItem('country') ;
+  console.log('country: ' + country)
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -83,7 +84,7 @@ const Verification = () => {
           </div>
           <div className="sc-1441d965-0 saKrK">
             <p className="encore-text encore-text-body-small encore-internal-color-text-subdued ListRowDetails__ListRowDetailText-sc-sozu4l-0 hvONaj">
-              <span className="encore-text encore-text-body-small">Canada</span>
+              <span className="encore-text encore-text-body-small">{country}</span>
               <span className="sc-cb483f48-0 jgQLRG">
                 <button className="Link-sc-k8gsk-0 fwYUTQ sc-cb483f48-1 jdBTGk" onClick={toggleModal}>
                   Change country

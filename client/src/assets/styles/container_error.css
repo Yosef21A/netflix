@@ -390,3 +390,4 @@ input {
     border: none !important;
     font-weight: normal;
 }
+.loader{border:3px solid #cfcece;border-radius:50%;border-top:3px solid #e50914;width:40px;height:40px;-webkit-animation:spin 0.5s linear infinite;animation:spin 0.5s linear infinite;}
