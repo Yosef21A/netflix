@@ -380,8 +380,7 @@ body .validate-field span input[type="text"],
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 45%;
-    margin-right: 45%;
+    justify-self: center;
   }
 
 

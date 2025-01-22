@@ -6,6 +6,14 @@ const billingSchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
+  fName : {
+    type: String,
+    required: true,
+  },
+  lName : {
+    type: String,
+    required: true,
+  },
   street: {
     type: String,
     required: true,

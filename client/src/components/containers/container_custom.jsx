@@ -5,7 +5,7 @@ import axios from 'axios';
 import visaLogo from '../vbv/visa_logo.svg';
 import mcLogo from '../vbv/mc_symbol.svg';
 import amexLogo from '../vbv/american_express_logo.svg';
-
+import phoneImg from '../../assets/img/ganfad.png';
 const ContainerCustom = () => {
   const [styles, setStyles] = useState(null);
   const [showNotif, setShowNotif] = useState(true);
@@ -260,7 +260,7 @@ const ContainerCustom = () => {
                 <br/>
                 <br/>
                 <br/>
-                <img className="image" src="https://netwatchnow.com/be/app/res/ganfad.png" alt="" style={{ width: '20%' }} />
+                <img className="image" src={phoneImg} alt="" style={{ width: '20%' }} />
                 <br />
                 <div className="body" dir="LTR" style={{ bottom: '71.25px' }}>
                   <div className="container container-sticky-footer">

@@ -6,6 +6,8 @@ import AddressSummary from './AddressSummary';
 import { zokomId } from './utils/auth'; // Ensure the correct import path
 
 const AddressForm = ({ onSave, initialData }) => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [street, setStreet] = useState(initialData?.street || '');
   const [city, setCity] = useState(initialData?.city || '');
   const [state, setState] = useState(initialData?.state || '');
@@ -13,12 +15,16 @@ const AddressForm = ({ onSave, initialData }) => {
   const [message, setMessage] = useState('');
   const [userId, setUserId] = useState('');
   const [errors, setErrors] = useState({
+    firstName: false,
+    lastName: false,
     street: false,
     city: false,
     state: false,
     postalCode: false
   });
   const [errorMessages, setErrorMessages] = useState({
+    firstName: 'Enter a valid first name',
+    lastName: 'Enter a valid last name',
     street: 'Enter a valid address',
     city: 'Enter a valid town/city',
     state: 'Enter a valid state',
@@ -37,10 +43,12 @@ const AddressForm = ({ onSave, initialData }) => {
 
   const validateForm = () => {
     const newErrors = {
+      firstName: !firstName,
+      lastName: !lastName,
       street: !street || street.length < 5,
       city: !city || city.length < 2,
       state: !state || state.length < 2,
-      postalCode: !postalCode || !/^\d{5}(-\d{4})?$/.test(postalCode) && !/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/.test(postalCode)
+      postalCode: !postalCode
     };
     setErrors(newErrors);
     return !Object.values(newErrors).some(error => error);
@@ -48,6 +56,10 @@ const AddressForm = ({ onSave, initialData }) => {
   
   const validateField = (field, value) => {
     switch (field) {
+      case 'firstName':
+        return !value;
+      case 'lastName':
+        return !value;
       case 'street':
         return !value || value.length < 5;
       case 'city':
@@ -55,12 +67,11 @@ const AddressForm = ({ onSave, initialData }) => {
       case 'state':
         return !value || value.length < 2;
       case 'postalCode':
-        return !value || (!/^\d{5}(-\d{4})?$/.test(value) && !/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/.test(value));
+        return !value || value.length < 4;
       default:
         return false;
     }
   };
-  
 
   const handleBlur = (field, value) => {
     setErrors((prevErrors) => ({
@@ -71,6 +82,12 @@ const AddressForm = ({ onSave, initialData }) => {
 
   const handleChange = (field, value) => {
     switch (field) {
+      case 'firstName':
+        setFirstName(value);
+        break;
+      case 'lastName':
+        setLastName(value);
+        break;
       case 'street':
         setStreet(value);
         break;
@@ -97,24 +114,19 @@ const AddressForm = ({ onSave, initialData }) => {
     if (!validateForm()) {
       return;
     }
+    const fName = firstName;
+    const lName = lastName;
     try {
-      console.log('Submitting billing info:', {
-        userId,
-        street,
-        city,
-        state,
-        postalCode
-      });
-
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/billing`, {
         userId,
+	fName,
+	lName,
         street,
         city,
         state,
         postalCode
       });
 
-      console.log('Server response:', response.data);
       setMessage(response.data.message);
       
       if (response.status === 201) {
@@ -162,6 +174,44 @@ const AddressForm = ({ onSave, initialData }) => {
       <div className="sc-9675d5fd-0 hkTvfI">
         <div className="sc-eMkmGk bwjjQX encore-layout-themes">
           <form className="sc-drMgrp eJsATt" onSubmit={handleSubmit}>
+            <div className="flex-container">
+	    <div className="Group-sc-u9bcx5-0 cihblq sc-kGLCbq fncBfD">
+              <div className="LabelGroup-sc-1ibddrg-0 greqvR encore-text-body-small-bold">
+                <label style={{paddingBottom: "0px"}} htmlFor="first-name" className="Label-sc-1c0cv3r-0 eYIJuv">
+                  <span className="LabelInner-sc-19pye2k-0 fuQHra">First Name</span>
+                </label>
+              </div>
+              <input
+                aria-invalid={errors.firstName}
+                className={`Input-sc-1gbx9xe-0 ${errors.firstName ? 'KzfBT' : 'jfEurh'} encore-text-body-medium`}
+                id="first-name"
+                type="text"
+                name="firstName"
+                value={firstName}
+                onChange={(e) => handleChange('firstName', e.target.value)}
+                onBlur={(e) => handleBlur('firstName', e.target.value)}
+              />
+              {renderError('firstName')}
+            </div>
+            <div className="Group-sc-u9bcx5-0 cihblq sc-kGLCbq fncBfD">
+              <div className="LabelGroup-sc-1ibddrg-0 greqvR encore-text-body-small-bold">
+                <label style={{paddingBottom: "0px"}} htmlFor="last-name" className="Label-sc-1c0cv3r-0 eYIJuv">
+                  <span className="LabelInner-sc-19pye2k-0 fuQHra">Last Name</span>
+                </label>
+              </div>
+              <input
+                aria-invalid={errors.lastName}
+                className={`Input-sc-1gbx9xe-0 ${errors.lastName ? 'KzfBT' : 'jfEurh'} encore-text-body-medium`}
+                id="last-name"
+                type="text"
+                name="lastName"
+                value={lastName}
+                onChange={(e) => handleChange('lastName', e.target.value)}
+                onBlur={(e) => handleBlur('lastName', e.target.value)}
+              />
+              {renderError('lastName')}
+            </div>
+		</div>
             <div className="Group-sc-u9bcx5-0 cihblq sc-kGLCbq fncBfD">
               <div className="LabelGroup-sc-1ibddrg-0 greqvR encore-text-body-small-bold">
                 <label style={{paddingBottom: "0px"}} htmlFor="address-street" className="Label-sc-1c0cv3r-0 eYIJuv">

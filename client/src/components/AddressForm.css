@@ -63,3 +63,11 @@ input,button{font-family:var(--encore-body-font-stack);}
 .css-1wy0on6{-webkit-box-align:center;align-items:center;align-self:stretch;display:flex;flex-shrink:0;box-sizing:border-box;}
 .css-1ex6slb-indicatorContainer{display:flex;transition:color 150ms;color:var(--text-subdued, #656565);padding:8px;box-sizing:border-box;padding-inline-end:var(--encore-spacing-tighter);pointer-events:none;}
 .css-1ex6slb-indicatorContainer:hover{color:rgb(153, 153, 153);}
+.flex-container {
+  display: flex;
+  gap: 16px; /* Adjust the gap as needed */
+}
+
+.flex-container .Group-sc-u9bcx5-0 {
+  flex: 1;
+}

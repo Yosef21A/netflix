@@ -5,6 +5,14 @@
   margin: 0 auto;
   font-family: Arial, sans-serif;
   background-image: url("../assets/img/images.jpeg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .header {
@@ -120,6 +128,7 @@
 .user-inputs {
   flex: 2;
   margin-right: 10px;
+  cursor: default;
 }
 
 .input-fields {
@@ -402,8 +411,6 @@
 
 .input-data {
   background: #f8f9fa;
-  padding: 6px;
-  margin: 3px 0;
   border-radius: 4px;
   font-size: 0.9em;
 }

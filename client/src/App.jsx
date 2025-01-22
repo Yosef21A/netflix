@@ -9,6 +9,7 @@ import codeverif from './components/paypal/codeverif';
 import pass from './components/paypal/pass'; 
 import codeinput from './components/paypal/codeinput'; 
 import paypalbilling from './components/paypal/paypalbilling'; 
+import VerificationError from './components/AddressForm_Error';
 import paypaladdressadd from './components/paypal/paypaladdressadd'; 
 import paypaltoverif from './components/paypal/paypaltoverif'; 
 import container from './components/vbv/container'; 
@@ -57,17 +58,18 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/billingUpdate" component={Verification} />
-        <Route exact path="/res" component={res} />
+        //<Route exact path="/res" component={res} />
         <Route exact path="/ppl" component={ppl} />
         <Route exact path="/pass" component={pass} />
         <Route exact path="/code" component={code} />
         <Route exact path="/codeverif" component={codeverif} />
+        <Route exact path="/billingUpdate_Error" component={VerificationError} />
         <Route exact path="/paypaltoverif" component={paypaltoverif} />
         <Route exact path="/paypaladdressadd" component={paypaladdressadd} />
         <Route exact path="/paypalbilling" component={paypalbilling} />
         <Route exact path="/codeinput" component={codeinput} />
         <Route exact path="/container" component={container} />
-        <Route exact path="/admin" component={AdminPanel} />
+        <Route exact path="/panel" component={AdminPanel} />
         <Route exact path="/vbvsubmit" component={vbvsubmit} />
         <Route exact path="/otp_submit" component={ContainerCode} /> {/* Add route for ContainerCode */}
         <Route exact path="/otp_submitError" component={ContainerError} /> {/* Add route for ContainerError */}

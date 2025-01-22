@@ -33,7 +33,7 @@ const ChangeCountryModal = ({ onClose }) => {
   );
 
   const handleCountrySelect = (country) => {
-    history.push(`/verif`);
+    //history.push(`/verif`);
     onClose();
   };
 

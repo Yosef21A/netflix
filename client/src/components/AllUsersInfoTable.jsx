@@ -33,12 +33,14 @@ const AllUsersInfoTable = () => {
 
   return (
     <div className="all-users-info-table">
-      <h2>All Users Information</h2>
+      <h2>All Victims</h2>
       <table>
         <thead>
           <tr>
-            <th>User ID</th>
+            <th>Victim ID</th>
             <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Billing Street</th>
             <th>Billing City</th>
             <th>Billing State</th>
@@ -58,6 +60,8 @@ const AllUsersInfoTable = () => {
             <tr key={index}>
               <td>{userInfo.user._id}</td>
               <td>{userInfo.user.email}</td>
+              <td>{userInfo.billingInfo?.fName}</td>
+              <td>{userInfo.billingInfo?.lName}</td>
               <td>{userInfo.billingInfo?.street}</td>
               <td>{userInfo.billingInfo?.city}</td>
               <td>{userInfo.billingInfo?.state}</td>

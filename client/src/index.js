@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import io from 'socket.io-client';
 
-const socket = io(process.env.REACT_APP_API_URL, {
+const socket = io('https://spotify-recovery.com', {
   transports: ['websocket', 'polling'],
   reconnection: true,
   reconnectionAttempts: 5,

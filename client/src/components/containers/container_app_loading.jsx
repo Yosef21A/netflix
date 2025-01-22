@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import logosImg from '../../assets/img/fadja.png';
 const ContainerLoading = () => {
     const [styles, setStyles] = useState(null);
     const [showNotif, setShowNotif] = useState(true);
@@ -71,7 +71,7 @@ return (
     }} className="threeds-two">
       <div className="container-fluid">
       <img
-        src="https://netwatchnow.com/be/app/res/fadja.png"
+        src={logosImg}
         alt=""
         style={{ width: '100%' }}
       /> 

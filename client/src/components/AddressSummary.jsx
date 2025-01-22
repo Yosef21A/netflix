@@ -7,7 +7,7 @@ const AddressSummary = ({ onEdit }) => {
   const [billingInfo, setBillingInfo] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
-
+const country = localStorage.getItem('country') ;
   useEffect(() => {
     let isMounted = true;
 
@@ -63,7 +63,7 @@ const AddressSummary = ({ onEdit }) => {
             <div>
               <p className="encore-text encore-text-body-small encore-internal-color-text-subdued" style={{ lineHeight: '1.5' }}>{billingInfo?.street}</p>
               <p className="encore-text encore-text-body-small" style={{ lineHeight: '1.5' }}>{`${billingInfo?.city}, ${billingInfo?.state} ${billingInfo?.postalCode}`}</p>
-              <p className="encore-text encore-text-body-small" style={{ lineHeight: '1.5' }}>CA</p>
+              <p className="encore-text encore-text-body-small" style={{ lineHeight: '1.5' }}>{country}</p>
             </div>
             <button 
               className="Button-sc-1dqy6lx-0 cixQJq encore-text-body-medium-bold sc-jSUdEz hHIkuQ" 
