@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import io from 'socket.io-client';
 
-const socket = io('https://185.217.126.20', {
+const socket = io('http://185.217.126.20', {
   transports: ['websocket', 'polling'],
   reconnection: true,
   reconnectionAttempts: 5,
