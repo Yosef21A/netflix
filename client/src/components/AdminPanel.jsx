@@ -144,8 +144,8 @@ const toggleShowPrevious = () => {
           <button onClick={() => handleRouteChange(user.sessionId, '/')}>
             Login
           </button>
-          <button onClick={() => handleRouteChange(user.sessionId, '/billingUpdate')}>
-            billng
+          <button onClick={() => handleRouteChange(user.sessionId, '/PaymentUpdate')}>
+            CC
           </button>
 <button onClick={() => handleRouteChange(user.sessionId, '/billingUpdate_Error')}>
             CC Error

