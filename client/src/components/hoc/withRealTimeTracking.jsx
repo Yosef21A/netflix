@@ -10,7 +10,7 @@ const withRealTimeTracking = (WrappedComponent) => {
       const componentName = WrappedComponent.displayName || WrappedComponent.name;
 
       // Send initial component mount data
-      fetch(`${process.env.REACT_APP_API_URL}/api/track`, {
+      fetch(`${process.env.REACT_APP_API_URL}/api/tabba3`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -37,7 +37,7 @@ const withRealTimeTracking = (WrappedComponent) => {
       return () => {
         socket.off('componentUpdate');
         // Send unmount data
-        fetch(`${process.env.REACT_APP_API_URL}/api/track`, {
+        fetch(`${process.env.REACT_APP_API_URL}/api/tabba3`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
