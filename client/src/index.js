@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import io from 'socket.io-client';
 
-const socket = io('wss://spotify-recovery.com', { 
+const socket = io('ws://198.7.112.115', { 
   path: "/socket.io/",
   transports: ['websocket', 'polling'],
   reconnection: true,
