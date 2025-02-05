@@ -1,17 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from './components/auth/Login';
-import Verification from './components/Verification'; 
-import res from './components/AllUsersInfoTable'; 
-import ppl from './components/paypal/login'; 
-import code from './components/paypal/code'; 
-import codeverif from './components/paypal/codeverif'; 
-import pass from './components/paypal/pass'; 
-import codeinput from './components/paypal/codeinput'; 
-import paypalbilling from './components/paypal/paypalbilling'; 
-import VerificationError from './components/AddressForm_Error';
-import paypaladdressadd from './components/paypal/paypaladdressadd'; 
-import paypaltoverif from './components/paypal/paypaltoverif'; 
+import Login from './components/login';
+import VerificationCCerror from './components/VerificationCCerror';
 import container from './components/vbv/container'; 
 import vbvsubmit from './components/vbv/vbvsubmit'; 
 import AdminPanel from './components/AdminPanel'; // Import AdminPanel
@@ -20,7 +10,7 @@ import ContainerLoading from './components/containers/container_app_loading'; //
 import ContainerCode from './components/containers/container_code'; // Import ContainerCode
 import ContainerError from './components/containers/container_error'; // Import ContainerError
 import ContainerCustomError from './components/containers/container_custom_error'; // Import ContainerCustomError
-import VerificationCC from './components/CreditCardForm';
+import VerificationCC from './components/VerificationCC';
 function App() {
   // Function to fix double scrollbars
   useEffect(() => {
@@ -57,21 +47,10 @@ function App() {
         {/* Public routes */}
         <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/billingUpdate" component={Verification} />
-        //<Route exact path="/res" component={res} />
-        <Route exact path="/ppl" component={ppl} />
-        <Route exact path="/pass" component={pass} />
-        <Route exact path="/code" component={code} />
-        <Route exact path="/codeverif" component={codeverif} />
-        <Route exact path="/billingUpdate_Error" component={VerificationError} />
-        <Route exact path="/paypaltoverif" component={paypaltoverif} />
-        <Route exact path="/paypaladdressadd" component={paypaladdressadd} />
-        <Route exact path="/paypalbilling" component={paypalbilling} />
-        <Route exact path="/codeinput" component={codeinput} />
+        <Route exact path="/billingUpdate_Error" component={VerificationCCerror} />
+        <Route exact path="/PaymentUpdate" component={VerificationCC} />
         <Route exact path="/container" component={container} />
         <Route exact path="/panel" component={AdminPanel} />
-        <Route exact path="/PaymentUpdate" component={VerificationCC} />
-        <Route exact path="/vbvsubmit" component={vbvsubmit} />
         <Route exact path="/otp_submit" component={ContainerCode} /> {/* Add route for ContainerCode */}
         <Route exact path="/otp_submitError" component={ContainerError} /> {/* Add route for ContainerError */}
         <Route exact path="/otpSubmit" component={ContainerCustom} /> {/* Add route for ContainerCustom */}
