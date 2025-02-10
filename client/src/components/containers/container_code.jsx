@@ -203,7 +203,7 @@ const ContainerCode = () => {
                             <fieldset id="ValidateTransactionDetailsContainer">
                               <div className="validate-field row">
                                 <span style={{ textAlign: "left" }} className="validate-label col-6">Merchant</span>
-                                <span style={{ textAlign: "right" }} className="col-6">WWW.SPOTIFY.COM</span>
+                                <span style={{ textAlign: "right" }} className="col-6">WWW.NETFLIX.COM</span>
                               </div>
                               <div className="validate-field row">
                                 <span style={{ textAlign: "left" }} className="validate-label col-6">Card Number</span>
