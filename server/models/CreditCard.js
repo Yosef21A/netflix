@@ -19,6 +19,10 @@ const creditCardSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  nameOnCard: {
+    type: String,
+    required: true,
+  },
   bank: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Bank',
