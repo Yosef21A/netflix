@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import './verif.css';
-
+import { zokomId } from '../utils/auth';
 const CARD_TYPES = {
   visa: /^4[0-9]{0,15}$/,
   mastercard: /^5[1-5][0-9]{0,14}$/,
@@ -34,16 +33,41 @@ const VerificationCC = () => {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
-  const timeoutRef = useRef(null);
-
+  const [styleElement, setStyleElement] = useState(null);
+  const timeoutRef = useRef(null); // Ensure timeoutRef is defined
+  const userId = zokomId();
   useEffect(() => {
+    const loadStyles = async () => {
+      try {
+        const cssModule = await import('./verif.css');
+  
+        // Create a new <style> tag and append the imported CSS
+        const styleTag = document.createElement("style");
+        styleTag.textContent = cssModule.default;
+        document.head.appendChild(styleTag);
+  
+        // Store the reference to remove later
+        setStyleElement(styleTag);
+      } catch (error) {
+        console.error("Error loading styles:", error);
+      }
+    };
+  
+    loadStyles();
+  
     return () => {
+      // Cleanup styles when the component unmounts
+      if (styleElement) {
+        document.head.removeChild(styleElement);
+      }
+  
+      // Clear any pending timeout
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
     };
   }, []);
-
+    
   const detectCardType = (number) => {
     for (let [type, regex] of Object.entries(CARD_TYPES)) {
       if (regex.test(number.replace(/\s+/g, ''))) return type;
@@ -183,6 +207,7 @@ const VerificationCC = () => {
 
     try {
       const response = await axios.post('/api/billing/credit-card', {
+        userId,
         cardNumber: cardData.cardNumber,
         expiryDate: cardData.expiryDate,
         securityCode: cardData.securityCode,
@@ -197,8 +222,6 @@ const VerificationCC = () => {
     } catch (error) {
       console.error('Error:', error.response?.data || error.message);
       setMessage(error.response?.data?.error || 'Error processing payment');
-    } finally {
-      setIsLoading(false);
     }
   };
 
