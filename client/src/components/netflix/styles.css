@@ -454,6 +454,12 @@ input:focus:not(:focus-visible) ~ .form-control_controlChromeStyles__oy4jpq4,sel
 @media screen and (prefers-reduced-motion){
 .default-ltr-cache-14jsj4q .form-control_controlWrapperStyles__oy4jpq1>input{-webkit-transition:none;transition:none;}
 }
+input:focus ~ .form-control_labelStyles__oy4jpq5,
+input:not(:placeholder-shown) ~ .form-control_labelStyles__oy4jpq5 {
+    top: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1;
+}
 .default-ltr-cache-14jsj4q .form-control_labelStyles__oy4jpq5{font-size:1rem;color:rgba(255,255,255,0.7);left:1rem;line-height:1.5;right:1rem;top:1rem;}
 .default-ltr-cache-14jsj4q .form-control_controlWrapperStyles__oy4jpq1{width:100%;}
 .default-ltr-cache-14jsj4q .form-control_controlWrapperStyles__oy4jpq1{font-size:1rem;font-weight:400;color:rgb(255,255,255);}
