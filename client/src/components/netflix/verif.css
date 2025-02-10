@@ -1,4 +1,4 @@
-style>body{font-size:100%;}/*! CSS Used from: https://assets.nflxext.com/web/ffe/wp/less/pages/signup/simplicity/simplicity.e916a1b80fefe0c5f0ba.css */
+body{font-size:100%;}/*! CSS Used from: https://assets.nflxext.com/web/ffe/wp/less/pages/signup/simplicity/simplicity.e916a1b80fefe0c5f0ba.css */
 .logos{position:relative;}
 .logos .logoIcon{float:left;height:25px;margin:1px 6px 1px 0;width:39px;}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:sans-serif;}
@@ -664,6 +664,7 @@ svg-nfLogo .svg-icon-netflix-logo {
     color: #000;
     -webkit-text-fill-color: #000;
     opacity: 1;
+    border:1px solid #a1a1a1 !important;
   }
   
   /* Active state for the container */
