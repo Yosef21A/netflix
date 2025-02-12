@@ -183,7 +183,7 @@ const toggleShowPrevious = () => {
           ))}
         </div>
       </div>
-<button onClick={toggleShowPrevious}>
+<button style={{marginRight:"100px"}} onClick={toggleShowPrevious}>
         Toggle Previous Victims
       </button>
       <div id="show" className="panel-section">

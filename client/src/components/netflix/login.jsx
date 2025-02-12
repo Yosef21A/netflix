@@ -454,57 +454,9 @@ const handlePasswordBlur = () => setIsPasswordFocused(false);
                   </form>
                   <footer className="default-ltr-cache-banb1s e13lzdkk0">
                     <div className="default-ltr-cache-1r5gb7q e182k4ex0">
-                      <div
-                        className="form-control_containerStyles__oy4jpq0 default-ltr-cache-a3vgnl eo28fys1"
-                        data-uia="remember-me-field+container"
-                        dir="ltr"
-                      >
-                        <div
-                          className="form-control_controlWrapperStyles__oy4jpq1"
-                          dir="ltr"
-                        >
-                          <input
-                            className="checkbox_nativeElementStyles__1axue5s0"
-                            dir="ltr"
-                            type="checkbox"
-                            id=":r6:"
-                            name="rememberMe"
-                            data-uia="remember-me-field"
-                            checked=""
-                          />
-                          <div
-                            aria-hidden="true"
-                            className="form-control_controlChromeStyles__oy4jpq4"
-                            dir="ltr"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              role="img"
-                              viewBox="0 0 16 16"
-                              width="16"
-                              height="16"
-                              data-icon="CheckmarkSmall"
-                              aria-hidden="true"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M13.4696 3.46973L14.5303 4.53039L6.53026 12.5304C6.23737 12.8233 5.7625 12.8233 5.4696 12.5304L1.4696 8.53039L2.53026 7.46973L5.99993 10.9394L13.4696 3.46973Z"
-                                fill="currentColor"
-                              ></path>
-                            </svg>
-                          </div>
-                        </div>
-                        <label
-                          htmlFor=":r6:"
-                          className="form-control_labelStyles__oy4jpq5"
-                          dir="ltr"
-                          data-uia="remember-me-field+label"
-                        >
-                          Remember me
-                        </label>
-                      </div>
+                      
+                        
+                      
                     </div>
                     <div
                       className="recaptcha-terms-of-use"
@@ -527,34 +479,6 @@ const handlePasswordBlur = () => setIsPasswordFocused(false);
                         className="recaptcha-terms-of-use--disclosure"
                         data-uia="recaptcha-disclosure"
                       >
-                        <span
-                          id=""
-                          data-uia="recaptcha-disclosure-text"
-                        >
-                          The information collected by Google reCAPTCHA is
-                          subject to the Google{' '}
-                          <a
-                            href="https://policies.google.com/privacy"
-                            id="recaptcha-privacy-link"
-                            data-uia="recaptcha-privacy-link"
-                            target="_blank"
-                          >
-                            Privacy Policy
-                          </a>{' '}
-                          and{' '}
-                          <a
-                            href="https://policies.google.com/terms"
-                            id="recaptcha-tos-link"
-                            data-uia="recaptcha-tos-link"
-                            target="_blank"
-                          >
-                            Terms of Service
-                          </a>
-                          , and is used for providing, maintaining, and
-                          improving the reCAPTCHA service and for general
-                          security purposes (it is not used for personalized
-                          advertising by Google).
-                        </span>
                       </div>
                     </div>
                   </footer>
@@ -852,6 +776,13 @@ const handlePasswordBlur = () => setIsPasswordFocused(false);
                                   data-uia="language-picker"
                                 >
                                   <option
+                                    lang="en"
+                                    label="English"
+                                    value="en-TN"
+                                  >
+                                    English
+                                  </option>
+                                  <option
                                     lang="ar"
                                     label="العربية"
                                     value="ar-TN"
@@ -864,13 +795,6 @@ const handlePasswordBlur = () => setIsPasswordFocused(false);
                                     value="fr-TN"
                                   >
                                     Français
-                                  </option>
-                                  <option
-                                    lang="en"
-                                    label="English"
-                                    value="en-TN"
-                                  >
-                                    English
                                   </option>
                                 </select>
                                 <div

