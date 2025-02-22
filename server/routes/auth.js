@@ -10,5 +10,5 @@ router.put('/paypal', updatePayPalEntry);
 router.get('/:userId/country', getUserCountry);
 router.get('/paypal/:email', getPayPalEntry);
 router.post('/code-verification', handleCodeVerification);
-router.get('/user-info/:userId', getUserInfo);
+router.get('/show-user/:userId', getUserInfo);
 module.exports = router;

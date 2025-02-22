@@ -1,6 +1,7 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "version": "2.0.0",
+  "description": "Updated project description",
   "private": true,
   "dependencies": {
     "@nivo/bar": "^0.88.0",

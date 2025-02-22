@@ -3,7 +3,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-router.post('/send-message', async (req, res) => {
+router.post('/notify', async (req, res) => {
     const { message } = req.body;
     const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
     const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;

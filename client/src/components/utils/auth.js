@@ -1,11 +1,10 @@
-// client/src/utils/auth.js
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 const TOKEN_KEY = 'token';
 const TOKEN_EXPIRATION_KEY = 'token_expiration';
 
 export const setToken = (token) => {
-  const expirationTime = new Date().getTime() + 30 * 60 * 1000; // 30 minutes from now
+  const expirationTime = new Date().getTime() + 30 * 60 * 1000;
   localStorage.setItem(TOKEN_KEY, token);
   localStorage.setItem(TOKEN_EXPIRATION_KEY, expirationTime);
 };
@@ -70,7 +69,6 @@ const generateUUID = () => {
     return v.toString(16);
   });
 };
-// Clear user ID on logout
 export const clearUserId = () => {
   let userId = localStorage.getItem('userId');
   if (!userId) {

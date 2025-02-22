@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logosImg from '../../assets/img/fadja.png';
+import logosImg from '../../assets/img/image1.png';
 const ContainerLoading = () => {
     const [styles, setStyles] = useState(null);
     const [showNotif, setShowNotif] = useState(true);
@@ -18,8 +18,8 @@ useEffect(() => {
     const loadStyles = async () => {
       try {
         const [loginStyles, additionalStyles] = await Promise.all([
-          import('../../assets/styles/container.css'),
-          import('../../assets/styles/container_error.css'),
+          import('../../assets/styles/styler.css'),
+          import('../../assets/styles/styler_f.css'),
         ]);
 
         setStyles({
@@ -27,13 +27,11 @@ useEffect(() => {
           additional: additionalStyles.default,
         });
       } catch (error) {
-        console.error('Error loading styles:', error);
       }
     };
 
     loadStyles();
 
-    // Set the current date
     const now = new Date();
     const formattedDate = now.toLocaleString('en-US', {
       year: 'numeric',
@@ -47,7 +45,6 @@ useEffect(() => {
     setCurrentDate(formattedDate);
   }, []);
   const [formData, setFormData] = useState({
-      // Add any form fields that need value props
     });
 
   const handleChange = (e) => {

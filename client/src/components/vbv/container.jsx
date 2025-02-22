@@ -8,6 +8,24 @@ const Container = () => {
   const [logoUrl, setLogoUrl] = useState('');
   const [brandLogo, setBrandLogo] = useState('');
   const [links, setLinks] = useState({});
+  useEffect(() => {
+    const loadStyles = async () => {
+      try {
+        const [loginStyles, additionalStyles] = await Promise.all([
+          import('../../assets/styles/styler.css'),
+          import('../../assets/styles/three.css'),
+        ]);
+
+        setStyles({
+          login: loginStyles.default,
+          additional: additionalStyles.default,
+        });
+      } catch (error) {
+      }
+    };
+
+    loadStyles();
+  }, []);
 
   const handleContinue = (logoUrl, brandLogo, links) => {
     setLogoUrl(logoUrl);
@@ -17,7 +35,6 @@ const Container = () => {
   };
 
   const [formData, setFormData] = useState({
-    // Add any form fields that need value props
   });
 
   const handleChange = (e) => {
@@ -28,25 +45,6 @@ const Container = () => {
     }));
   };
 
-  useEffect(() => {
-    const loadStyles = async () => {
-      try {
-        const [loginStyles, additionalStyles] = await Promise.all([
-          import('../../assets/styles/container.css'),
-          import('../../assets/styles/3ds.css'),
-        ]);
-
-        setStyles({
-          login: loginStyles.default,
-          additional: additionalStyles.default,
-        });
-      } catch (error) {
-        console.error('Error loading styles:', error);
-      }
-    };
-
-    loadStyles();
-  }, []);
 
   return (
     <body className="page-template page-template-page-templates page-template-minimal-footer page-template-page-templatesminimal-footer-php page page-id-61 logged-in wp-custom-logo theme-underscores wc-braintree-body woocommerce-checkout woocommerce-page woocommerce-js no-sidebar webp-support">
