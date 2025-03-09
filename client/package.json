@@ -1,0 +1,89 @@
+{
+  "name": "client",
+  "version": "2.0.0",
+  "description": "Updated project description",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@nivo/bar": "^0.88.0",
+    "@nivo/core": "^0.88.0",
+    "@nivo/line": "^0.88.0",
+    "@nivo/pie": "^0.88.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
+    "braintree-web-drop-in-react": "^1.2.1",
+    "chart.js": "^3.9.1",
+    "crypto-js": "^4.2.0",
+    "ipinfo": "^1.5.1",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^3.1.2",
+    "libphonenumber-js": "^1.11.17",
+    "moment": "^2.30.1",
+    "notistack": "^3.0.1",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "socket.io-client": "^4.8.1",
+    "winston": "^3.17.0"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "start:rename": "node renameClasses.cjs",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts --openssl-legacy-provider build && node obfuscate.cjs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.20",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "cross-env": "^7.0.3",
+    "css-modules-require-hook": "^4.2.3",
+    "cssnano": "^4.1.11",
+    "file-loader": "^6.2.0",
+    "fs-extra": "^11.3.0",
+    "glob": "^11.0.1",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-replace": "^1.1.4",
+    "html-minifier-terser": "^7.2.0",
+    "javascript-obfuscator": "^4.1.1",
+    "postcss": "^8.5.3",
+    "postcss-class-rename": "^1.0.1",
+    "postcss-cli": "^11.0.0",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-obfuscator": "^1.6.1",
+    "postcss-url": "^10.1.3",
+    "purgecss": "^7.0.2",
+    "terser": "^5.39.0",
+    "webpack": "^4.42.0",
+    "webpack-assets-manifest": "^5.2.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}

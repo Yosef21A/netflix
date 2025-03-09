@@ -1,0 +1,294 @@
+.admin-panel {
+  padding: 40px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  
+  /* Ensure correct path */
+  background: url("../assets/img/images.jpeg") no-repeat center center;
+  
+  /* Improve background visibility */
+  background-size: cover;  /* or try 'contain' */
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  
+  /* Adjust overlay transparency */
+  background-color: rgba(0, 0, 0, 0.4); /* Darken for contrast */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Panel Sections */
+.panel-section {
+  background: rgba(255, 255, 255, 0.475);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 99%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #222;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+/* User Grid */
+.users-grid {
+  display: flex; 
+  flex-direction: column;  /* Stack items vertically */
+  gap: 15px;  /* Space between viewers */
+  width: 100%;
+}
+
+
+/* User Cards */
+.user-card {
+  background: rgba(255, 255, 255, 0.541);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.user-card {
+  display: flex;
+  flex-direction: row; /* Aligns everything in a row */
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: center; /* Keeps everything aligned */
+  gap: 20px; /* Adds space between sections */
+  padding: 15px;
+  width: 100%;
+}
+.input-data {
+  margin: 2px;
+  font-size: large;
+}
+/* Make each section take equal space */
+.user-info, .user-inputs, .route-buttons {
+  flex: 1; /* Ensures they take up equal space */
+}
+
+/* Ensure buttons are aligned properly */
+.route-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+p {
+  margin: 6px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #000000a9;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.route-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.route-buttons button {
+  flex: 1 1 120px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  font-size: 14px;
+}
+
+.route-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+button {
+  background: #920000ca;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #730000;
+}
+
+.hoverror {
+  background: #D9534F !important;
+}
+
+.hoverror:hover {
+  background: #C9302C !important;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal h2 {
+  color: #222;
+}
+
+.modal .input-config {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.modal .input-config select,
+.modal .input-config input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.modal button {
+  background: #28A745;
+  color: white;
+  margin-top: 12px;
+  margin: 6px;
+  font-size: 16px;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background: #218838;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-buttons {
+    flex-direction: column;
+  }
+}
+
+
+.route-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Ensure space between buttons */
+  justify-content: center; /* Center align buttons */
+  margin-top: 12px;
+}
+
+.route-buttons button {
+  flex: 1 1 calc(50% - 10px); /* Make buttons evenly sized */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px; /* Soft rounded corners */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Blue Buttons */
+.route-buttons button {
+  background: linear-gradient(135deg, #1dac00, #0e5600);
+  color: white;
+}
+
+.route-buttons button:hover {
+  background: linear-gradient(135deg, #ddd500, #0e5600);
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Error (Red) Buttons */
+.hoverror {
+  background: linear-gradient(135deg, #c9302c, #dc070062 ) !important;
+  color: white;
+}
+
+.hoverror:hover {
+  background: linear-gradient(135deg, #c9302c, #b41414) !important;
+  transform: translateY(-2px);
+}
+
+/* Out Button */
+.route-buttons button:last-child {
+  background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+.route-buttons button:last-child:hover {
+  background: linear-gradient(135deg, #495057, #343a40);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .route-buttons {
+    flex-direction: column;
+  }
+  .route-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .user-info, .user-inputs, .route-buttons {
+    width: 100%;
+  }
+
+  /* Smaller Buttons for Mobile */
+  .route-buttons button {
+    padding: 5px 8px;
+    font-size: 11px;
+    min-width: 70px;
+  }
+
+  /* Reduce Input & Card Sizes */
+  .user-inputs input {
+    padding: 4px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,957 @@
+{
+  "activeUsers": [],
+  "previousUsers": [
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:53:11.605Z",
+      "timestamp": "2025-03-09T14:53:11.605Z",
+      "disconnectedAt": "2025-03-09T14:53:11.605Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:53:06.900Z",
+      "timestamp": "2025-03-09T14:53:06.900Z",
+      "disconnectedAt": "2025-03-09T14:53:06.900Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:52:59.326Z",
+      "timestamp": "2025-03-09T14:52:59.326Z",
+      "disconnectedAt": "2025-03-09T14:52:59.326Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:52:04.327Z",
+      "timestamp": "2025-03-09T14:52:04.327Z",
+      "disconnectedAt": "2025-03-09T14:52:04.327Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:51:57.719Z",
+      "timestamp": "2025-03-09T14:51:57.719Z",
+      "disconnectedAt": "2025-03-09T14:51:57.719Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:51:54.510Z",
+      "timestamp": "2025-03-09T14:51:54.510Z",
+      "disconnectedAt": "2025-03-09T14:51:54.510Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:48:57.531Z",
+      "timestamp": "2025-03-09T14:48:57.531Z",
+      "disconnectedAt": "2025-03-09T14:51:27.101Z"
+    },
+    {
+      "clientSessionID": "6ecc93-1d86-cab351",
+      "ip": "136.144.17.14",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:47:05.386Z",
+      "timestamp": "2025-03-09T14:47:05.386Z",
+      "disconnectedAt": "2025-03-09T14:49:27.059Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:48:56.034Z",
+      "timestamp": "2025-03-09T14:48:56.034Z",
+      "disconnectedAt": "2025-03-09T14:48:56.034Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:48:03.364Z",
+      "timestamp": "2025-03-09T14:48:03.364Z",
+      "disconnectedAt": "2025-03-09T14:48:03.364Z"
+    },
+    {
+      "clientSessionID": "daaaa0-ab79-4829fa",
+      "ip": "136.144.17.4",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:44:52.275Z",
+      "timestamp": "2025-03-09T14:44:52.275Z",
+      "disconnectedAt": "2025-03-09T14:47:00.345Z"
+    },
+    {
+      "clientSessionID": "03b650-5057-d97b83",
+      "ip": "216.73.162.11",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:43:39.782Z",
+      "timestamp": "2025-03-09T14:43:39.782Z",
+      "disconnectedAt": "2025-03-09T14:46:06.821Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:55.786Z",
+      "timestamp": "2025-03-09T14:45:55.786Z",
+      "disconnectedAt": "2025-03-09T14:45:55.786Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:44.835Z",
+      "timestamp": "2025-03-09T14:45:44.835Z",
+      "disconnectedAt": "2025-03-09T14:45:44.835Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:40.253Z",
+      "timestamp": "2025-03-09T14:45:40.253Z",
+      "disconnectedAt": "2025-03-09T14:45:40.253Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:35.352Z",
+      "timestamp": "2025-03-09T14:45:35.352Z",
+      "disconnectedAt": "2025-03-09T14:45:35.352Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:16.334Z",
+      "timestamp": "2025-03-09T14:45:16.334Z",
+      "disconnectedAt": "2025-03-09T14:45:16.334Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:13.912Z",
+      "timestamp": "2025-03-09T14:45:13.912Z",
+      "disconnectedAt": "2025-03-09T14:45:13.912Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:10.960Z",
+      "timestamp": "2025-03-09T14:45:10.960Z",
+      "disconnectedAt": "2025-03-09T14:45:10.960Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:09.603Z",
+      "timestamp": "2025-03-09T14:45:09.603Z",
+      "disconnectedAt": "2025-03-09T14:45:09.603Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:06.322Z",
+      "timestamp": "2025-03-09T14:45:06.322Z",
+      "disconnectedAt": "2025-03-09T14:45:06.322Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:45:03.207Z",
+      "timestamp": "2025-03-09T14:45:03.207Z",
+      "disconnectedAt": "2025-03-09T14:45:03.207Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:44:20.052Z",
+      "timestamp": "2025-03-09T14:44:20.052Z",
+      "disconnectedAt": "2025-03-09T14:44:20.052Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:44:12.256Z",
+      "timestamp": "2025-03-09T14:44:12.256Z",
+      "disconnectedAt": "2025-03-09T14:44:12.256Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:43:59.844Z",
+      "timestamp": "2025-03-09T14:43:59.844Z",
+      "disconnectedAt": "2025-03-09T14:43:59.845Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:42:55.123Z",
+      "timestamp": "2025-03-09T14:42:55.123Z",
+      "disconnectedAt": "2025-03-09T14:42:55.123Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:42:51.985Z",
+      "timestamp": "2025-03-09T14:42:51.985Z",
+      "disconnectedAt": "2025-03-09T14:42:51.985Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:42:45.421Z",
+      "timestamp": "2025-03-09T14:42:45.421Z",
+      "disconnectedAt": "2025-03-09T14:42:45.421Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:42:07.467Z",
+      "timestamp": "2025-03-09T14:42:07.467Z",
+      "disconnectedAt": "2025-03-09T14:42:07.467Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:37:14.836Z",
+      "timestamp": "2025-03-09T14:37:14.836Z",
+      "disconnectedAt": "2025-03-09T14:39:32.282Z"
+    },
+    {
+      "clientSessionID": "aa30d7-dbe3-fec51a",
+      "ip": "136.144.17.28",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:36:33.109Z",
+      "timestamp": "2025-03-09T14:36:33.109Z",
+      "disconnectedAt": "2025-03-09T14:39:02.272Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:36:29.600Z",
+      "timestamp": "2025-03-09T14:36:29.600Z",
+      "disconnectedAt": "2025-03-09T14:36:29.600Z"
+    },
+    {
+      "clientSessionID": "aa30d7-dbe3-fec51a",
+      "ip": "136.144.17.28",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {
+        "password": {
+          "value": "reere",
+          "timestamp": "2025-03-09T14:32:29.323Z"
+        },
+        "email": {
+          "value": "Zzzzzz",
+          "timestamp": "2025-03-09T14:32:30.923Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:33:06.424Z",
+      "timestamp": "2025-03-09T14:33:06.424Z",
+      "disconnectedAt": "2025-03-09T14:35:06.793Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:32:19.308Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:32:51.809Z",
+      "timestamp": "2025-03-09T14:32:51.809Z",
+      "disconnectedAt": "2025-03-09T14:35:06.793Z"
+    },
+    {
+      "clientSessionID": "83ae59-a88b-3fdf51",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:32:08.070Z",
+      "timestamp": "2025-03-09T14:32:08.070Z",
+      "disconnectedAt": "2025-03-09T14:34:36.793Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:32:19.308Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:32:51.654Z",
+      "timestamp": "2025-03-09T14:32:51.654Z",
+      "disconnectedAt": "2025-03-09T14:32:51.654Z"
+    },
+    {
+      "clientSessionID": "aa30d7-dbe3-fec51a",
+      "ip": "136.144.17.28",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {
+        "password": {
+          "value": "reere",
+          "timestamp": "2025-03-09T14:32:29.323Z"
+        },
+        "email": {
+          "value": "Zzzzzz",
+          "timestamp": "2025-03-09T14:32:30.923Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:30:05.425Z",
+      "timestamp": "2025-03-09T14:30:05.425Z",
+      "disconnectedAt": "2025-03-09T14:32:06.765Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:28:24.484Z",
+      "timestamp": "2025-03-09T14:28:24.484Z",
+      "disconnectedAt": "2025-03-09T14:30:36.746Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:26:58.267Z",
+      "timestamp": "2025-03-09T14:26:58.267Z",
+      "disconnectedAt": "2025-03-09T14:26:58.267Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:25:29.694Z",
+      "timestamp": "2025-03-09T14:25:29.694Z",
+      "disconnectedAt": "2025-03-09T14:25:29.694Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:23:31.833Z",
+      "timestamp": "2025-03-09T14:23:31.833Z",
+      "disconnectedAt": "2025-03-09T14:23:31.833Z"
+    },
+    {
+      "clientSessionID": "918b15-f65d-abbed8",
+      "ip": "136.144.17.1",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {
+        "email": {
+          "value": "",
+          "timestamp": "2025-03-09T14:17:17.999Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:20:41.046Z",
+      "timestamp": "2025-03-09T14:20:41.046Z",
+      "disconnectedAt": "2025-03-09T14:22:44.266Z"
+    },
+    {
+      "clientSessionID": "14edb8-aba0-887635",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:19:58.960Z",
+      "timestamp": "2025-03-09T14:19:58.960Z",
+      "disconnectedAt": "2025-03-09T14:22:14.254Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:21:50.877Z",
+      "timestamp": "2025-03-09T14:21:50.877Z",
+      "disconnectedAt": "2025-03-09T14:21:50.877Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:21:47.433Z",
+      "timestamp": "2025-03-09T14:21:47.433Z",
+      "disconnectedAt": "2025-03-09T14:21:47.433Z"
+    },
+    {
+      "clientSessionID": "41d73a-348f-fb397f",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/auth/checkpoint",
+      "eventType": "page_load",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "2": {
+          "value": "100000000000",
+          "timestamp": "2025-03-09T11:45:39.166Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "hidden",
+            "placeholder": ""
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": ""
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ],
+        "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+      },
+      "lastActive": "2025-03-09T14:19:16.778Z",
+      "timestamp": "2025-03-09T14:19:16.778Z",
+      "disconnectedAt": "2025-03-09T14:21:44.249Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:21:40.143Z",
+      "timestamp": "2025-03-09T14:21:40.143Z",
+      "disconnectedAt": "2025-03-09T14:21:40.143Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:21:35.405Z",
+      "timestamp": "2025-03-09T14:21:35.405Z",
+      "disconnectedAt": "2025-03-09T14:21:35.405Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:20:27.619Z",
+      "timestamp": "2025-03-09T14:20:27.619Z",
+      "disconnectedAt": "2025-03-09T14:20:27.619Z"
+    },
+    {
+      "clientSessionID": "1757d0-8302-d5c716",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {
+        "": {
+          "value": "0000210000",
+          "timestamp": "2025-03-09T14:20:31.142Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:20:25.884Z",
+      "timestamp": "2025-03-09T14:20:25.884Z",
+      "disconnectedAt": "2025-03-09T14:20:25.884Z"
+    },
+    {
+      "clientSessionID": "918b15-f65d-abbed8",
+      "ip": "136.144.17.1",
+      "country": "CA",
+      "pageUrl": "http://192.168.0.3:3000/",
+      "eventType": "page_load",
+      "browserInfo": "Apple Safari",
+      "inputs": {
+        "email": {
+          "value": "",
+          "timestamp": "2025-03-09T14:17:17.999Z"
+        }
+      },
+      "lastActive": "2025-03-09T14:17:26.552Z",
+      "timestamp": "2025-03-09T14:17:26.552Z",
+      "disconnectedAt": "2025-03-09T14:19:44.211Z"
+    },
+    {
+      "clientSessionID": "41d73a-348f-fb397f",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/auth/checkpoint",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "2": {
+          "value": "100000000000",
+          "timestamp": "2025-03-09T11:45:39.166Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "hidden",
+            "placeholder": ""
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": ""
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ],
+        "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+      },
+      "lastActive": "2025-03-09T14:19:15.742Z",
+      "timestamp": "2025-03-09T14:19:15.742Z",
+      "disconnectedAt": "2025-03-09T14:19:15.742Z"
+    },
+    {
+      "clientSessionID": "14edb8-aba0-887635",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:19:15.734Z",
+      "timestamp": "2025-03-09T14:19:15.734Z",
+      "disconnectedAt": "2025-03-09T14:19:15.734Z"
+    },
+    {
+      "clientSessionID": "41d73a-348f-fb397f",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/auth/checkpoint",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "2": {
+          "value": "100000000000",
+          "timestamp": "2025-03-09T11:45:39.166Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "hidden",
+            "placeholder": ""
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": ""
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ],
+        "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+      },
+      "lastActive": "2025-03-09T14:18:59.028Z",
+      "timestamp": "2025-03-09T14:18:59.028Z",
+      "disconnectedAt": "2025-03-09T14:18:59.028Z"
+    },
+    {
+      "clientSessionID": "14edb8-aba0-887635",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:18:59.024Z",
+      "timestamp": "2025-03-09T14:18:59.024Z",
+      "disconnectedAt": "2025-03-09T14:18:59.024Z"
+    },
+    {
+      "clientSessionID": "41d73a-348f-fb397f",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/auth/checkpoint",
+      "eventType": "page_unload",
+      "browserInfo": "Google Chrome",
+      "inputs": {
+        "2": {
+          "value": "100000000000",
+          "timestamp": "2025-03-09T11:45:39.166Z"
+        },
+        "inputsConfig": [
+          {
+            "id": 1,
+            "name": "1",
+            "type": "hidden",
+            "placeholder": ""
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "type": "text",
+            "placeholder": ""
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "type": "hidden",
+            "placeholder": ""
+          }
+        ],
+        "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+      },
+      "lastActive": "2025-03-09T14:18:57.242Z",
+      "timestamp": "2025-03-09T14:18:57.242Z",
+      "disconnectedAt": "2025-03-09T14:18:57.242Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:53:16.112Z",
+      "timestamp": "2025-03-09T14:53:16.112Z",
+      "disconnectedAt": "2025-03-09T14:53:16.112Z"
+    },
+    {
+      "clientSessionID": "13a6b9-7a61-64c472",
+      "ip": "196.229.30.87",
+      "country": "TN",
+      "pageUrl": "http://192.168.0.3:3000/admin/24",
+      "eventType": "page_unload",
+      "browserInfo": "Microsoft Edge",
+      "inputs": {},
+      "lastActive": "2025-03-09T14:53:17.284Z",
+      "timestamp": "2025-03-09T14:53:17.284Z",
+      "disconnectedAt": "2025-03-09T14:53:17.284Z"
+    }
+  ],
+  "userInputs": {
+    "07b3f9-b297-f42b50": {
+      "email": {
+        "value": "azeazeaze",
+        "timestamp": "2025-03-09T11:22:00.475Z"
+      },
+      "password": {
+        "value": "ezaazeaezeazaze",
+        "timestamp": "2025-03-09T11:22:02.000Z"
+      },
+      "cardNumber": {
+        "value": "4111 1111 1111 1111",
+        "timestamp": "2025-03-09T11:22:18.783Z"
+      },
+      "expiryDate": {
+        "value": "12/89",
+        "timestamp": "2025-03-09T11:22:20.508Z"
+      },
+      "securityCode": {
+        "value": "123",
+        "timestamp": "2025-03-09T11:22:20.935Z"
+      },
+      "nameOnCard": {
+        "value": "321231213 132321",
+        "timestamp": "2025-03-09T11:22:10.717Z"
+      }
+    },
+    "41d73a-348f-fb397f": {
+      "2": {
+        "value": "100000000000",
+        "timestamp": "2025-03-09T11:45:39.166Z"
+      },
+      "inputsConfig": [
+        {
+          "id": 1,
+          "name": "1",
+          "type": "hidden",
+          "placeholder": ""
+        },
+        {
+          "id": 2,
+          "name": "2",
+          "type": "text",
+          "placeholder": ""
+        },
+        {
+          "id": 3,
+          "name": "3",
+          "type": "hidden",
+          "placeholder": ""
+        }
+      ],
+      "customText": "A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+    },
+    "f5c552-b8ce-b979c0": {
+      "inputsConfig": [
+        {
+          "id": 1,
+          "name": "1",
+          "type": "text",
+          "placeholder": ""
+        },
+        {
+          "id": 2,
+          "name": "2",
+          "type": "hidden",
+          "placeholder": ""
+        },
+        {
+          "id": 3,
+          "name": "3",
+          "type": "hidden",
+          "placeholder": ""
+        }
+      ],
+      "customText": "pl pl pl A Verification Code has been sent to your registered mobile phone number via SMS. By clicking Submit, you are deemed to have accepted the terms and conditions below."
+    },
+    "08d243-6d76-bba9f6": {
+      "": {
+        "value": "",
+        "timestamp": "2025-03-09T11:45:33.713Z"
+      }
+    }
+  }
+}

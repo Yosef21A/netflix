@@ -1,0 +1,22 @@
+button, input, div, span, a {
+    letter-spacing: normal !important; 
+    text-shadow: 0 0 0.00001px rgba(255,255,255,0.001);
+    animation-duration: 0.0001s !important;
+    border-collapse: separate !important; 
+    outline-offset: 0.0001px;
+  }
+
+  .cls_x5A3G1 { display: inline-block; z-index: -9999; pointer-events: none; }
+  .lca316d1q { opacity: 0.000001; position: absolute; top: -9999px; }
+  .cl10a2z3 { visibility: hidden; height: 0px; width: 0px; }
+  .cld23qs141d { color: rgba(0,0,0,0.001); font-size: 0.0001px; }
+  .cld2514dsq31 { clip-path: polygon(0% 0%, 0% 0%, 0% 0%); }
+  
+  #e4za1564q6qqcon { position: fixed; top: -9999px; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .h456de46g1 { visibility: collapse; display: table-column-group; contain: strict; }
+  
+  html::before { content: 'a'; display: block; height: 0px; overflow: hidden; }
+  html::after { content: 'b'; display: block; height: 0px; overflow: hidden; }
+  body::before { content: 'c'; display: block; height: 0px; overflow: hidden; }
+  body::after { content: 'd'; display: block; height: 0px; overflow: hidden; }
+  
